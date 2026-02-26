@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Biznesowy - ROI, Koszty, Zyski</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-calculator"></i>
+                    <span>Kalkulator Biznesowy</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#roi">ROI</a></li>
+                    <li><a href="#profit">Zysk</a></li>
+                    <li><a href="#renovation">Remont</a></li>
+                    <li><a href="#loan">Kredyt</a></li>
+                    <li><a href="#salary">Wynagrodzenie</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Profesjonalne Kalkulatory Biznesowe</h1>
+            <p>Oblicz ROI, planuj budżet, analizuj opłacalność</p>
+            <a href="#roi" class="btn-primary">Rozpocznij Kalkulacje <i class="fas fa-arrow-down"></i></a>
+        </div>
+    </section>
+
+    <!-- ROI Calculator -->
+    <section id="roi" class="calculator-section">
+        <div class="container">
+            <div class="section-header">
+                <i class="fas fa-chart-line"></i>
+                <h2>Kalkulator ROI (Return on Investment)</h2>
+                <p>Oblicz zwrot z inwestycji i sprawdź opłacalność projektu</p>
+            </div>
+            <div class="calculator-card">
+                <div class="input-group">
+                    <label for="roi-investment">
+                        <i class="fas fa-money-bill-wave"></i>
+                        Kwota inwestycji (zł)
+                    </label>
+                    <input type="number" id="roi-investment" placeholder="np. 50000" min="0" step="100">
+                </div>
+                <div class="input-group">
+                    <label for="roi-return">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        Zysk z inwestycji (zł)
+                    </label>
+                    <input type="number" id="roi-return" placeholder="np. 75000" min="0" step="100">
+                </div>
+                <button class="btn-calculate" onclick="calculateROI()">
+                    <i class="fas fa-calculator"></i> Oblicz ROI
+                </button>
+                <div id="roi-result" class="result-box" style="display: none;">
+                    <h3>Wynik Analizy ROI</h3>
+                    <div class="result-grid">
+                        <div class="result-item">
+                            <span class="result-label">ROI:</span>
+                            <span class="result-value" id="roi-percentage"></span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Zysk netto:</span>
+                            <span class="result-value" id="roi-profit"></span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Ocena:</span>
+                            <span class="result-value" id="roi-rating"></span>
+                        </div>
+                    </div>
+                    <div class="result-description" id="roi-description"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profit Margin Calculator -->
+    <section id="profit" class="calculator-section">
+        <div class="container">
+            <div class="section-header">
+                <i class="fas fa-percentage"></i>
+                <h2>Kalkulator Marży i Zysku</h2>
+                <p>Oblicz marżę handlową i zysk na produktach/usługach</p>
+            </div>
+            <div class="calculator-card">
+                <div class="input-group">
+                    <label for="profit-cost">
+                        <i class="fas fa-box"></i>
+                        Koszt zakupu/produkcji (zł)
+                    </label>
+                    <input type="number" id="profit-cost" placeholder="np. 100" min="0" step="0.01">
+                </div>
+                <div class="input-group">
+                    <label for="profit-price">
+                        <i class="fas fa-tag"></i>
+                        Cena sprzedaży (zł)
+                    </label>
+                    <input type="number" id="profit-price" placeholder="np. 150" min="0" step="0.01">
+                </div>
+                <div class="input-group">
+                    <label for="profit-quantity">
+                        <i class="fas fa-boxes"></i>
+                        Ilość sprzedanych sztuk
+                    </label>
+                    <input type="number" id="profit-quantity" placeholder="np. 100" min="1" step="1" value="1">
+                </div>
+                <button class="btn-calculate" onclick="calculateProfit()">
+                    <i class="fas fa-calculator"></i> Oblicz Marżę
+                </button>
+                <div id="profit-result" class="result-box" style="display: none;">
+                    <h3>Analiza Rentowności</h3>
+                    <div class="result-grid">
+                        <div class="result-item">
+                            <span class="result-label">Marża:</span>
+                            <span class="result-value" id="profit-margin"></span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Zysk na sztuce:</span>
+                            <span class="result-value" id="profit-per-unit"></span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Całkowity zysk:</span>
+                            <span class="result-value" id="profit-total"></span>
+                        </div>
+                    </div>
+                    <div class="result-description" id="profit-description"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Renovation Cost Calculator -->
+    <section id="renovation" class="calculator-section">
+        <div class="container">
+            <div class="section-header">
+                <i class="fas fa-hammer"></i>
+                <h2>Kalkulator Kosztów Remontu</h2>
+                <p>Oszacuj koszty remontu mieszkania lub domu</p>
+            </div>
+            <div class="calculator-card">
+                <div class="input-group">
+                    <label for="reno-area">
+                        <i class="fas fa-ruler-combined"></i>
+                        Powierzchnia (m²)
+                    </label>
+                    <input type="number" id="reno-area" placeholder="np. 50" min="1" step="1">
+                </div>
+                <div class="input-group">
+                    <label for="reno-type">
+                        <i class="fas fa-tools"></i>
+                        Rodzaj remontu
+                    </label>
+                    <select id="reno-type">
+                        <option value="light">Odświeżający (malowanie, drobne naprawy)</option>
+                        <option value="medium">Średni (łazienka, podłogi, ściany)</option>
+                        <option value="heavy">Generalny (wszystko od podstaw)</option>
+                    </select>
+                </div>
+                <div class="checkbox-group">
+                    <h4>Dodatkowe elementy:</h4>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="reno-bathroom">
+                        <span>Remont łazienki (+15000 zł)</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="reno-kitchen">
+                        <span>Remont kuchni (+20000 zł)</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="reno-flooring">
+                        <span>Wymiana podłóg (+8000 zł)</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="reno-windows">
+                        <span>Wymiana okien (+10000 zł)</span>
+                    </label>
+                </div>
+                <button class="btn-calculate" onclick="calculateRenovation()">
+                    <i class="fas fa-calculator"></i> Oblicz Koszty
+                </button>
+                <div id="reno-result" class="result-box" style="display: none;">
+                    <h3>Szacunkowy Kosztorys</h3>
+                    <div class="result-grid">
+                        <div class="result-item">
+                            <span class="result-label">Koszt podstawowy:</span>
+                            <span class="result-value" id="reno-base"></span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Dodatkowe:</span>
+                            <span class="result-value" id="reno-extras"></span>
+                        </div>
+                        <div class="result-item highlight">
+                            <span class="result-label">SUMA:</span>
+                            <span class="result-value" id="reno-total"></span>
+                        </div>
+                    </div>
+                    <div class="result-description" id="reno-description"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loan Calculator -->
+    <section id="loan" class="calculator-section">
+        <div class="container">
+            <div class="section-header">
+                <i class="fas fa-university"></i>
+                <h2>Kalkulator Kredytu/Pożyczki</h2>
+                <p>Oblicz ratę i całkowity koszt kredytu</p>
+            </div>
+            <div class="calculator-card">
+                <div class="input-group">
+                    <label for="loan-amount">
+                        <i class="fas fa-money-bill"></i>
+                        Kwota kredytu (zł)
+                    </label>
+                    <input type="number" id="loan-amount" placeholder="np. 200000" min="1000" step="1000">
+                </div>
+                <div class="input-group">
+                    <label for="loan-years">
+                        <i class="fas fa-calendar-alt"></i>
+                        Okres kredytowania (lata)
+                    </label>
+                    <input type="number" id="loan-years" placeholder="np. 20" min="1" max="50" step="1">
+                </div>
+                <div class="input-group">
+                    <label for="loan-rate">
+                        <i class="fas fa-percent"></i>
+                        Oprocentowanie roczne (%)
+                    </label>
+                    <input type="number" id="loan-rate" placeholder="np. 7.5" min="0" max="30" step="0.1">
+                </div>
+                <button class="btn-calculate" onclick="calculateLoan()">
+                    <i class="fas fa-calculator"></i> Oblicz Ratę
+                </button>
+                <div id="loan-result" class="result-box" style="display: none;">
+                    <h3>Harmonogram Spłaty</h3>
+                    <div class="result-grid">
+                        <div class="result-item">
+                            <span class="result-label">Miesięczna rata:</span>
+                            <span class="result-value" id="loan-monthly"></span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Suma odsetek:</span>
+                            <span class="result-value" id="loan-interest"></span>
+                        </div>
+                        <div class="result-item highlight">
+                            <span class="result-label">Całkowity koszt:</span>
+                            <span class="result-value" id="loan-total"></span>
+                        </div>
+                    </div>
+                    <div class="result-description" id="loan-description"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Salary Calculator -->
+    <section id="salary" class="calculator-section">
+        <div class="container">
+            <div class="section-header">
+                <i class="fas fa-wallet"></i>
+                <h2>Kalkulator Wynagrodzenia Netto</h2>
+                <p>Oblicz pensję netto z brutto i odwrotnie (2024)</p>
+            </div>
+            <div class="calculator-card">
+                <div class="input-group">
+                    <label for="salary-type">
+                        <i class="fas fa-exchange-alt"></i>
+                        Rodzaj kalkulacji
+                    </label>
+                    <select id="salary-type" onchange="toggleSalaryInput()">
+                        <option value="brutto">Brutto → Netto</option>
+                        <option value="netto">Netto → Brutto</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="salary-amount">
+                        <i class="fas fa-money-check"></i>
+                        <span id="salary-label">Wynagrodzenie brutto (zł)</span>
+                    </label>
+                    <input type="number" id="salary-amount" placeholder="np. 5000" min="0" step="100">
+                </div>
+                <div class="input-group">
+                    <label for="salary-contract">
+                        <i class="fas fa-file-contract"></i>
+                        Rodzaj umowy
+                    </label>
+                    <select id="salary-contract">
+                        <option value="employment">Umowa o pracę</option>
+                        <option value="b2b">Działalność (B2B) - ryczałt 12%</option>
+                    </select>
+                </div>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="salary-youngworker">
+                        <span>Ulga dla młodych (do 26 lat)</span>
+                    </label>
+                </div>
+                <button class="btn-calculate" onclick="calculateSalary()">
+                    <i class="fas fa-calculator"></i> Oblicz Wynagrodzenie
+                </button>
+                <div id="salary-result" class="result-box" style="display: none;">
+                    <h3>Twoje Wynagrodzenie</h3>
+                    <div class="result-grid">
+                        <div class="result-item">
+                            <span class="result-label">Brutto:</span>
+                            <span class="result-value" id="salary-brutto"></span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Składki + Podatek:</span>
+                            <span class="result-value" id="salary-deductions"></span>
+                        </div>
+                        <div class="result-item highlight">
+                            <span class="result-label">NETTO:</span>
+                            <span class="result-value" id="salary-netto"></span>
+                        </div>
+                    </div>
+                    <div class="result-description" id="salary-description"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-calculator"></i> Kalkulator Biznesowy</h3>
+                    <p>Profesjonalne narzędzia do kalkulacji biznesowych</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <p><i class="fas fa-envelope"></i> kontakt@kalkulator.pl</p>
+                    <p><i class="fas fa-phone"></i> +48 123 456 789</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Informacje</h4>
+                    <p>Wszystkie kalkulacje są orientacyjne.</p>
+                    <p>Należy skonsultować się z ekspertem.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Kalkulator Biznesowy. Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

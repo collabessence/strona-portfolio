@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO App - Zaawansowane Zarządzanie Zadaniami</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-left">
+                <i class="fas fa-tasks"></i>
+                <h1>TODO App</h1>
+                <span class="task-count">0 zadań</span>
+            </div>
+            <div class="header-right">
+                <button class="theme-toggle" id="themeToggle" title="Przełącz motyw" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="settings-btn" id="settingsBtn" title="Ustawienia" aria-label="Open settings">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="app-main">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3><i class="fas fa-filter"></i> Filtry</h3>
+                    <ul class="filter-list">
+                        <li class="filter-item active" data-filter="all">
+                            <i class="fas fa-list"></i>
+                            <span>Wszystkie</span>
+                            <span class="count" id="countAll">0</span>
+                        </li>
+                        <li class="filter-item" data-filter="active">
+                            <i class="fas fa-circle"></i>
+                            <span>Aktywne</span>
+                            <span class="count" id="countActive">0</span>
+                        </li>
+                        <li class="filter-item" data-filter="completed">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Ukończone</span>
+                            <span class="count" id="countCompleted">0</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3><i class="fas fa-tag"></i> Kategorie</h3>
+                    <ul class="category-list">
+                        <li class="category-item active" data-category="all">
+                            <span class="category-color" style="background: #6366f1;"></span>
+                            <span>Wszystkie</span>
+                            <span class="count" id="catAll">0</span>
+                        </li>
+                        <li class="category-item" data-category="work">
+                            <span class="category-color" style="background: #3b82f6;"></span>
+                            <span>Praca</span>
+                            <span class="count" id="catWork">0</span>
+                        </li>
+                        <li class="category-item" data-category="personal">
+                            <span class="category-color" style="background: #10b981;"></span>
+                            <span>Osobiste</span>
+                            <span class="count" id="catPersonal">0</span>
+                        </li>
+                        <li class="category-item" data-category="shopping">
+                            <span class="category-color" style="background: #f59e0b;"></span>
+                            <span>Zakupy</span>
+                            <span class="count" id="catShopping">0</span>
+                        </li>
+                        <li class="category-item" data-category="health">
+                            <span class="category-color" style="background: #ef4444;"></span>
+                            <span>Zdrowie</span>
+                            <span class="count" id="catHealth">0</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3><i class="fas fa-exclamation-circle"></i> Priorytet</h3>
+                    <ul class="priority-list">
+                        <li class="priority-item active" data-priority="all">
+                            <span>Wszystkie</span>
+                            <span class="count" id="prioAll">0</span>
+                        </li>
+                        <li class="priority-item" data-priority="high">
+                            <i class="fas fa-angle-double-up" style="color: #ef4444;"></i>
+                            <span>Wysoki</span>
+                            <span class="count" id="prioHigh">0</span>
+                        </li>
+                        <li class="priority-item" data-priority="medium">
+                            <i class="fas fa-angle-up" style="color: #f59e0b;"></i>
+                            <span>Średni</span>
+                            <span class="count" id="prioMedium">0</span>
+                        </li>
+                        <li class="priority-item" data-priority="low">
+                            <i class="fas fa-angle-down" style="color: #10b981;"></i>
+                            <span>Niski</span>
+                            <span class="count" id="prioLow">0</span>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Content Area -->
+            <section class="content-area">
+                <!-- Search and Add -->
+                <div class="toolbar">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Szukaj zadań...">
+                    </div>
+                    <button class="btn-add" id="addTaskBtn">
+                        <i class="fas fa-plus"></i>
+                        <span>Dodaj Zadanie</span>
+                    </button>
+                </div>
+
+                <!-- Sort Options -->
+                <div class="sort-bar">
+                    <div class="sort-options">
+                        <button class="sort-btn active" data-sort="date">
+                            <i class="fas fa-calendar"></i> Data
+                        </button>
+                        <button class="sort-btn" data-sort="priority">
+                            <i class="fas fa-exclamation"></i> Priorytet
+                        </button>
+                        <button class="sort-btn" data-sort="name">
+                            <i class="fas fa-font"></i> Nazwa
+                        </button>
+                    </div>
+                    <button class="clear-completed" id="clearCompleted">
+                        <i class="fas fa-trash"></i> Usuń ukończone
+                    </button>
+                </div>
+
+                <!-- Tasks List -->
+                <div class="tasks-container" id="tasksContainer">
+                    <!-- Tasks will be dynamically added here -->
+                </div>
+
+                <!-- Empty State -->
+                <div class="empty-state" id="emptyState">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h3>Brak zadań</h3>
+                    <p>Dodaj swoje pierwsze zadanie, aby rozpocząć!</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Add/Edit Task Modal -->
+    <div class="modal" id="taskModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Nowe Zadanie</h2>
+                <button class="modal-close" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="taskForm">
+                <div class="form-group">
+                    <label for="taskTitle">Tytuł zadania *</label>
+                    <input type="text" id="taskTitle" required placeholder="Co trzeba zrobić?">
+                </div>
+
+                <div class="form-group">
+                    <label for="taskDescription">Opis</label>
+                    <textarea id="taskDescription" rows="3" placeholder="Dodatkowe szczegóły..."></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="taskCategory">Kategoria</label>
+                        <select id="taskCategory">
+                            <option value="work">Praca</option>
+                            <option value="personal">Osobiste</option>
+                            <option value="shopping">Zakupy</option>
+                            <option value="health">Zdrowie</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="taskPriority">Priorytet</label>
+                        <select id="taskPriority">
+                            <option value="low">Niski</option>
+                            <option value="medium" selected>Średni</option>
+                            <option value="high">Wysoki</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="taskDueDate">Termin wykonania</label>
+                    <input type="date" id="taskDueDate">
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" id="cancelBtn">Anuluj</button>
+                    <button type="submit" class="btn-save">
+                        <i class="fas fa-save"></i> Zapisz
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

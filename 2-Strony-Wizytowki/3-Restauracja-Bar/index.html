@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restauracja - Smaki Tradycji</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-utensils"></i>
+                <span>RESTAURACJA</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Start</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Galeria</a></li>
+                <li><a href="#reservation">Rezerwacja</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Smaki Tradycji</h1>
+            <p class="hero-subtitle">Autentyczna kuchnia · Wyjątkowa atmosfera · Niezapomniane doznania</p>
+            <div class="hero-buttons">
+                <a href="#reservation" class="btn btn-primary">Zarezerwuj Stolik</a>
+                <a href="#menu" class="btn btn-secondary">Zobacz Menu</a>
+            </div>
+            <div class="hero-info">
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Pn-Nd: 12:00 - 22:00</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+48 123 456 789</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-users"></i>
+                        <p>Zdjęcie restauracji</p>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2>Nasza Historia</h2>
+                    <p>Od ponad 20 lat serwujemy wyśmienite dania przygotowane według tradycyjnych receptur. Każde danie to połączenie najlepszych składników, miłości do gotowania i pasji do zadowolenia naszych gości.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <div>
+                                <h4>Świeże Produkty</h4>
+                                <p>Lokalni dostawcy, sezonowe składniki</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <h4>Nagrodzeni Szefowie Kuchni</h4>
+                                <p>Doświadczenie i pasja w każdym daniu</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <h4>Domowa Atmosfera</h4>
+                                <p>Poczuj się jak w domu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nasze Menu</h2>
+                <p>Wybierz spośród naszych specjałów</p>
+            </div>
+
+            <!-- Menu Categories -->
+            <div class="menu-tabs">
+                <button class="menu-tab active" data-category="all">Wszystko</button>
+                <button class="menu-tab" data-category="przystawki">Przystawki</button>
+                <button class="menu-tab" data-category="zupy">Zupy</button>
+                <button class="menu-tab" data-category="dania-glowne">Dania Główne</button>
+                <button class="menu-tab" data-category="desery">Desery</button>
+                <button class="menu-tab" data-category="napoje">Napoje</button>
+            </div>
+
+            <!-- Menu Items -->
+            <div class="menu-grid">
+                <!-- Przystawki -->
+                <div class="menu-item" data-category="przystawki">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-drumstick-bite"></i>
+                        </div>
+                        <span class="badge-new">Nowość</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Carpaccio z polędwicy</h3>
+                            <span class="price">28 zł</span>
+                        </div>
+                        <p>Cienkie plastry polędwicy z rukolą, parmezanem i sosem truflowym</p>
+                        <div class="menu-item-footer">
+                            <span class="tag"><i class="fas fa-pepper-hot"></i> Pikantne</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="przystawki">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-cheese"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Tatar z łososia</h3>
+                            <span class="price">32 zł</span>
+                        </div>
+                        <p>Świeży łosoś z awokado, kolendrą i sosem sojowym</p>
+                        <div class="menu-item-footer">
+                            <span class="tag"><i class="fas fa-fish"></i> Ryby</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Zupy -->
+                <div class="menu-item" data-category="zupy">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-bowl-food"></i>
+                        </div>
+                        <span class="badge-popular">Bestseller</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Krem z dyni</h3>
+                            <span class="price">18 zł</span>
+                        </div>
+                        <p>Aksamitny krem z pieczonej dyni z imbirem i pestkami</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="zupy">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-soup"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Rosół tradycyjny</h3>
+                            <span class="price">15 zł</span>
+                        </div>
+                        <p>Według starej receptury z makaronem domowym</p>
+                    </div>
+                </div>
+
+                <!-- Dania Główne -->
+                <div class="menu-item" data-category="dania-glowne">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-pizza-slice"></i>
+                        </div>
+                        <span class="badge-popular">Bestseller</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Stek z polędwicy wołowej</h3>
+                            <span class="price">68 zł</span>
+                        </div>
+                        <p>250g argentyńskiej polędwicy z grillowanymi warzywami</p>
+                        <div class="menu-item-footer">
+                            <span class="tag"><i class="fas fa-fire"></i> Grill</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="dania-glowne">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-fish"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Łosoś pieczony</h3>
+                            <span class="price">52 zł</span>
+                        </div>
+                        <p>Filet z łososia na szpinaku z ziemniakami młodymi</p>
+                        <div class="menu-item-footer">
+                            <span class="tag"><i class="fas fa-leaf"></i> Zdrowe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="dania-glowne">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-burger"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Burger Domowy</h3>
+                            <span class="price">38 zł</span>
+                        </div>
+                        <p>200g wołowiny, ser cheddar, bekon, warzywa, frytki</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="dania-glowne">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Risotto z grzybami leśnymi</h3>
+                            <span class="price">42 zł</span>
+                        </div>
+                        <p>Kremowe risotto z sezonowymi grzybami i parmezanem</p>
+                        <div class="menu-item-footer">
+                            <span class="tag"><i class="fas fa-leaf"></i> Wegetariańskie</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desery -->
+                <div class="menu-item" data-category="desery">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-ice-cream"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Lava Cake</h3>
+                            <span class="price">22 zł</span>
+                        </div>
+                        <p>Ciepłe ciasto czekoladowe z lodami waniliowymi</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desery">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-birthday-cake"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Tiramisu</h3>
+                            <span class="price">20 zł</span>
+                        </div>
+                        <p>Klasyczny włoski deser z mascarpone</p>
+                    </div>
+                </div>
+
+                <!-- Napoje -->
+                <div class="menu-item" data-category="napoje">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-wine-glass"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Wino czerwone/białe</h3>
+                            <span class="price">18 zł/kieliszek</span>
+                        </div>
+                        <p>Wybrane wina z najlepszych winnic</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="napoje">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Kawa z ekspresu</h3>
+                            <span class="price">12 zł</span>
+                        </div>
+                        <p>Espresso, Americano, Cappuccino, Latte</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-note">
+                <p><i class="fas fa-info-circle"></i> Menu może się różnić w zależności od dostępności sezonowych składników. Zapytaj kelnera o dzisiejsze specjały!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Galeria</h2>
+                <p>Zobacz naszą restaurację i dania</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Wnętrze restauracji</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-utensils"></i>
+                        <p>Danie 1</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-cocktail"></i>
+                        <p>Drinki</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-drumstick-bite"></i>
+                        <p>Danie 2</p>
+                    </div>
+                </div>
+                <div class="gallery-item large">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-users"></i>
+                        <p>Atmosfera</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-wine-bottle"></i>
+                        <p>Wina</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="reservation">
+        <div class="container">
+            <div class="section-header">
+                <h2>Rezerwacja Stolika</h2>
+                <p>Zarezerwuj miejsce już teraz</p>
+            </div>
+            
+            <div class="reservation-content">
+                <div class="reservation-info">
+                    <h3>Dlaczego warto zarezerwować?</h3>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check"></i> Gwarancja miejsca w wybranym terminie</li>
+                        <li><i class="fas fa-check"></i> Preferowany stolik (przy oknie, balkon)</li>
+                        <li><i class="fas fa-check"></i> Możliwość specjalnych życzeń</li>
+                        <li><i class="fas fa-check"></i> Rezerwacja na większe grupy</li>
+                        <li><i class="fas fa-check"></i> Organizacja wydarzeń specjalnych</li>
+                    </ul>
+
+                    <div class="reservation-contact">
+                        <h4>Lub zadzwoń:</h4>
+                        <a href="tel:+48123456789" class="phone-number">
+                            <i class="fas fa-phone"></i> +48 123 456 789
+                        </a>
+                        <p class="small-text">Pn-Nd: 10:00 - 20:00</p>
+                    </div>
+                </div>
+
+                <div class="reservation-form">
+                    <form id="reservationForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Imię i nazwisko *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Data *</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Godzina *</label>
+                                <select id="time" name="time" required>
+                                    <option value="">Wybierz godzinę</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="12:30">12:30</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="13:30">13:30</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="17:30">17:30</option>
+                                    <option value="18:00">18:00</option>
+                                    <option value="18:30">18:30</option>
+                                    <option value="19:00">19:00</option>
+                                    <option value="19:30">19:30</option>
+                                    <option value="20:00">20:00</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="guests">Liczba osób *</label>
+                                <select id="guests" name="guests" required>
+                                    <option value="">Wybierz</option>
+                                    <option value="1">1 osoba</option>
+                                    <option value="2">2 osoby</option>
+                                    <option value="3">3 osoby</option>
+                                    <option value="4">4 osoby</option>
+                                    <option value="5">5 osób</option>
+                                    <option value="6">6 osób</option>
+                                    <option value="7+">7+ osób</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="table">Preferowany stolik</label>
+                                <select id="table" name="table">
+                                    <option value="">Bez preferencji</option>
+                                    <option value="window">Przy oknie</option>
+                                    <option value="terrace">Taras</option>
+                                    <option value="quiet">Spokojny kącik</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Dodatkowe uwagi</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Okazja specjalna, alergie, inne życzenia..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Zarezerwuj Stolik</button>
+                        <p class="form-note">* Pola wymagane. Potwierdzenie rezerwacji wyślemy SMS-em.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Kontakt</h2>
+                <p>Odwiedź nas lub skontaktuj się</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Adres</h4>
+                        <p>ul. Smaczna 15<br>00-000 Warszawa</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h4>Telefon</h4>
+                        <p>+48 123 456 789</p>
+                        <a href="tel:+48123456789" class="btn btn-sm">Zadzwoń</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p>kontakt@restauracja.pl</p>
+                        <a href="mailto:kontakt@restauracja.pl" class="btn btn-sm">Napisz</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <i class="fas fa-clock"></i>
+                        <h4>Godziny Otwarcia</h4>
+                        <p>
+                            <strong>Pn-Czw:</strong> 12:00 - 22:00<br>
+                            <strong>Pt-Sb:</strong> 12:00 - 23:00<br>
+                            <strong>Niedziela:</strong> 12:00 - 21:00
+                        </p>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <h3><i class="fas fa-map-marked-alt"></i> Lokalizacja</h3>
+                    <div class="map-wrapper">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.5234814853577!2d21.012228615747!3d52.229675279756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669fd4e021%3A0x72f0be2a88ead3fc!2sRestauracja!5e0!3m2!1spl!2spl!4v1234567890123!5m2!1spl!2spl"
+                            height="400"
+                            style="border:0; border-radius: 10px;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Mapa lokalizacji restauracji">
+                        </iframe>
+                    </div>
+                    <p class="map-hint"><i class="fas fa-route"></i> Kliknij mapę, aby uzyskać wskazówki dojazdu</p>
+                </div>
+
+                <div class="social-section">
+                    <h3>Śledź Nas</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i> Facebook</a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i> TripAdvisor</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Restauracja</h4>
+                    <p>Smaki tradycji w nowoczesnej odsłonie. Zapraszamy na niezapomniane kulinarne doświadczenia.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="#menu">Nasze Menu</a></li>
+                        <li><a href="#gallery">Galeria</a></li>
+                        <li><a href="#reservation">Rezerwacja</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +48 123 456 789</li>
+                        <li><i class="fas fa-envelope"></i> kontakt@restauracja.pl</li>
+                        <li><i class="fas fa-map-marker-alt"></i> ul. Smaczna 15</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Restauracja. Wszystkie prawa zastrzeżone.</p>
+                <p>Wykonanie: Twoje Imię - Strony Internetowe</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/48123456789?text=Witam,%20chciałbym%20zarezerwować%20stolik" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Skontaktuj się przez WhatsApp"
+       title="Rezerwacja przez WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Cookie Consent -->
+    <div id="cookieConsent" class="cookie-consent">
+        <div class="cookie-content">
+            <p>
+                <i class="fas fa-cookie-bite"></i>
+                <span>Ta strona używa ciasteczek, aby zapewnić najlepsze doświadczenia. Kontynuując przeglądanie, zgadzasz się na ich użycie.</span>
+            </p>
+            <button id="acceptCookies" class="btn-cookie">
+                <i class="fas fa-check"></i> Rozumiem
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

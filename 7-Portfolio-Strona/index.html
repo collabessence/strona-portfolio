@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twoje Imię - Freelance Web Developer | Strony & Narzędzia</title>
+    <meta name="description" content="Profesjonalne strony internetowe i narzędzia dla firm. Szybko, tanio, efektywnie.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                    <span>TwojeImię.dev</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Start</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Usługi</a></li>
+                    <li><a href="#pricing">Cennik</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Strony & Narzędzia dla Twojej Firmy</h1>
+                    <p class="hero-subtitle">Profesjonalnie • Szybko • Przystępnie</p>
+                    <p class="hero-description">
+                        Tworzę responsywne strony internetowe i użyteczne narzędzia, 
+                        które pomagają małym i średnim firmom rosnąć online.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#portfolio" class="btn-primary">
+                            <i class="fas fa-eye"></i> Zobacz Portfolio
+                        </a>
+                        <a href="#contact" class="btn-secondary">
+                            <i class="fas fa-envelope"></i> Kontakt
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">15</span>
+                            <span class="stat-label">Projektów</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Gotowych</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">1-14</span>
+                            <span class="stat-label">Dni realizacji</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="window-code">
+                            <div class="code-line">
+                                <span class="code-keyword">function</span> <span class="code-function">rozwójFirmy</span>() {
+                            </div>
+                            <div class="code-line indent">
+                                <span class="code-keyword">return</span> {
+                            </div>
+                            <div class="code-line indent2">
+                                strona: <span class="code-string">"profesjonalna"</span>,
+                            </div>
+                            <div class="code-line indent2">
+                                klienci: <span class="code-number">+500%</span>,
+                            </div>
+                            <div class="code-line indent2">
+                                ROI: <span class="code-string">"instant"</span>
+                            </div>
+                            <div class="code-line indent">
+                                }
+                            </div>
+                            <div class="code-line">
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <h2>Moje Projekty</h2>
+            <p class="section-subtitle">Gotowe rozwiązania i projekty na zamówienie</p>
+
+            <div class="portfolio-grid">
+                <!-- FLAGSHIP PROJECT: Advanced Animated Website -->
+                <div class="portfolio-card flagship">
+                    <div class="featured-badge flagship-badge">🚀 FLAGSHIP PROJECT</div>
+                    <div class="card-image animated-bg">
+                        <i class="fas fa-rocket fa-5x"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Advanced Animated Website</h3>
+                        <p>Spektakularna strona z zaawansowanymi animacjami, particles, parallax i 3D effects</p>
+                        <ul class="tech-stack">
+                            <li><i class="fas fa-magic"></i> Canvas API</li>
+                            <li><i class="fas fa-cube"></i> 3D Tilt</li>
+                            <li><i class="fas fa-bolt"></i> Parallax</li>
+                        </ul>
+                        <div class="card-features">
+                            <span><i class="fas fa-check"></i> Particles Animation</span>
+                            <span><i class="fas fa-check"></i> Scroll Effects</span>
+                            <span><i class="fas fa-check"></i> Custom Cursor</span>
+                            <span><i class="fas fa-check"></i> Portfolio Filter</span>
+                            <span><i class="fas fa-check"></i> Stats Counter</span>
+                            <span><i class="fas fa-check"></i> 3D Cards</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price">3000-5000 zł</span>
+                            <span class="time">5-7 dni</span>
+                        </div>
+                        <a href="15-Advanced-Animated-Website/index.html" class="btn-demo flagship-demo" target="_blank" title="Zobacz najbardziej zaawansowany projekt z pełnymi animacjami">
+                            <i class="fas fa-star"></i> Zobacz Flagowy Projekt
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 1: Strony Wizytówki -->
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <i class="fas fa-store fa-5x"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Strony Wizytówki</h3>
+                        <p>Profesjonalne one-page dla lokalnych biznesów</p>
+                        <ul class="tech-stack">
+                            <li><i class="fab fa-html5"></i> HTML5</li>
+                            <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                            <li><i class="fab fa-js"></i> JavaScript</li>
+                        </ul>
+                        <div class="card-features">
+                            <span><i class="fas fa-check"></i> Responsywna</span>
+                            <span><i class="fas fa-check"></i> SEO</span>
+                            <span><i class="fas fa-check"></i> Formularz</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price">Od 500 zł</span>
+                            <span class="time">2-3 dni</span>
+                        </div>
+                        <a href="2-Strony-Wizytowki/1-Fryzjer-Salon/index.html" class="btn-demo" target="_blank" title="Sprawdź przykładową stronę dla salonu fryzjerskiego">
+                            <i class="fas fa-external-link-alt"></i> Sprawdź Przykład
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Kalkulator ROI -->
+                <div class="portfolio-card featured">
+                    <div class="featured-badge">POPULARNE</div>
+                    <div class="card-image">
+                        <i class="fas fa-calculator fa-5x"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Kalkulatory Biznesowe</h3>
+                        <p>5 kalkulatorów: ROI, marża, kredyt, płace, remont</p>
+                        <ul class="tech-stack">
+                            <li><i class="fas fa-laptop-code"></i> Web App</li>
+                            <li><i class="fas fa-chart-line"></i> Analytics</li>
+                        </ul>
+                        <div class="card-features">
+                            <span><i class="fas fa-check"></i> 5 narzędzi</span>
+                            <span><i class="fas fa-check"></i> Live preview</span>
+                            <span><i class="fas fa-check"></i> Mobilna</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price">600-1200 zł</span>
+                            <span class="time">2 dni</span>
+                        </div>
+                        <a href="5-Kalkulator-ROI/index.html" class="btn-demo" target="_blank" title="Sprawdź interaktywne kalkulatory biznesowe">
+                            <i class="fas fa-external-link-alt"></i> Sprawdź Przykład
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Generator Wizytówek -->
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <i class="fas fa-id-card fa-5x"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Generator Wizytówek</h3>
+                        <p>Tool do tworzenia i pobierania wizytówek PNG/PDF</p>
+                        <ul class="tech-stack">
+                            <li><i class="fas fa-magic"></i> Generator</li>
+                            <li><i class="fas fa-download"></i> Export</li>
+                        </ul>
+                        <div class="card-features">
+                            <span><i class="fas fa-check"></i> 4 szablony</span>
+                            <span><i class="fas fa-check"></i> PDF/PNG</span>
+                            <span><i class="fas fa-check"></i> Lead magnet</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price">400-800 zł</span>
+                            <span class="time">1 dzień</span>
+                        </div>
+                        <a href="6-Generator-Wizytowek/index.html" class="btn-demo" target="_blank" title="Wypróbuj generator wizytówek online">
+                            <i class="fas fa-external-link-alt"></i> Sprawdź Przykład
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4: Bot Telegram -->
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <i class="fab fa-telegram fa-5x"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Bot Telegram</h3>
+                        <p>Auto-responder z FAQ i zbieraniem kontaktów</p>
+                        <ul class="tech-stack">
+                            <li><i class="fab fa-python"></i> Python</li>
+                            <li><i class="fas fa-robot"></i> Bot API</li>
+                        </ul>
+                        <div class="card-features">
+                            <span><i class="fas fa-check"></i> FAQ system</span>
+                            <span><i class="fas fa-check"></i> 24/7 online</span>
+                            <span><i class="fas fa-check"></i> Rezerwacje</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price">500-900 zł</span>
+                            <span class="time">1 dzień</span>
+                        </div>
+                        <a href="4-Telegram-Bot/README.md" class="btn-demo" target="_blank" title="Zobacz dokumentację bota Telegram">
+                            <i class="fas fa-book"></i> Zobacz Dokumentację
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5: Excel Automation -->
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <i class="fas fa-file-excel fa-5x"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Automatyzacja Excel</h3>
+                        <p>Narzędzie do łączenia, filtrowania i analizy danych</p>
+                        <ul class="tech-stack">
+                            <li><i class="fab fa-python"></i> Python</li>
+                            <li><i class="fas fa-table"></i> Pandas</li>
+                        </ul>
+                        <div class="card-features">
+                            <span><i class="fas fa-check"></i> GUI</span>
+                            <span><i class="fas fa-check"></i> Raporty</span>
+                            <span><i class="fas fa-check"></i> Batch</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price">400-800 zł</span>
+                            <span class="time">1-2 dni</span>
+                        </div>
+                        <a href="3-Excel-Automation/README.md" class="btn-demo" target="_blank" title="Zobacz dokumentację narzędzia Excel">
+                            <i class="fas fa-book"></i> Zobacz Dokumentację
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 6: OLX Scraper -->
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <i class="fas fa-search fa-5x"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Scraper OLX</h3>
+                        <p>Automatyczne zbieranie ogłoszeń z OLX do Excel</p>
+                        <ul class="tech-stack">
+                            <li><i class="fab fa-python"></i> Python</li>
+                            <li><i class="fas fa-spider"></i> Scraping</li>
+                        </ul>
+                        <div class="card-features">
+                            <span><i class="fas fa-check"></i> Filtry</span>
+                            <span><i class="fas fa-check"></i> Excel export</span>
+                            <span><i class="fas fa-check"></i> Scheduling</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price">300-600 zł</span>
+                            <span class="time">1 dzień</span>
+                        </div>
+                        <a href="1-OLX-Scraper/README.md" class="btn-demo" target="_blank" title="Zobacz dokumentację scrapera OLX">
+                            <i class="fas fa-book"></i> Zobacz Dokumentację
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 7: Landing Page Generator -->
+                <div class="portfolio-card featured">
+                    <div class="featured-badge">NOWOŚĆ</div>
+                    <div class="card-image">
+                        <i class="fas fa-paper-plane fa-5x"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Landing Page Generator</h3>
+                        <p>Twórz profesjonalne landing pages w 5 minut</p>
+                        <ul class="tech-stack">
+                            <li><i class="fas fa-laptop-code"></i> Web App</li>
+                            <li><i class="fas fa-eye"></i> Live Preview</li>
+                        </ul>
+                        <div class="card-features">
+                            <span><i class="fas fa-check"></i> 3 szablony</span>
+                            <span><i class="fas fa-check"></i> Live preview</span>
+                            <span><i class="fas fa-check"></i> Export HTML</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price">400-800 zł</span>
+                            <span class="time">1 dzień</span>
+                        </div>
+                        <a href="8-Landing-Page-Generator/index.html" class="btn-demo" target="_blank" title="Wypróbuj generator landing pages">
+                            <i class="fas fa-external-link-alt"></i> Sprawdź Przykład
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 8: Invoice Generator -->
+                <div class="portfolio-card featured">
+                    <div class="featured-badge">HIT!</div>
+                    <div class="card-image">
+                        <i class="fas fa-file-invoice fa-5x"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Generator Faktur VAT</h3>
+                        <p>Polski generator faktur z PDF - bez abonamentów!</p>
+                        <ul class="tech-stack">
+                            <li><i class="fas fa-file-pdf"></i> PDF Export</li>
+                            <li><i class="fas fa-calculator"></i> Auto VAT</li>
+                        </ul>
+                        <div class="card-features">
+                            <span><i class="fas fa-check"></i> VAT PL</span>
+                            <span><i class="fas fa-check"></i> Generuj PDF</span>
+                            <span><i class="fas fa-check"></i> LocalStorage</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price">200-400 zł</span>
+                            <span class="time">1 dzień</span>
+                        </div>
+                        <a href="9-Invoice-Generator/index.html" class="btn-demo" target="_blank" title="Wypróbuj generator faktur VAT">
+                            <i class="fas fa-external-link-alt"></i> Sprawdź Przykład
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 9: Leadsy Portal -->
+                <div class="portfolio-card featured">
+                    <div class="featured-badge">LIVE!</div>
+                    <div class="card-image">
+                        <i class="fas fa-rocket fa-5x"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Leadsy - Portal Marketingowy</h3>
+                        <p>Zaawansowany portal do generowania leadów i webinarów</p>
+                        <ul class="tech-stack">
+                            <li><i class="fas fa-server"></i> PHP Backend</li>
+                            <li><i class="fas fa-database"></i> Email System</li>
+                            <li><i class="fas fa-search"></i> SEO Pro</li>
+                        </ul>
+                        <div class="card-features">
+                            <span><i class="fas fa-check"></i> Multi-page</span>
+                            <span><i class="fas fa-check"></i> CMS</span>
+                            <span><i class="fas fa-check"></i> Analytics</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price">Pro Bono</span>
+                            <span class="time">Projekt charytatywny</span>
+                        </div>
+                        <a href="https://www.leadsy.pl/" class="btn-demo" target="_blank" title="Zobacz działający portal Leadsy" rel="noopener">
+                            <i class="fas fa-globe"></i> Zobacz Live
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 10: StronaHR -->
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <i class="fas fa-briefcase fa-5x"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>StronaHR - Portal B2B</h3>
+                        <p>Strona firmowa dla usług HR i szkoleń sprzedażowych</p>
+                        <ul class="tech-stack">
+                            <li><i class="fab fa-html5"></i> HTML5</li>
+                            <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                            <li><i class="fab fa-php"></i> PHP</li>
+                        </ul>
+                        <div class="card-features">
+                            <span><i class="fas fa-check"></i> Multi-page</span>
+                            <span><i class="fas fa-check"></i> Formularz PHP</span>
+                            <span><i class="fas fa-check"></i> SEO</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price">1500-2500 zł</span>
+                            <span class="time">5-7 dni</span>
+                        </div>
+                        <a href="10-StronaHR/index.html" class="btn-demo" target="_blank" title="Sprawdź stronę firmową StronaHR">
+                            <i class="fas fa-external-link-alt"></i> Sprawdź Przykład
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2>Co Mogę Dla Ciebie Zrobić?</h2>
+            <p class="section-subtitle">Kompleksowe usługi web development</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Strony WWW</h3>
+                    <p>Wizytówki, landing pages, portfolio. Responsywne, szybkie, SEO-friendly.</p>
+                    <a href="#contact" class="service-link">Zapytaj o wycenę <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Narzędzia Online</h3>
+                    <p>Kalkulatory, generatory, formularze. Wszystko co zwiększa engagement.</p>
+                    <a href="#contact" class="service-link">Zapytaj o wycenę <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>Automatyzacja</h3>
+                    <p>Boty, scrapery, integracje API. Oszczędzaj czas, zwiększ efektywność.</p>
+                    <a href="#contact" class="service-link">Zapytaj o wycenę <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Excel & Dane</h3>
+                    <p>Automatyzacja, raporty, dashboardy. Przekształć dane w decyzje.</p>
+                    <a href="#contact" class="service-link">Zapytaj o wycenę <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <h2>Transparentny Cennik</h2>
+            <p class="section-subtitle">Bez ukrytych kosztów, jasne zasady</p>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Start</h3>
+                    <div class="price-tag">
+                        <span class="currency">Od</span>
+                        <span class="amount">300</span>
+                        <span class="currency">zł</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Strona one-page</li>
+                        <li><i class="fas fa-check"></i> Responsywny design</li>
+                        <li><i class="fas fa-check"></i> Formularz kontaktowy</li>
+                        <li><i class="fas fa-check"></i> Hosting 1 rok GRATIS</li>
+                        <li><i class="fas fa-check"></i> 2-3 dni realizacji</li>
+                    </ul>
+                    <a href="#contact" class="btn-pricing">Zamów teraz</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="popular-badge">NAJPOPULARNIEJSZE</div>
+                    <h3>Pro</h3>
+                    <div class="price-tag">
+                        <span class="currency">Od</span>
+                        <span class="amount">800</span>
+                        <span class="currency">zł</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Strona wielostronicowa</li>
+                        <li><i class="fas fa-check"></i> Galeria + animacje</li>
+                        <li><i class="fas fa-check"></i> SEO optymalizacja</li>
+                        <li><i class="fas fa-check"></i> Google Maps</li>
+                        <li><i class="fas fa-check"></i> WhatsApp button</li>
+                        <li><i class="fas fa-check"></i> Hosting + Domena</li>
+                        <li><i class="fas fa-check"></i> 3-5 dni realizacji</li>
+                    </ul>
+                    <a href="#contact" class="btn-pricing">Zamów teraz</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Custom</h3>
+                    <div class="price-tag">
+                        <span class="currency">Od</span>
+                        <span class="amount">1500</span>
+                        <span class="currency">zł</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Zaawansowana funkcjonalność</li>
+                        <li><i class="fas fa-check"></i> Integracje (API, CRM)</li>
+                        <li><i class="fas fa-check"></i> Panel administracyjny</li>
+                        <li><i class="fas fa-check"></i> Bazy danych</li>
+                        <li><i class="fas fa-check"></i> Dedykowane rozwiązania</li>
+                        <li><i class="fas fa-check"></i> Wsparcie techniczne</li>
+                        <li><i class="fas fa-check"></i> 5-14 dni realizacji</li>
+                    </ul>
+                    <a href="#contact" class="btn-pricing">Porozmawiajmy</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="popular-badge">ENTERPRISE</div>
+                    <h3>Portal / System</h3>
+                    <div class="price-tag">
+                        <span class="currency">Od</span>
+                        <span class="amount">2500</span>
+                        <span class="currency">zł</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Pełny portal biznesowy</li>
+                        <li><i class="fas fa-check"></i> PHP Backend + Email</li>
+                        <li><i class="fas fa-check"></i> CMS / Panel admina</li>
+                        <li><i class="fas fa-check"></i> Zaawansowane SEO</li>
+                        <li><i class="fas fa-check"></i> Google Analytics</li>
+                        <li><i class="fas fa-check"></i> Multi-page (10+ stron)</li>
+                        <li><i class="fas fa-check"></i> 7-14 dni realizacji</li>
+                    </ul>
+                    <a href="#contact" class="btn-pricing">Wycena indywidualna</a>
+                </div>
+            </div>
+
+            <div class="pricing-note">
+                <p><i class="fas fa-info-circle"></i> Ceny są orientacyjne. Dokładna wycena po omówieniu wymagań projektu.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Skontaktuj Się</h2>
+            <p class="section-subtitle">Odpowiadam w ciągu 24h</p>
+
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>kontakt@twojeimie.pl</p>
+                        <a href="mailto:kontakt@twojeimie.pl">Napisz maila</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Telefon</h3>
+                        <p>+48 123 456 789</p>
+                        <a href="tel:+48123456789">Zadzwoń</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <i class="fab fa-whatsapp"></i>
+                        <h3>WhatsApp</h3>
+                        <p>Szybki kontakt</p>
+                        <a href="https://wa.me/48123456789">Napisz na WhatsApp</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <i class="fab fa-telegram"></i>
+                        <h3>Telegram</h3>
+                        <p>@twojeimie</p>
+                        <a href="https://t.me/twojeimie">Telegram</a>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Imię i Nazwisko</label>
+                            <input type="text" id="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Typ usługi</label>
+                            <select id="service" required>
+                                <option value="">Wybierz...</option>
+                                <option value="website">Strona WWW</option>
+                                <option value="tool">Narzędzie online</option>
+                                <option value="bot">Bot/Automatyzacja</option>
+                                <option value="excel">Excel/Dane</option>
+                                <option value="other">Inne</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Wiadomość</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-paper-plane"></i> Wyślij Wiadomość
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-code"></i> TwojeImię.dev</h3>
+                    <p>Freelance Web Developer</p>
+                    <p>Tworzę strony i narzędzia dla małych i średnich firm</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Usługi</h4>
+                    <ul>
+                        <li><a href="#portfolio">Strony WWW</a></li>
+                        <li><a href="#portfolio">Narzędzia Online</a></li>
+                        <li><a href="#portfolio">Automatyzacja</a></li>
+                        <li><a href="#pricing">Cennik</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> kontakt@twojeimie.pl</li>
+                        <li><i class="fas fa-phone"></i> +48 123 456 789</li>
+                        <li><i class="fab fa-whatsapp"></i> WhatsApp</li>
+                        <li><i class="fab fa-telegram"></i> @twojeimie</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Social Media</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/twojeimie" title="GitHub" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/twojeimie" title="LinkedIn" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://facebook.com/twojeimie" title="Facebook" aria-label="Facebook Page"><i class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com/twojeimie" title="Instagram" aria-label="Instagram Profile"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 TwojeImię.dev - Wszelkie prawa zastrzeżone</p>
+                <p>Made with <i class="fas fa-heart"></i> in Poland</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Rezerwacji Online - Umów wizytę w 3 krokach</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-calendar-check"></i>
+                <h1>BookEasy</h1>
+            </div>
+            <nav class="nav">
+                <a href="#rezerwacja" class="nav-link active">Umów wizytę</a>
+                <a href="#admin" class="nav-link">Panel Admin</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Zarezerwuj wizytę online</h2>
+                <p>Szybko, wygodnie i bez telefonów. Wybierz termin który Ci odpowiada.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <strong>2,500+</strong>
+                            <span>Zadowolonych klientów</span>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>24/7</strong>
+                            <span>Rezerwacja online</span>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-star"></i>
+                        <div>
+                            <strong>4.9/5</strong>
+                            <span>Średnia ocen</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Booking Section -->
+    <section class="booking-section" id="rezerwacja">
+        <div class="container">
+            <div class="booking-container">
+                <!-- Progress Steps -->
+                <div class="progress-steps">
+                    <div class="step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-info">
+                            <span class="step-title">Wybierz usługę</span>
+                            <span class="step-desc">Rodzaj wizyty</span>
+                        </div>
+                    </div>
+                    <div class="step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-info">
+                            <span class="step-title">Wybierz termin</span>
+                            <span class="step-desc">Data i godzina</span>
+                        </div>
+                    </div>
+                    <div class="step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-info">
+                            <span class="step-title">Twoje dane</span>
+                            <span class="step-desc">Potwierdź rezerwację</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 1: Select Service -->
+                <div class="booking-step" id="step1" style="display: block;">
+                    <h3 class="step-heading">
+                        <i class="fas fa-list"></i>
+                        Wybierz usługę
+                    </h3>
+                    <div class="services-grid">
+                        <div class="service-card" data-service="haircut" data-duration="45" data-price="80">
+                            <div class="service-icon">
+                                <i class="fas fa-cut"></i>
+                            </div>
+                            <h4>Strzyżenie</h4>
+                            <p>Profesjonalne strzyżenie</p>
+                            <div class="service-meta">
+                                <span><i class="fas fa-clock"></i> 45 min</span>
+                                <span><i class="fas fa-tag"></i> 80 zł</span>
+                            </div>
+                        </div>
+                        <div class="service-card" data-service="coloring" data-duration="90" data-price="150">
+                            <div class="service-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h4>Koloryzacja</h4>
+                            <p>Farbowanie włosów</p>
+                            <div class="service-meta">
+                                <span><i class="fas fa-clock"></i> 90 min</span>
+                                <span><i class="fas fa-tag"></i> 150 zł</span>
+                            </div>
+                        </div>
+                        <div class="service-card" data-service="styling" data-duration="60" data-price="100">
+                            <div class="service-icon">
+                                <i class="fas fa-spray-can"></i>
+                            </div>
+                            <h4>Stylizacja</h4>
+                            <p>Układanie i stylizacja</p>
+                            <div class="service-meta">
+                                <span><i class="fas fa-clock"></i> 60 min</span>
+                                <span><i class="fas fa-tag"></i> 100 zł</span>
+                            </div>
+                        </div>
+                        <div class="service-card" data-service="massage" data-duration="60" data-price="120">
+                            <div class="service-icon">
+                                <i class="fas fa-spa"></i>
+                            </div>
+                            <h4>Masaż głowy</h4>
+                            <p>Relaksujący masaż</p>
+                            <div class="service-meta">
+                                <span><i class="fas fa-clock"></i> 60 min</span>
+                                <span><i class="fas fa-tag"></i> 120 zł</span>
+                            </div>
+                        </div>
+                        <div class="service-card" data-service="treatment" data-duration="75" data-price="200">
+                            <div class="service-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h4>Zabieg regeneracyjny</h4>
+                            <p>Profesjonalna pielęgnacja</p>
+                            <div class="service-meta">
+                                <span><i class="fas fa-clock"></i> 75 min</span>
+                                <span><i class="fas fa-tag"></i> 200 zł</span>
+                            </div>
+                        </div>
+                        <div class="service-card" data-service="consultation" data-duration="30" data-price="50">
+                            <div class="service-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h4>Konsultacja</h4>
+                            <p>Bezpłatna konsultacja</p>
+                            <div class="service-meta">
+                                <span><i class="fas fa-clock"></i> 30 min</span>
+                                <span><i class="fas fa-tag"></i> 50 zł</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Select Date & Time -->
+                <div class="booking-step" id="step2" style="display: none;">
+                    <h3 class="step-heading">
+                        <i class="fas fa-calendar-alt"></i>
+                        Wybierz datę i godzinę
+                    </h3>
+                    
+                    <div class="datetime-container">
+                        <!-- Calendar -->
+                        <div class="calendar-section">
+                            <div class="calendar-header">
+                                <button class="calendar-nav" id="prevMonth">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <h4 id="currentMonth">Listopad 2025</h4>
+                                <button class="calendar-nav" id="nextMonth">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="calendar-weekdays">
+                                <div>Pn</div>
+                                <div>Wt</div>
+                                <div>Śr</div>
+                                <div>Cz</div>
+                                <div>Pt</div>
+                                <div>So</div>
+                                <div>Nd</div>
+                            </div>
+                            <div class="calendar-days" id="calendarDays">
+                                <!-- Days will be generated by JS -->
+                            </div>
+                        </div>
+
+                        <!-- Time Slots -->
+                        <div class="time-section">
+                            <h4>Dostępne godziny</h4>
+                            <div class="time-info">
+                                <p id="selectedDateInfo">Wybierz datę z kalendarza</p>
+                            </div>
+                            <div class="time-slots" id="timeSlots">
+                                <!-- Time slots will be generated by JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Contact Details -->
+                <div class="booking-step" id="step3" style="display: none;">
+                    <h3 class="step-heading">
+                        <i class="fas fa-user"></i>
+                        Twoje dane kontaktowe
+                    </h3>
+                    
+                    <!-- Booking Summary -->
+                    <div class="booking-summary">
+                        <h4><i class="fas fa-clipboard-list"></i> Podsumowanie rezerwacji</h4>
+                        <div class="summary-content">
+                            <div class="summary-item">
+                                <span class="summary-label">Usługa:</span>
+                                <span class="summary-value" id="summaryService">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Data:</span>
+                                <span class="summary-value" id="summaryDate">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Godzina:</span>
+                                <span class="summary-value" id="summaryTime">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Czas trwania:</span>
+                                <span class="summary-value" id="summaryDuration">-</span>
+                            </div>
+                            <div class="summary-item total">
+                                <span class="summary-label">Cena:</span>
+                                <span class="summary-value" id="summaryPrice">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <form class="contact-form" id="bookingForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Imię *</label>
+                                <input type="text" id="firstName" required placeholder="Jan">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Nazwisko *</label>
+                                <input type="text" id="lastName" required placeholder="Kowalski">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" required placeholder="jan@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon *</label>
+                                <input type="tel" id="phone" required placeholder="+48 123 456 789">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Dodatkowe uwagi (opcjonalnie)</label>
+                            <textarea id="notes" rows="3" placeholder="Napisz jeśli masz jakieś specjalne wymagania..."></textarea>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" id="terms" required>
+                                <span>Akceptuję <a href="#" target="_blank">regulamin</a> i <a href="#" target="_blank">politykę prywatności</a> *</span>
+                            </label>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" id="newsletter">
+                                <span>Chcę otrzymywać informacje o promocjach i nowościach</span>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="booking-actions">
+                    <button class="btn btn-secondary" id="prevBtn" style="display: none;">
+                        <i class="fas fa-arrow-left"></i>
+                        Wstecz
+                    </button>
+                    <button class="btn btn-primary" id="nextBtn">
+                        Dalej
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn btn-success" id="submitBtn" style="display: none;">
+                        <i class="fas fa-check"></i>
+                        Potwierdź rezerwację
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Panel Section -->
+    <section class="admin-section" id="admin" style="display: none;">
+        <div class="container">
+            <div class="admin-header">
+                <h2>
+                    <i class="fas fa-cog"></i>
+                    Panel Administracyjny
+                </h2>
+                <div class="admin-actions">
+                    <button class="btn btn-secondary" id="exportBtn">
+                        <i class="fas fa-download"></i>
+                        Eksport CSV
+                    </button>
+                    <button class="btn btn-danger" id="clearAllBtn">
+                        <i class="fas fa-trash"></i>
+                        Wyczyść wszystkie
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="admin-filters">
+                <div class="filter-group">
+                    <label>Filtruj po dacie:</label>
+                    <input type="date" id="filterDate">
+                </div>
+                <div class="filter-group">
+                    <label>Filtruj po usłudze:</label>
+                    <select id="filterService">
+                        <option value="">Wszystkie</option>
+                        <option value="haircut">Strzyżenie</option>
+                        <option value="coloring">Koloryzacja</option>
+                        <option value="styling">Stylizacja</option>
+                        <option value="massage">Masaż głowy</option>
+                        <option value="treatment">Zabieg regeneracyjny</option>
+                        <option value="consultation">Konsultacja</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Status:</label>
+                    <select id="filterStatus">
+                        <option value="">Wszystkie</option>
+                        <option value="pending">Oczekujące</option>
+                        <option value="confirmed">Potwierdzone</option>
+                        <option value="cancelled">Anulowane</option>
+                    </select>
+                </div>
+                <button class="btn btn-secondary" id="resetFilters">
+                    <i class="fas fa-redo"></i>
+                    Reset
+                </button>
+            </div>
+
+            <!-- Bookings Table -->
+            <div class="bookings-table-container">
+                <table class="bookings-table" id="bookingsTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Data rezerwacji</th>
+                            <th>Klient</th>
+                            <th>Email</th>
+                            <th>Telefon</th>
+                            <th>Usługa</th>
+                            <th>Termin</th>
+                            <th>Godzina</th>
+                            <th>Cena</th>
+                            <th>Status</th>
+                            <th>Akcje</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bookingsTableBody">
+                        <!-- Bookings will be loaded here -->
+                    </tbody>
+                </table>
+                <div class="empty-admin" id="emptyAdmin">
+                    <i class="fas fa-inbox"></i>
+                    <p>Brak rezerwacji do wyświetlenia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content success-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Rezerwacja potwierdzona!</h3>
+            <p>Dziękujemy za rezerwację. Potwierdzenie zostało wysłane na Twój adres email.</p>
+            <div class="booking-details" id="confirmationDetails">
+                <!-- Details will be inserted here -->
+            </div>
+            <button class="btn btn-primary" id="closeSuccessModal">
+                <i class="fas fa-home"></i>
+                Wróć do strony głównej
+            </button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

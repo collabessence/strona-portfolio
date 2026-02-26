@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warsztat Samochodowy - Profesjonalne Naprawy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-car"></i>
+                <span>AUTO-SERWIS</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Start</a></li>
+                <li><a href="#services">Usługi</a></li>
+                <li><a href="#pricing">Cennik</a></li>
+                <li><a href="#about">O Nas</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Twój Samochód w Dobrych Rękach</h1>
+            <p class="hero-subtitle">Profesjonalne naprawy i serwis samochodowy</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Umów Wizytę</a>
+                <a href="tel:+48123456789" class="btn btn-secondary">
+                    <i class="fas fa-phone"></i> Zadzwoń Teraz
+                </a>
+            </div>
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <i class="fas fa-tools"></i>
+                    <span>Wieloletnie doświadczenie</span>
+                </div>
+                <div class="hero-feature">
+                    <i class="fas fa-certificate"></i>
+                    <span>Certyfikowani mechanicy</span>
+                </div>
+                <div class="hero-feature">
+                    <i class="fas fa-clock"></i>
+                    <span>Szybka realizacja</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nasze Usługi</h2>
+                <p>Kompleksowy serwis dla Twojego pojazdu</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-oil-can"></i>
+                    </div>
+                    <h3>Wymiana Oleju</h3>
+                    <p>Profesjonalna wymiana oleju i filtrów</p>
+                    <ul class="service-list">
+                        <li>Olej silnikowy</li>
+                        <li>Filtry oleju</li>
+                        <li>Płyn chłodniczy</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brake-warning"></i>
+                    </div>
+                    <h3>Układ Hamulcowy</h3>
+                    <p>Naprawa i konserwacja hamulców</p>
+                    <ul class="service-list">
+                        <li>Klocki hamulcowe</li>
+                        <li>Tarcze hamulcowe</li>
+                        <li>Płyn hamulcowy</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3>Naprawa Silnika</h3>
+                    <p>Diagnostyka i naprawa</p>
+                    <ul class="service-list">
+                        <li>Diagnostyka komputerowa</li>
+                        <li>Naprawy mechaniczne</li>
+                        <li>Regulacja zaworów</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tire"></i>
+                    </div>
+                    <h3>Wymiana Opon</h3>
+                    <p>Sezonowa wymiana i wyważanie</p>
+                    <ul class="service-list">
+                        <li>Wymiana opon</li>
+                        <li>Wyważanie kół</li>
+                        <li>Geometria kół</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-air-conditioner"></i>
+                    </div>
+                    <h3>Klimatyzacja</h3>
+                    <p>Serwis i naprawa klimatyzacji</p>
+                    <ul class="service-list">
+                        <li>Ozonowanie</li>
+                        <li>Uzupełnienie czynnika</li>
+                        <li>Naprawa usterek</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-battery-full"></i>
+                    </div>
+                    <h3>Elektryka</h3>
+                    <p>Diagnostyka układów elektrycznych</p>
+                    <ul class="service-list">
+                        <li>Akumulatory</li>
+                        <li>Alternatory</li>
+                        <li>Rozruszniki</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Przykładowy Cennik</h2>
+                <p>Konkurencyjne ceny i przejrzyste zasady rozliczeń</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Przegląd Podstawowy</h3>
+                        <div class="price">
+                            <span class="amount">150</span>
+                            <span class="currency">zł</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Wymiana oleju</li>
+                        <li><i class="fas fa-check"></i> Wymiana filtra oleju</li>
+                        <li><i class="fas fa-check"></i> Kontrola płynów</li>
+                        <li><i class="fas fa-check"></i> Sprawdzenie oświetlenia</li>
+                        <li><i class="fas fa-check"></i> Raport z przeglądu</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Umów Wizytę</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="badge">Popularne</div>
+                    <div class="pricing-header">
+                        <h3>Przegląd Rozszerzony</h3>
+                        <div class="price">
+                            <span class="amount">350</span>
+                            <span class="currency">zł</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Wszystko z podstawowego</li>
+                        <li><i class="fas fa-check"></i> Diagnostyka komputerowa</li>
+                        <li><i class="fas fa-check"></i> Kontrola zawieszenia</li>
+                        <li><i class="fas fa-check"></i> Kontrola układu hamulcowego</li>
+                        <li><i class="fas fa-check"></i> Kontrola klimatyzacji</li>
+                        <li><i class="fas fa-check"></i> Mycie auta gratis</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Umów Wizytę</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Usługi Dodatkowe</h3>
+                        <div class="price">
+                            <span class="amount">od 50</span>
+                            <span class="currency">zł</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Wymiana klocków - 200 zł</li>
+                        <li><i class="fas fa-check"></i> Wymiana tarcz - 350 zł</li>
+                        <li><i class="fas fa-check"></i> Wymiana opon - 80 zł</li>
+                        <li><i class="fas fa-check"></i> Wyważanie kół - 60 zł</li>
+                        <li><i class="fas fa-check"></i> Geometria - 120 zł</li>
+                        <li><i class="fas fa-check"></i> + inne usługi</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Zapytaj o Cenę</a>
+                </div>
+            </div>
+
+            <div class="pricing-note">
+                <p><i class="fas fa-info-circle"></i> Ceny są orientacyjne i mogą się różnić w zależności od modelu pojazdu i zakresu prac. Dokładną wycenę otrzymasz po diagnostyce.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-wrench"></i>
+                        <p>Zdjęcie warsztatu</p>
+                    </div>
+                </div>
+                
+                <div class="about-text">
+                    <h2>Dlaczego My?</h2>
+                    <p>Od ponad 15 lat profesjonalnie zajmujemy się naprawą i serwisem pojazdów. Nasz zespół to doświadczeni mechanicy z pasją do motoryzacji.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Certyfikowani Specjaliści</h4>
+                                <p>Regularnie szkolimy nasz personel</p>
+                            </div>
+                        </div>
+
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-check"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Gwarancja na Usługi</h4>
+                                <p>Wszystkie naprawy objęte gwarancją</p>
+                            </div>
+                        </div>
+
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Nowoczesny Sprzęt</h4>
+                                <p>Diagnostyka komputerowa i profesjonalne narzędzia</p>
+                            </div>
+                        </div>
+
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Szybka Realizacja</h4>
+                                <p>Większość napraw w ciągu 24h</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Lat Doświadczenia</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">10k+</div>
+                            <div class="stat-label">Naprawionych Aut</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Zadowolonych Klientów</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Skontaktuj Się z Nami</h2>
+                <p>Umów wizytę lub zapytaj o szczegóły</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Adres</h4>
+                        <p>ul. Mechaniczna 45<br>00-000 Warszawa</p>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-phone"></i>
+                        <h4>Telefon</h4>
+                        <p>+48 123 456 789</p>
+                        <a href="tel:+48123456789" class="btn btn-sm">Zadzwoń</a>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p>kontakt@warsztat.pl</p>
+                        <a href="mailto:kontakt@warsztat.pl" class="btn btn-sm">Napisz</a>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h4>Godziny Otwarcia</h4>
+                        <p>
+                            <strong>Pn-Pt:</strong> 8:00 - 18:00<br>
+                            <strong>Sobota:</strong> 9:00 - 14:00<br>
+                            <strong>Niedziela:</strong> Zamknięte
+                        </p>
+                    </div>
+
+                    <div class="map-placeholder">
+                        <i class="fas fa-map"></i>
+                        <p>Tutaj umieść Google Maps</p>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Formularz Kontaktowy</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Imię i nazwisko *" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" placeholder="Telefon *" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="carBrand" name="carBrand" placeholder="Marka auta">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="carModel" name="carModel" placeholder="Model">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="service" name="service" required aria-label="Wybierz usługę">
+                                <option value="">Wybierz usługę *</option>
+                                <option value="przegląd">Przegląd okresowy</option>
+                                <option value="diagnostyka">Diagnostyka</option>
+                                <option value="naprawa">Naprawa</option>
+                                <option value="wymiana-oleju">Wymiana oleju</option>
+                                <option value="wymiana-opon">Wymiana opon</option>
+                                <option value="klimatyzacja">Klimatyzacja</option>
+                                <option value="inne">Inne</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Opisz problem lub dodatkowe informacje"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Wyślij Zapytanie</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Google Maps -->
+            <div class="map-container">
+                <h3><i class="fas fa-map-marked-alt"></i> Nasza Lokalizacja</h3>
+                <div class="map-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.2779489478067!2d21.01222671573324!3d52.22967997976037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x72f0be2a88ead3fc!2sPa%C5%82ac%20Kultury%20i%20Nauki!5e0!3m2!1spl!2spl!4v1234567890123!5m2!1spl!2spl"
+                        width="100%" 
+                        height="400" 
+                        style="border:0; border-radius: 10px;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        title="Mapa lokalizacji warsztatu">
+                    </iframe>
+                    <p class="map-hint">
+                        <i class="fas fa-route"></i> 
+                        Kliknij mapę aby otworzyć nawigację Google Maps
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Warsztat Samochodowy</h4>
+                    <p>Profesjonalny serwis samochodowy z wieloletnim doświadczeniem.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/warsztat" title="Facebook" aria-label="Facebook Page"><i class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com/warsztat" title="Instagram" aria-label="Instagram Profile"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/warsztat" title="YouTube" aria-label="YouTube Channel"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Szybkie Linki</h4>
+                    <ul>
+                        <li><a href="#services">Usługi</a></li>
+                        <li><a href="#pricing">Cennik</a></li>
+                        <li><a href="#about">O Nas</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +48 123 456 789</li>
+                        <li><i class="fas fa-envelope"></i> kontakt@warsztat.pl</li>
+                        <li><i class="fas fa-map-marker-alt"></i> ul. Mechaniczna 45</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Warsztat Samochodowy. Wszystkie prawa zastrzeżone.</p>
+                <p>Wykonanie: Twoje Imię - Strony Internetowe</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/48123456789?text=Dzień%20dobry!%20Potrzebuję%20pomocy%20z%20samochodem" 
+       class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Kontakt WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-consent">
+        <div class="cookie-content">
+            <p>
+                <i class="fas fa-cookie-bite"></i>
+                Ta strona używa plików cookie, aby zapewnić najlepszą jakość usług. 
+                Kontynuując przeglądanie, zgadzasz się na ich użycie.
+            </p>
+            <button id="acceptCookies" class="btn-cookie">
+                Rozumiem <i class="fas fa-check"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

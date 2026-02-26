@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://stronahr.pl/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Blocked directories
+Disallow: /css/
+Disallow: /js/

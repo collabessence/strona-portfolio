@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Faktur PL - Darmowy generator faktur VAT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <h1>Generator Faktur PL</h1>
+            </div>
+            <p class="tagline">Darmowy, prosty generator faktur VAT zgodny z polskim prawem</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Invoice Form -->
+            <div class="invoice-builder">
+                <!-- Seller Info -->
+                <section class="form-section">
+                    <h2><i class="fas fa-user-tie"></i> Dane Sprzedawcy</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="sellerName">Nazwa firmy / Imię i nazwisko *</label>
+                            <input type="text" id="sellerName" required placeholder="Jan Kowalski / Firma Sp. z o.o.">
+                        </div>
+                        <div class="form-group">
+                            <label for="sellerNIP">NIP *</label>
+                            <input type="text" id="sellerNIP" required placeholder="123-456-78-90" maxlength="13">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="sellerAddress">Ulica i nr *</label>
+                            <input type="text" id="sellerAddress" required placeholder="ul. Główna 12/5">
+                        </div>
+                        <div class="form-group">
+                            <label for="sellerPostal">Kod pocztowy *</label>
+                            <input type="text" id="sellerPostal" required placeholder="00-001" maxlength="6">
+                        </div>
+                        <div class="form-group">
+                            <label for="sellerCity">Miasto *</label>
+                            <input type="text" id="sellerCity" required placeholder="Warszawa">
+                        </div>
+                        <div class="form-group">
+                            <label for="sellerPhone">Telefon</label>
+                            <input type="tel" id="sellerPhone" placeholder="+48 123 456 789">
+                        </div>
+                        <div class="form-group">
+                            <label for="sellerEmail">Email</label>
+                            <input type="email" id="sellerEmail" placeholder="kontakt@firma.pl">
+                        </div>
+                        <div class="form-group">
+                            <label for="sellerBank">Bank</label>
+                            <input type="text" id="sellerBank" placeholder="PKO BP">
+                        </div>
+                        <div class="form-group">
+                            <label for="sellerAccount">Nr konta *</label>
+                            <input type="text" id="sellerAccount" required placeholder="12 3456 7890 1234 5678 9012 3456" maxlength="32">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Buyer Info -->
+                <section class="form-section">
+                    <h2><i class="fas fa-user"></i> Dane Nabywcy</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="buyerName">Nazwa firmy / Imię i nazwisko *</label>
+                            <input type="text" id="buyerName" required placeholder="Klient Sp. z o.o.">
+                        </div>
+                        <div class="form-group">
+                            <label for="buyerNIP">NIP</label>
+                            <input type="text" id="buyerNIP" placeholder="987-654-32-10" maxlength="13">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="buyerAddress">Ulica i nr *</label>
+                            <input type="text" id="buyerAddress" required placeholder="ul. Handlowa 5">
+                        </div>
+                        <div class="form-group">
+                            <label for="buyerPostal">Kod pocztowy *</label>
+                            <input type="text" id="buyerPostal" required placeholder="01-234" maxlength="6">
+                        </div>
+                        <div class="form-group">
+                            <label for="buyerCity">Miasto *</label>
+                            <input type="text" id="buyerCity" required placeholder="Kraków">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Invoice Details -->
+                <section class="form-section">
+                    <h2><i class="fas fa-file-alt"></i> Szczegóły Faktury</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="invoiceNumber">Numer faktury *</label>
+                            <input type="text" id="invoiceNumber" required placeholder="FV/2024/01/001">
+                        </div>
+                        <div class="form-group">
+                            <label for="invoiceDate">Data wystawienia *</label>
+                            <input type="date" id="invoiceDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="saleDate">Data sprzedaży *</label>
+                            <input type="date" id="saleDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="paymentDeadline">Termin płatności *</label>
+                            <input type="date" id="paymentDeadline" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="paymentMethod">Sposób płatności *</label>
+                            <select id="paymentMethod" required>
+                                <option value="przelew">Przelew</option>
+                                <option value="gotowka">Gotówka</option>
+                                <option value="karta">Karta płatnicza</option>
+                                <option value="blik">BLIK</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Items -->
+                <section class="form-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-list"></i> Pozycje na Fakturze</h2>
+                        <button type="button" id="addItemBtn" class="btn btn-success">
+                            <i class="fas fa-plus"></i> Dodaj Pozycję
+                        </button>
+                    </div>
+                    
+                    <div id="itemsContainer">
+                        <!-- Items will be added here dynamically -->
+                    </div>
+
+                    <div class="totals-section">
+                        <div class="totals-grid">
+                            <div class="total-row">
+                                <span>Suma netto:</span>
+                                <span id="totalNet">0.00 PLN</span>
+                            </div>
+                            <div class="total-row">
+                                <span>VAT:</span>
+                                <span id="totalVAT">0.00 PLN</span>
+                            </div>
+                            <div class="total-row total-gross">
+                                <span>Suma brutto:</span>
+                                <span id="totalGross">0.00 PLN</span>
+                            </div>
+                        </div>
+                        <div class="total-words" id="totalWords">
+                            Słownie: zero złotych 00/100
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Notes -->
+                <section class="form-section">
+                    <h2><i class="fas fa-sticky-note"></i> Uwagi (opcjonalnie)</h2>
+                    <div class="form-group">
+                        <textarea id="notes" rows="3" placeholder="Dodatkowe informacje..."></textarea>
+                    </div>
+                </section>
+
+                <!-- Actions -->
+                <div class="action-buttons">
+                    <button type="button" id="previewBtn" class="btn btn-secondary">
+                        <i class="fas fa-eye"></i> Podgląd
+                    </button>
+                    <button type="button" id="saveDataBtn" class="btn btn-info">
+                        <i class="fas fa-save"></i> Zapisz Dane
+                    </button>
+                    <button type="button" id="loadDataBtn" class="btn btn-info">
+                        <i class="fas fa-upload"></i> Wczytaj Dane
+                    </button>
+                    <button type="button" id="generateBtn" class="btn btn-primary">
+                        <i class="fas fa-file-pdf"></i> Generuj PDF
+                    </button>
+                </div>
+            </div>
+
+            <!-- Preview -->
+            <div class="invoice-preview" id="invoicePreview">
+                <div class="preview-header">
+                    <h3><i class="fas fa-eye"></i> Podgląd Faktury</h3>
+                    <button type="button" id="closePreviewBtn" class="btn-close" title="Zamknij" aria-label="Zamknij podgląd faktury">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="preview-content" id="previewContent">
+                    <!-- Invoice preview will be rendered here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Generator Faktur PL | Darmowy generator faktur VAT</p>
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-question-circle"></i> Pomoc</a>
+                <a href="#"><i class="fas fa-shield-alt"></i> Zgodność z prawem</a>
+                <a href="#"><i class="fas fa-file-alt"></i> Regulamin</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Wizytówek PRO | Zaprojektuj profesjonalną wizytówkę online</title>
+    <meta name="description" content="Zaawansowany generator wizytówek online. 8 profesjonalnych szablonów, wybór fontów, kolory, gradienty, logo, QR code. Eksport do PNG.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700&family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;600;700&family=Work+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-id-card"></i>
+                    <span>Generator Wizytówek <span class="pro-badge">PRO</span></span>
+                </div>
+                <nav class="nav">
+                    <a href="#galeria" class="nav-link">Szablony</a>
+                    <a href="#personalizacja" class="nav-link">Personalizacja</a>
+                    <a href="#podglad" class="nav-link">Podgląd</a>
+                    <button class="btn btn-primary" id="exportBtn">
+                        <i class="fas fa-download"></i> Pobierz PNG
+                    </button>
+                </nav>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#galeria" class="mobile-menu-link">Szablony</a>
+        <a href="#personalizacja" class="mobile-menu-link">Personalizacja</a>
+        <a href="#podglad" class="mobile-menu-link">Podgląd</a>
+        <button class="btn btn-primary btn-block" id="exportBtnMobile">
+            <i class="fas fa-download"></i> Pobierz PNG
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Generator Wizytówek <span class="gradient-text">PRO</span></h1>
+                <p class="hero-subtitle">Zaprojektuj profesjonalną wizytówkę w kilka minut. 8 nowoczesnych szablonów, pełna personalizacja, logo, QR code i więcej!</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <i class="fas fa-palette"></i>
+                        <span>8 Szablonów</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-font"></i>
+                        <span>8 Fontów</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-image"></i>
+                        <span>Logo & QR</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Orientacja</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+        <!-- Template Gallery -->
+        <section id="galeria" class="section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-th"></i> Wybierz Szablon
+                </h2>
+                <p class="section-subtitle">8 profesjonalnych projektów na każdą okazję</p>
+            </div>
+            <div class="template-gallery">
+                <div class="template-card active" data-template="modern">
+                    <div class="template-preview modern-preview">
+                        <div class="preview-name">Jan Kowalski</div>
+                        <div class="preview-role">Senior Developer</div>
+                    </div>
+                    <div class="template-info">
+                        <h3>Modern</h3>
+                        <p>Minimalistyczny i elegancki</p>
+                    </div>
+                </div>
+
+                <div class="template-card" data-template="elegant">
+                    <div class="template-preview elegant-preview">
+                        <div class="preview-name">Jan Kowalski</div>
+                        <div class="preview-role">Senior Developer</div>
+                    </div>
+                    <div class="template-info">
+                        <h3>Elegant</h3>
+                        <p>Klasyczny z akcentem</p>
+                    </div>
+                </div>
+
+                <div class="template-card" data-template="creative">
+                    <div class="template-preview creative-preview">
+                        <div class="preview-name">Jan Kowalski</div>
+                        <div class="preview-role">Senior Developer</div>
+                    </div>
+                    <div class="template-info">
+                        <h3>Creative</h3>
+                        <p>Odważny i kolorowy</p>
+                    </div>
+                </div>
+
+                <div class="template-card" data-template="corporate">
+                    <div class="template-preview corporate-preview">
+                        <div class="preview-name">Jan Kowalski</div>
+                        <div class="preview-role">Senior Developer</div>
+                    </div>
+                    <div class="template-info">
+                        <h3>Corporate</h3>
+                        <p>Profesjonalny biznes</p>
+                    </div>
+                </div>
+
+                <div class="template-card" data-template="minimal">
+                    <div class="template-preview minimal-preview">
+                        <div class="preview-name">Jan Kowalski</div>
+                        <div class="preview-role">Senior Developer</div>
+                    </div>
+                    <div class="template-info">
+                        <h3>Minimal</h3>
+                        <p>Czysty i prosty</p>
+                    </div>
+                </div>
+
+                <div class="template-card" data-template="gradient">
+                    <div class="template-preview gradient-preview">
+                        <div class="preview-name">Jan Kowalski</div>
+                        <div class="preview-role">Senior Developer</div>
+                    </div>
+                    <div class="template-info">
+                        <h3>Gradient</h3>
+                        <p>Nowoczesne gradienty</p>
+                    </div>
+                </div>
+
+                <div class="template-card" data-template="bold">
+                    <div class="template-preview bold-preview">
+                        <div class="preview-name">Jan Kowalski</div>
+                        <div class="preview-role">Senior Developer</div>
+                    </div>
+                    <div class="template-info">
+                        <h3>Bold</h3>
+                        <p>Mocny i wyrazisty</p>
+                    </div>
+                </div>
+
+                <div class="template-card" data-template="tech">
+                    <div class="template-preview tech-preview">
+                        <div class="preview-name">Jan Kowalski</div>
+                        <div class="preview-role">Senior Developer</div>
+                    </div>
+                    <div class="template-info">
+                        <h3>Tech</h3>
+                        <p>Dla branży IT</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personalization -->
+        <section id="personalizacja" class="section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-sliders-h"></i> Personalizacja
+                </h2>
+                <p class="section-subtitle">Dostosuj wizytówkę do swoich potrzeb</p>
+            </div>
+
+            <div class="personalization-grid">
+                <!-- Basic Info -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <i class="fas fa-user"></i>
+                        <h3>Podstawowe Informacje</h3>
+                    </div>
+                    <div class="panel-content">
+                        <div class="form-group">
+                            <label>Imię i Nazwisko</label>
+                            <input type="text" id="fullName" placeholder="Jan Kowalski" class="input" value="Jan Kowalski">
+                        </div>
+                        <div class="form-group">
+                            <label>Stanowisko / Zawód</label>
+                            <input type="text" id="position" placeholder="Senior Developer" class="input" value="Senior Developer">
+                        </div>
+                        <div class="form-group">
+                            <label>Firma / Organizacja</label>
+                            <input type="text" id="company" placeholder="Tech Solutions Sp. z o.o." class="input" value="Tech Solutions">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <i class="fas fa-address-book"></i>
+                        <h3>Dane Kontaktowe</h3>
+                    </div>
+                    <div class="panel-content">
+                        <div class="form-group">
+                            <label>Telefon</label>
+                            <input type="tel" id="phone" placeholder="+48 123 456 789" class="input" value="+48 123 456 789">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="email" placeholder="jan.kowalski@example.com" class="input" value="jan.kowalski@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Strona WWW</label>
+                            <input type="url" id="website" placeholder="www.example.com" class="input" value="www.example.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Adres</label>
+                            <input type="text" id="address" placeholder="ul. Przykładowa 1, 00-000 Warszawa" class="input" value="ul. Przykładowa 1, Warszawa">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Colors & Styling -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <i class="fas fa-palette"></i>
+                        <h3>Kolory & Styl</h3>
+                    </div>
+                    <div class="panel-content">
+                        <div class="form-group">
+                            <label>Font</label>
+                            <select id="fontFamily" class="select">
+                                <option value="'Roboto', sans-serif">Roboto (Modern)</option>
+                                <option value="'Montserrat', sans-serif">Montserrat (Bold)</option>
+                                <option value="'Playfair Display', serif">Playfair Display (Elegant)</option>
+                                <option value="'Open Sans', sans-serif">Open Sans (Clean)</option>
+                                <option value="'Lato', sans-serif">Lato (Neutral)</option>
+                                <option value="'Poppins', sans-serif">Poppins (Friendly)</option>
+                                <option value="'Inter', sans-serif">Inter (Tech)</option>
+                                <option value="'Work Sans', sans-serif">Work Sans (Professional)</option>
+                            </select>
+                        </div>
+
+                        <div class="color-grid">
+                            <div class="form-group">
+                                <label>Kolor Główny</label>
+                                <div class="color-input-wrapper">
+                                    <input type="color" id="primaryColor" value="#667eea" class="color-input">
+                                    <input type="text" id="primaryColorText" value="#667eea" class="input input-sm">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Kolor Drugorzędny</label>
+                                <div class="color-input-wrapper">
+                                    <input type="color" id="secondaryColor" value="#764ba2" class="color-input">
+                                    <input type="text" id="secondaryColorText" value="#764ba2" class="input input-sm">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Kolor Akcentu</label>
+                                <div class="color-input-wrapper">
+                                    <input type="color" id="accentColor" value="#f093fb" class="color-input">
+                                    <input type="text" id="accentColorText" value="#f093fb" class="input input-sm">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Kolor Tła</label>
+                                <div class="color-input-wrapper">
+                                    <input type="color" id="bgColor" value="#ffffff" class="color-input">
+                                    <input type="text" id="bgColorText" value="#ffffff" class="input input-sm">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="useGradient" checked>
+                                <span>Użyj gradientu (Kolor Główny → Drugorzędny)</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Logo & QR -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <i class="fas fa-image"></i>
+                        <h3>Logo & QR Code</h3>
+                    </div>
+                    <div class="panel-content">
+                        <div class="form-group">
+                            <label>Logo Firmy</label>
+                            <input type="file" id="logoUpload" accept="image/*" class="file-input">
+                            <div class="file-preview" id="logoPreview" style="display: none;">
+                                <img id="logoImage" alt="Logo">
+                                <button class="btn-remove" id="removeLogo">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="showQR">
+                                <span>Dodaj QR Code z danymi kontaktowymi</span>
+                            </label>
+                            <small class="help-text">QR code wygeneruje się automatycznie z Twoich danych</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layout -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <i class="fas fa-expand"></i>
+                        <h3>Układ & Rozmiar</h3>
+                    </div>
+                    <div class="panel-content">
+                        <div class="form-group">
+                            <label>Orientacja</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="orientation" value="horizontal" checked>
+                                    <span><i class="fas fa-grip-lines"></i> Pozioma (85×55mm)</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="orientation" value="vertical">
+                                    <span><i class="fas fa-grip-lines-vertical"></i> Pionowa (55×85mm)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Rozmiar Wizytówki</label>
+                            <select id="cardSize" class="select">
+                                <option value="standard">Standard (85×55mm)</option>
+                                <option value="large">Duża (90×50mm)</option>
+                                <option value="square">Kwadratowa (70×70mm)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <i class="fas fa-share-alt"></i>
+                        <h3>Social Media</h3>
+                    </div>
+                    <div class="panel-content">
+                        <div class="form-group">
+                            <label>LinkedIn</label>
+                            <input type="text" id="linkedin" placeholder="linkedin.com/in/username" class="input">
+                        </div>
+                        <div class="form-group">
+                            <label>GitHub</label>
+                            <input type="text" id="github" placeholder="github.com/username" class="input">
+                        </div>
+                        <div class="form-group">
+                            <label>Twitter</label>
+                            <input type="text" id="twitter" placeholder="twitter.com/username" class="input">
+                        </div>
+                        <div class="form-group">
+                            <label>Facebook</label>
+                            <input type="text" id="facebook" placeholder="facebook.com/username" class="input">
+                        </div>
+                        <div class="form-group">
+                            <label>Instagram</label>
+                            <input type="text" id="instagram" placeholder="instagram.com/username" class="input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preview -->
+        <section id="podglad" class="section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-eye"></i> Podgląd na Żywo
+                </h2>
+                <p class="section-subtitle">Twoja wizytówka aktualizuje się w czasie rzeczywistym</p>
+            </div>
+
+            <div class="preview-container">
+                <div class="preview-wrapper" id="previewWrapper">
+                    <!-- Business Card Preview -->
+                    <div class="business-card" id="businessCard">
+                        <!-- Content will be rendered by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="preview-actions">
+                    <button class="btn btn-secondary" id="resetBtn">
+                        <i class="fas fa-undo"></i> Resetuj
+                    </button>
+                    <button class="btn btn-primary btn-lg" id="exportBtnMain">
+                        <i class="fas fa-download"></i> Pobierz jako PNG (300 DPI)
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Generator Wizytówek PRO. Wszystkie prawa zastrzeżone.</p>
+            <div class="footer-links">
+                <a href="#">Polityka Prywatności</a>
+                <a href="#">Regulamin</a>
+                <a href="#">Kontakt</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
