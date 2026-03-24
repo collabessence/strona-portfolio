@@ -1,0 +1,161 @@
+---
+import { MapPin, Phone, Mail, Send } from '@lucide/astro';
+import GithubIcon from './icons/GithubIcon.astro';
+import LinkedinIcon from './icons/LinkedinIcon.astro';
+
+const contactInfo = [
+  { icon: MapPin, title: 'Lokalizacja', text: 'Praca zdalna' },
+  { icon: Phone, title: 'Telefon', text: '+48 727 705 045', sub: 'Pn–Pt: 9:00–18:00' },
+  { icon: Mail, title: 'Email', text: 'collabessence@gmail.com', sub: 'Odpowiadam w 24h' },
+];
+---
+
+<section id="contact" class="py-24 sm:py-32">
+  <div class="max-w-6xl mx-auto px-5">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <span class="reveal inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-xs font-semibold uppercase tracking-wider mb-4">
+        Kontakt
+      </span>
+      <h2 class="reveal reveal-delay-1 text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+        Napisz do mnie
+      </h2>
+      <p class="reveal reveal-delay-2 text-text-secondary max-w-xl mx-auto">
+        Masz pomysl na projekt? Chcesz wycene? Napisz — odpowiadam w ciagu 24h.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-5 gap-8 lg:gap-12">
+      <!-- Contact info -->
+      <div class="lg:col-span-2 space-y-4">
+        {contactInfo.map((info, i) => (
+          <div class={`reveal reveal-delay-${i + 1} flex items-start gap-4 p-5 rounded-xl border border-border bg-surface/50 hover:border-primary/30 transition-all`}>
+            <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <info.icon class="w-5 h-5 text-primary" />
+            </div>
+            <div>
+              <h3 class="font-semibold text-sm mb-1">{info.title}</h3>
+              <p class="text-sm text-text-secondary">{info.text}</p>
+              {info.sub && <p class="text-xs text-text-muted mt-0.5">{info.sub}</p>}
+            </div>
+          </div>
+        ))}
+
+        <!-- Social links -->
+        <div class="reveal reveal-delay-4 flex gap-3 pt-2">
+          <a
+            href="https://github.com/madone-dev"
+            target="_blank"
+            rel="noopener"
+            class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-border hover:border-primary/30 text-text-secondary hover:text-text transition-all text-sm"
+          >
+            <GithubIcon class="w-4 h-4" /> GitHub
+          </a>
+          <a
+            href="https://linkedin.com/in/madone-dev"
+            target="_blank"
+            rel="noopener"
+            class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-border hover:border-primary/30 text-text-secondary hover:text-text transition-all text-sm"
+          >
+            <LinkedinIcon class="w-4 h-4" /> LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact form -->
+      <form
+        id="contact-form"
+        class="reveal reveal-delay-2 lg:col-span-3 space-y-5 p-6 sm:p-8 rounded-2xl border border-border bg-surface/50"
+        action="https://formspree.io/f/YOUR_FORM_ID"
+        method="POST"
+      >
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="name" class="block text-sm font-medium text-text-secondary mb-2">Imie i nazwisko</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-text placeholder-text-muted focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-colors text-sm"
+              placeholder="Jan Kowalski"
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-text-secondary mb-2">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-text placeholder-text-muted focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-colors text-sm"
+              placeholder="jan@firma.pl"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="subject" class="block text-sm font-medium text-text-secondary mb-2">Temat</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            required
+            class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-text placeholder-text-muted focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-colors text-sm"
+            placeholder="Wycena strony internetowej"
+          />
+        </div>
+
+        <div>
+          <label for="message" class="block text-sm font-medium text-text-secondary mb-2">Wiadomosc</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-text placeholder-text-muted focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-colors text-sm resize-none"
+            placeholder="Opisz swoj projekt..."
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="group flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-3.5 rounded-full bg-primary hover:bg-primary-light text-white font-semibold transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/25"
+        >
+          <Send class="w-4 h-4" />
+          Wyslij wiadomosc
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '<span class="animate-pulse">Wysylanie...</span>';
+    btn.disabled = true;
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+
+      if (response.ok) {
+        btn.innerHTML = '<span class="text-green-400">Wyslano! Dziekuje.</span>';
+        form.reset();
+        setTimeout(() => { btn.innerHTML = originalText; btn.disabled = false; }, 3000);
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch {
+      btn.innerHTML = '<span class="text-red-400">Blad. Sprobuj ponownie.</span>';
+      setTimeout(() => { btn.innerHTML = originalText; btn.disabled = false; }, 3000);
+    }
+  });
+</script>

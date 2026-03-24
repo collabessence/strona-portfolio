@@ -1,0 +1,96 @@
+---
+import { Check } from '@lucide/astro';
+
+const plans = [
+  {
+    icon: '🏪',
+    title: 'Strona Wizytowka',
+    price: '500–1000 zl',
+    description: 'One-page z formularzem kontaktowym, galeria, responsywny design.',
+    time: '2–3 dni',
+    gradient: 'from-primary to-accent',
+  },
+  {
+    icon: '🏢',
+    title: 'Strona Korporacyjna',
+    price: '1500–2500 zl',
+    description: 'Multi-page z podstronami, blog-ready, formularze PHP, panel admina.',
+    time: '5–7 dni',
+    gradient: 'from-pink-500 to-rose-500',
+  },
+  {
+    icon: '🧮',
+    title: 'Narzedzia Webowe',
+    price: '400–1200 zl',
+    description: 'Kalkulatory, generatory, narzedzia SaaS z exportem PDF/PNG.',
+    time: '1–3 dni',
+    gradient: 'from-cyan-500 to-blue-500',
+  },
+  {
+    icon: '🐍',
+    title: 'Python Automation',
+    price: '400–900 zl',
+    description: 'Boty Telegram, scrapery, automatyzacja Excel/PDF. Python 3.8+ z GUI.',
+    time: '1–2 dni',
+    gradient: 'from-amber-400 to-yellow-500',
+  },
+];
+
+const included = [
+  'Responsywny design',
+  'Podstawowe SEO',
+  'Kod zrodlowy',
+  'Instrukcja deploy',
+  '30 dni wsparcia',
+  'Darmowe poprawki',
+];
+---
+
+<section id="pricing" class="py-24 sm:py-32 bg-surface/30">
+  <div class="max-w-6xl mx-auto px-5">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <span class="reveal inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-xs font-semibold uppercase tracking-wider mb-4">
+        Cennik
+      </span>
+      <h2 class="reveal reveal-delay-1 text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+        Przejrzyste ceny
+      </h2>
+      <p class="reveal reveal-delay-2 text-text-secondary max-w-xl mx-auto">
+        Profesjonalne rozwiazania w przystepnych cenach — bez ukrytych kosztow
+      </p>
+    </div>
+
+    <!-- Plans grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
+      {plans.map((plan, i) => (
+        <div class={`reveal reveal-delay-${(i % 4) + 1} group p-6 rounded-2xl border border-border bg-bg hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 text-center`}>
+          <span class="text-3xl mb-3 block">{plan.icon}</span>
+          <h3 class="font-bold mb-2">{plan.title}</h3>
+          <div class={`text-2xl font-extrabold bg-gradient-to-r ${plan.gradient} bg-clip-text text-transparent mb-3`}>
+            {plan.price}
+          </div>
+          <p class="text-sm text-text-secondary mb-4 leading-relaxed">
+            {plan.description}
+          </p>
+          <div class="text-xs text-text-muted font-mono">
+            Czas: {plan.time}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Included features -->
+    <div class="reveal p-6 sm:p-8 rounded-2xl border border-primary/20 bg-primary/5 text-center">
+      <h3 class="font-bold text-lg mb-5">Co jest wliczone w kazda usluge?</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+        {included.map((item) => (
+          <div class="flex items-center gap-2 text-sm text-text-secondary">
+            <Check class="w-4 h-4 text-green-400 flex-shrink-0" />
+            {item}
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

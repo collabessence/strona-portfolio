@@ -1,22 +1,42 @@
-# 🎯 Portfolio Hub - Profesjonalny Przegląd Projektów
+# madone.dev — Portfolio
 
-To jest moja główna wizytówka technologiczna, stanowiąca centralny punkt dostępu do szerokiego wachlarza projektów programistycznych.
+Portfolio freelance web developera. 17 gotowych projektow — strony wizytowki, narzedzia webowe, automatyzacja Python, AI tools.
 
-## 🌟 Co znajdziesz w środku?
-To repozytorium to "projekt w projekcie". Zawiera interaktywny interfejs z dostępem do ponad **15 różnych aplikacji i narzędzi**, w tym:
-- **🗂️ Strony Wizytówki:** (Fryzjer, Mechanik, Restauracja)
-- **📊 Narzędzia Analityczne:** Kalkulatory ROI, systemy porównawcze.
-- **🤖 Automatyzacja:** Scrapery danych (np. OLX), boty powiadomień.
-- **🛠️ Narzędzia Utility:** Generatory haseł, skracacze linków, timery.
+## Stack
 
-## 🛠️ Technologie
-- **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
-- **Animacje:** Particles.js, GSAP, CSS Animations
-- **Responsywność:** Mobile First Design
+- **Astro 6** + **Tailwind CSS 4** + **TypeScript**
+- **Inter** + **JetBrains Mono** (Google Fonts)
+- **Lucide Icons** + custom SVG
 
-## 🚀 Jak przeglądać?
-1. **Live Demo:** Jeśli włączone są GitHub Pages, kliknij w link w sekcji "About".
-2. **Lokalnie:** Pobierz repozytorium i uruchom `index.html`. 
+## Uruchomienie lokalne
 
----
-*Każdy z sub-projektów znajduje się w dedykowanym folderze, co pozwala na łatwą analizę kodu źródłowego.*
+```bash
+npm install
+npm run dev       # localhost:4321
+npm run build     # produkcyjny build -> dist/
+```
+
+## Deploy
+
+Automatyczny deploy na GitHub Pages przez GitHub Actions (branch `astro-v2`).
+
+## Projekty w portfolio
+
+| # | Projekt | Kategoria |
+|---|---------|-----------|
+| 1 | OLX Scraper | Python |
+| 2 | Strony Wizytowki (Fryzjer, Mechanik, Restauracja) | Web |
+| 3 | Excel Automation | Python |
+| 4 | Bot Telegram | Python |
+| 5 | Kalkulator ROI | Narzedzia |
+| 6 | Generator Wizytowek | Narzedzia |
+| 7 | Portfolio Strona | Web |
+| 8 | Landing Page Generator | Narzedzia |
+| 9 | Generator Faktur VAT | Narzedzia |
+| 10 | Strona HR | Web |
+| 11 | Klinika Dentystyczna | Web |
+| 12 | Fitness & Silownia | Web |
+| 13 | TODO Application | Narzedzia |
+| 14 | System Rezerwacji Online | Narzedzia |
+| 15 | AI Content Generator | Python |
+| 16 | AI Image Editor Pro | Python |

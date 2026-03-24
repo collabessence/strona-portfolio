@@ -1,0 +1,182 @@
+---
+import { Code, Menu, X } from '@lucide/astro';
+import GithubIcon from './icons/GithubIcon.astro';
+import LinkedinIcon from './icons/LinkedinIcon.astro';
+
+const navLinks = [
+  { href: '#home', label: 'Home' },
+  { href: '#about', label: 'O mnie' },
+  { href: '#services', label: 'Uslugi' },
+  { href: '#projects', label: 'Projekty' },
+  { href: '#pricing', label: 'Cennik' },
+  { href: '#contact', label: 'Kontakt' },
+];
+---
+
+<nav
+  id="navbar"
+  class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
+>
+  <div class="max-w-6xl mx-auto px-5 flex items-center justify-between h-16 lg:h-[4.5rem]">
+    <!-- Brand -->
+    <a href="#home" class="flex items-center gap-2 group">
+      <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center transition-transform group-hover:scale-110">
+        <Code class="w-4 h-4 text-white" />
+      </div>
+      <span class="text-lg font-bold text-text">
+        madone<span class="text-primary">.dev</span>
+      </span>
+    </a>
+
+    <!-- Desktop nav -->
+    <ul class="hidden lg:flex items-center gap-8">
+      {navLinks.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class="nav-link text-sm font-medium text-text-secondary hover:text-text transition-colors relative py-1"
+            data-section={link.href.slice(1)}
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Social + hamburger -->
+    <div class="flex items-center gap-3">
+      <a
+        href="https://github.com/madone-dev"
+        target="_blank"
+        rel="noopener"
+        class="hidden sm:flex w-9 h-9 items-center justify-center rounded-lg border border-border hover:border-primary hover:text-primary transition-colors text-text-secondary"
+        aria-label="GitHub"
+      >
+        <GithubIcon class="w-4 h-4" />
+      </a>
+      <a
+        href="https://linkedin.com/in/madone-dev"
+        target="_blank"
+        rel="noopener"
+        class="hidden sm:flex w-9 h-9 items-center justify-center rounded-lg border border-border hover:border-primary hover:text-primary transition-colors text-text-secondary"
+        aria-label="LinkedIn"
+      >
+        <LinkedinIcon class="w-4 h-4" />
+      </a>
+      <button
+        id="hamburger"
+        class="lg:hidden flex w-9 h-9 items-center justify-center rounded-lg border border-border text-text-secondary hover:text-text transition-colors"
+        aria-label="Otworz menu"
+      >
+        <Menu id="icon-menu" class="w-5 h-5" />
+        <X id="icon-close" class="w-5 h-5 hidden" />
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="lg:hidden hidden absolute top-full left-0 w-full bg-bg/95 backdrop-blur-xl border-b border-border"
+  >
+    <ul class="flex flex-col p-5 gap-1">
+      {navLinks.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class="mobile-nav-link block py-3 px-4 rounded-lg text-text-secondary hover:text-text hover:bg-surface transition-colors font-medium"
+            data-section={link.href.slice(1)}
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+      <li class="flex gap-3 pt-3 mt-2 border-t border-border">
+        <a href="https://github.com/madone-dev" target="_blank" rel="noopener" class="flex items-center gap-2 py-2 px-4 text-text-secondary hover:text-primary transition-colors text-sm">
+          <GithubIcon class="w-4 h-4" /> GitHub
+        </a>
+        <a href="https://linkedin.com/in/madone-dev" target="_blank" rel="noopener" class="flex items-center gap-2 py-2 px-4 text-text-secondary hover:text-primary transition-colors text-sm">
+          <LinkedinIcon class="w-4 h-4" /> LinkedIn
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  const navbar = document.getElementById('navbar')!;
+  const hamburger = document.getElementById('hamburger')!;
+  const mobileMenu = document.getElementById('mobile-menu')!;
+  const iconMenu = document.getElementById('icon-menu')!;
+  const iconClose = document.getElementById('icon-close')!;
+
+  // Glassmorphism on scroll
+  function updateNav() {
+    if (window.scrollY > 32) {
+      navbar.classList.add('bg-bg/80', 'backdrop-blur-xl', 'border-b', 'border-border');
+    } else {
+      navbar.classList.remove('bg-bg/80', 'backdrop-blur-xl', 'border-b', 'border-border');
+    }
+  }
+  window.addEventListener('scroll', updateNav, { passive: true });
+  updateNav();
+
+  // Hamburger toggle
+  let menuOpen = false;
+  hamburger.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    mobileMenu.classList.toggle('hidden', !menuOpen);
+    iconMenu.classList.toggle('hidden', menuOpen);
+    iconClose.classList.toggle('hidden', !menuOpen);
+  });
+
+  // Close mobile menu on link click
+  mobileMenu.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', () => {
+      menuOpen = false;
+      mobileMenu.classList.add('hidden');
+      iconMenu.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    });
+  });
+
+  // Active section tracking
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+
+  function updateActiveLink() {
+    const scrollY = window.scrollY + 120;
+    sections.forEach((section) => {
+      const el = section as HTMLElement;
+      const top = el.offsetTop;
+      const height = el.offsetHeight;
+      const id = el.getAttribute('id');
+      if (scrollY >= top && scrollY < top + height) {
+        navLinks.forEach((link) => {
+          const anchor = link as HTMLAnchorElement;
+          const isActive = anchor.dataset.section === id;
+          anchor.classList.toggle('text-text', isActive);
+          anchor.classList.toggle('text-text-secondary', !isActive);
+        });
+      }
+    });
+  }
+  window.addEventListener('scroll', updateActiveLink, { passive: true });
+</script>
+
+<style>
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    transition: width 0.3s;
+  }
+  .nav-link:hover::after,
+  .nav-link.text-text::after {
+    width: 100%;
+  }
+</style>

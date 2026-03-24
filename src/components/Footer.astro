@@ -1,0 +1,129 @@
+---
+import { Code, Heart } from '@lucide/astro';
+import GithubIcon from './icons/GithubIcon.astro';
+import LinkedinIcon from './icons/LinkedinIcon.astro';
+
+const navLinks = [
+  { href: '#home', label: 'Start' },
+  { href: '#about', label: 'O mnie' },
+  { href: '#services', label: 'Uslugi' },
+  { href: '#projects', label: 'Projekty' },
+  { href: '#pricing', label: 'Cennik' },
+  { href: '#contact', label: 'Kontakt' },
+];
+
+const portfolioLinks = [
+  { href: '#projects', label: '17 gotowych projektow' },
+  { href: '#pricing', label: 'Strony od 500 zl' },
+  { href: '#services', label: 'Automatyzacja Python' },
+  { href: '#services', label: 'Narzedzia webowe' },
+];
+---
+
+<footer class="border-t border-border bg-surface/30">
+  <div class="max-w-6xl mx-auto px-5 py-12 sm:py-16">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      <!-- Brand -->
+      <div>
+        <a href="#home" class="flex items-center gap-2 mb-4 group">
+          <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+            <Code class="w-4 h-4 text-white" />
+          </div>
+          <span class="text-lg font-bold text-text">
+            madone<span class="text-primary">.dev</span>
+          </span>
+        </a>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          Profesjonalne strony i narzedzia webowe dla rozwijajacych sie firm.
+        </p>
+        <div class="flex gap-2 mt-4">
+          <a href="https://github.com/madone-dev" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg border border-border hover:border-primary text-text-secondary hover:text-primary flex items-center justify-center transition-colors">
+            <GithubIcon class="w-4 h-4" />
+          </a>
+          <a href="https://linkedin.com/in/madone-dev" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg border border-border hover:border-primary text-text-secondary hover:text-primary flex items-center justify-center transition-colors">
+            <LinkedinIcon class="w-4 h-4" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <h4 class="font-semibold mb-4 text-sm">Nawigacja</h4>
+        <ul class="space-y-2.5">
+          {navLinks.map((link) => (
+            <li>
+              <a href={link.href} class="text-sm text-text-secondary hover:text-primary transition-colors">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Portfolio -->
+      <div>
+        <h4 class="font-semibold mb-4 text-sm">Portfolio</h4>
+        <ul class="space-y-2.5">
+          {portfolioLinks.map((link) => (
+            <li>
+              <a href={link.href} class="text-sm text-text-secondary hover:text-primary transition-colors">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="font-semibold mb-4 text-sm">Kontakt</h4>
+        <div class="space-y-2.5 text-sm text-text-secondary">
+          <p>collabessence@gmail.com</p>
+          <p>+48 727 705 045</p>
+          <p>Pn–Pt: 9:00–18:00</p>
+        </div>
+        <a
+          href="#contact"
+          class="inline-flex items-center gap-2 mt-4 px-5 py-2 rounded-full bg-primary hover:bg-primary-light text-white text-sm font-semibold transition-colors"
+        >
+          Napisz do mnie
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="pt-8 border-t border-border text-center text-sm text-text-muted">
+      <p>&copy; 2026 madone.dev &middot; Freelance Web Developer</p>
+      <p class="mt-1 flex items-center justify-center gap-1">
+        Built with <Heart class="w-3 h-3 text-rose-400 inline" /> using Astro, Tailwind &amp; TypeScript
+      </p>
+    </div>
+  </div>
+
+  <!-- Scroll to top -->
+  <button
+    id="scroll-top"
+    class="fixed bottom-6 right-6 w-11 h-11 rounded-full bg-primary text-white flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/25 z-50"
+    aria-label="Przewin na gore"
+  >
+    &uarr;
+  </button>
+</footer>
+
+<script>
+  const scrollTopBtn = document.getElementById('scroll-top')!;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+      scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+      scrollTopBtn.classList.add('opacity-100');
+    } else {
+      scrollTopBtn.classList.add('opacity-0', 'pointer-events-none');
+      scrollTopBtn.classList.remove('opacity-100');
+    }
+  }, { passive: true });
+
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>

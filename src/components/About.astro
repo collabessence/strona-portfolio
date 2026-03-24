@@ -1,0 +1,89 @@
+---
+const techStack = [
+  { name: 'HTML5', icon: '🌐' },
+  { name: 'CSS3', icon: '🎨' },
+  { name: 'JavaScript', icon: '⚡' },
+  { name: 'TypeScript', icon: '📘' },
+  { name: 'React', icon: '⚛️' },
+  { name: 'Python', icon: '🐍' },
+  { name: 'Node.js', icon: '🟢' },
+  { name: 'SQL', icon: '🗃️' },
+  { name: 'Git', icon: '📦' },
+  { name: 'Docker', icon: '🐳' },
+  { name: 'Tailwind', icon: '💨' },
+  { name: 'Astro', icon: '🚀' },
+];
+
+const highlights = [
+  '17 gotowych, funkcjonalnych projektow',
+  'Responsywny design w kazdym projekcie',
+  'SEO & Performance first approach',
+  'Automatyzacja procesow w Python',
+];
+---
+
+<section id="about" class="py-24 sm:py-32">
+  <div class="max-w-6xl mx-auto px-5">
+    <!-- Section header -->
+    <div class="text-center mb-16">
+      <span class="reveal inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-xs font-semibold uppercase tracking-wider mb-4">
+        O mnie
+      </span>
+      <h2 class="reveal reveal-delay-1 text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+        Kim jestem?
+      </h2>
+      <p class="reveal reveal-delay-2 text-text-secondary max-w-xl mx-auto">
+        Freelance web developer tworzacy profesjonalne rozwiazania dla malych i srednich firm
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <!-- Left: Tech stack grid -->
+      <div class="reveal">
+        <div class="grid grid-cols-3 sm:grid-cols-4 gap-3">
+          {techStack.map((tech, i) => (
+            <div
+              class={`flex flex-col items-center gap-2 p-4 rounded-xl border border-border bg-surface/50 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 reveal reveal-delay-${(i % 4) + 1}`}
+            >
+              <span class="text-2xl">{tech.icon}</span>
+              <span class="text-xs font-medium text-text-secondary">{tech.name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Right: Description -->
+      <div class="reveal reveal-delay-2">
+        <h3 class="text-2xl sm:text-3xl font-bold mb-5">
+          Tworze strony, ktore <span class="text-primary">dzialaja</span>
+        </h3>
+        <p class="text-text-secondary leading-relaxed mb-8">
+          Specjalizuje sie w projektowaniu i programowaniu responsywnych stron
+          internetowych oraz praktycznych narzedzi webowych. Kazdy projekt tworze
+          z mysla o maksymalnej funkcjonalnosci i prostym uzytkowaniu. Moje portfolio
+          zawiera 17 gotowych rozwiazan — od prostych wizytowek po zaawansowane
+          systemy rezerwacji i narzedzia AI.
+        </p>
+
+        <ul class="space-y-3 mb-8">
+          {highlights.map((item) => (
+            <li class="flex items-center gap-3 text-text-secondary">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="w-2 h-2 rounded-full bg-primary"></span>
+              </span>
+              {item}
+            </li>
+          ))}
+        </ul>
+
+        <a
+          href="#projects"
+          class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
+        >
+          Zobacz moje projekty
+          <span>&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

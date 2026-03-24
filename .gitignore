@@ -1,6 +1,5 @@
 # Dependencies
 node_modules/
-package-lock.json
 yarn.lock
 
 # Environment variables
@@ -62,3 +61,6 @@ coverage/
 
 # Misc
 .sass-cache/
+
+# Astro
+.astro/

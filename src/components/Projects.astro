@@ -1,0 +1,90 @@
+---
+import ProjectCard from './ProjectCard.astro';
+import { projects, categories } from '../data/projects';
+---
+
+<section id="projects" class="py-24 sm:py-32 bg-surface/30">
+  <div class="max-w-6xl mx-auto px-5">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <span class="reveal inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-xs font-semibold uppercase tracking-wider mb-4">
+        Portfolio
+      </span>
+      <h2 class="reveal reveal-delay-1 text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+        Moje projekty
+      </h2>
+      <p class="reveal reveal-delay-2 text-text-secondary max-w-xl mx-auto">
+        {projects.length} gotowych projektow — kazdy w 100% funkcjonalny i gotowy do wdrozenia
+      </p>
+    </div>
+
+    <!-- Filter buttons -->
+    <div class="reveal reveal-delay-2 flex flex-wrap justify-center gap-2 mb-12">
+      {categories.map((cat) => (
+        <button
+          class="filter-btn px-5 py-2 rounded-full text-sm font-medium border transition-all duration-300"
+          data-filter={cat.id}
+        >
+          {cat.label}
+          <span class="ml-1 text-text-muted">({cat.count})</span>
+        </button>
+      ))}
+    </div>
+
+    <!-- Projects grid -->
+    <div id="projects-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {projects.map((project) => (
+        <div class="reveal">
+          <ProjectCard project={project} />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.project-card');
+
+  // Set initial active state
+  filterButtons[0]?.classList.add('bg-primary', 'text-white', 'border-primary');
+  filterButtons.forEach((btn) => {
+    if (!btn.classList.contains('bg-primary')) {
+      btn.classList.add('border-border', 'text-text-secondary', 'hover:border-primary/50', 'hover:text-text');
+    }
+  });
+
+  filterButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const filter = (btn as HTMLElement).dataset.filter;
+
+      // Update button styles
+      filterButtons.forEach((b) => {
+        b.classList.remove('bg-primary', 'text-white', 'border-primary');
+        b.classList.add('border-border', 'text-text-secondary', 'hover:border-primary/50', 'hover:text-text');
+      });
+      btn.classList.add('bg-primary', 'text-white', 'border-primary');
+      btn.classList.remove('border-border', 'text-text-secondary', 'hover:border-primary/50', 'hover:text-text');
+
+      // Filter cards
+      cards.forEach((card) => {
+        const wrapper = card.closest('.reveal') as HTMLElement;
+        if (!wrapper) return;
+        const category = (card as HTMLElement).dataset.category;
+        const show = filter === 'all' || filter === category;
+
+        if (show) {
+          wrapper.style.display = '';
+          requestAnimationFrame(() => {
+            wrapper.style.opacity = '1';
+            wrapper.style.transform = 'translateY(0)';
+          });
+        } else {
+          wrapper.style.opacity = '0';
+          wrapper.style.transform = 'translateY(12px)';
+          setTimeout(() => { wrapper.style.display = 'none'; }, 300);
+        }
+      });
+    });
+  });
+</script>

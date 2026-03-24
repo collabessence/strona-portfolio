@@ -1,0 +1,80 @@
+---
+const services = [
+  {
+    icon: '🏪',
+    title: 'Strony Wizytowki',
+    description: 'Profesjonalne one-page dla lokalnych biznesow — fryzjer, mechanik, restauracja.',
+    features: ['Responsywny design', 'Formularz kontaktowy', 'Optymalizacja SEO'],
+  },
+  {
+    icon: '🧮',
+    title: 'Narzedzia Webowe',
+    description: 'Kalkulatory ROI, generatory wizytowek, faktury VAT i inne praktyczne narzedzia.',
+    features: ['Interaktywne UI', 'Export PDF/PNG', 'Walidacja danych'],
+  },
+  {
+    icon: '🐍',
+    title: 'Python Automation',
+    description: 'Boty Telegram, automatyzacja Excel, scrapery — oszczedzaj czas na powtarzalnych zadaniach.',
+    features: ['Python 3.8+', 'API Integration', 'GUI z Tkinter'],
+  },
+  {
+    icon: '🎯',
+    title: 'Landing Pages',
+    description: 'Generator landing pages z 8 szablonami i live preview — gotowe w kilka minut.',
+    features: ['8 gotowych szablonow', 'Live preview', 'Export HTML'],
+  },
+  {
+    icon: '🏢',
+    title: 'Strony Korporacyjne',
+    description: 'Rozbudowane witryny dla firm — HR, kliniki, silownie z pelna funkcjonalnoscia.',
+    features: ['Multi-page layout', 'Blog & CMS ready', 'Formularze PHP'],
+  },
+  {
+    icon: '📱',
+    title: 'Aplikacje SPA',
+    description: 'TODO app, Weather app i inne single page applications z nowoczesnym UI.',
+    features: ['Vanilla JavaScript', 'API Integration', 'Local Storage'],
+  },
+];
+---
+
+<section id="services" class="py-24 sm:py-32">
+  <div class="max-w-6xl mx-auto px-5">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <span class="reveal inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-xs font-semibold uppercase tracking-wider mb-4">
+        Uslugi
+      </span>
+      <h2 class="reveal reveal-delay-1 text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+        Co oferuje?
+      </h2>
+      <p class="reveal reveal-delay-2 text-text-secondary max-w-xl mx-auto">
+        Profesjonalne rozwiazania webowe dopasowane do Twoich potrzeb
+      </p>
+    </div>
+
+    <!-- Services grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {services.map((service, i) => (
+        <div class={`reveal reveal-delay-${(i % 4) + 1} group p-6 rounded-2xl border border-border bg-surface/50 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1`}>
+          <span class="text-3xl mb-4 block">{service.icon}</span>
+          <h3 class="text-lg font-bold mb-2 group-hover:text-primary transition-colors">
+            {service.title}
+          </h3>
+          <p class="text-sm text-text-secondary mb-4 leading-relaxed">
+            {service.description}
+          </p>
+          <ul class="space-y-2">
+            {service.features.map((feature) => (
+              <li class="flex items-center gap-2 text-xs text-text-muted">
+                <span class="w-1 h-1 rounded-full bg-primary flex-shrink-0"></span>
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

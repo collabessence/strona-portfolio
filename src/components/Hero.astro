@@ -1,0 +1,102 @@
+---
+import { ArrowRight, Mail, ChevronDown } from '@lucide/astro';
+---
+
+<section id="home" class="relative min-h-screen flex items-center justify-center pt-16 gradient-mesh overflow-hidden">
+  <!-- Subtle animated orbs -->
+  <div class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+    <div class="absolute top-1/4 left-1/5 w-72 h-72 bg-primary/10 rounded-full blur-[120px] animate-pulse"></div>
+    <div class="absolute bottom-1/4 right-1/5 w-96 h-96 bg-accent/10 rounded-full blur-[140px] animate-pulse" style="animation-delay: 2s;"></div>
+  </div>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-5 text-center">
+    <!-- Badge -->
+    <div class="reveal inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-surface/50 text-sm text-text-secondary mb-8">
+      <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+      Dostepny do wspolpracy
+    </div>
+
+    <!-- Heading -->
+    <h1 class="reveal reveal-delay-1 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight mb-6">
+      Strony &amp; Narzedzia
+      <span class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+        Digital
+      </span>
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="reveal reveal-delay-2 text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed">
+      Profesjonalne strony internetowe i narzedzia webowe
+      dla rozwijajacych sie firm. Od wizytowek po systemy rezerwacji.
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="reveal reveal-delay-3 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a
+        href="#projects"
+        class="group flex items-center gap-2 px-7 py-3.5 rounded-full bg-primary hover:bg-primary-light text-white font-semibold transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/25"
+      >
+        Zobacz projekty
+        <ArrowRight class="w-4 h-4 transition-transform group-hover:translate-x-1" />
+      </a>
+      <a
+        href="#contact"
+        class="flex items-center gap-2 px-7 py-3.5 rounded-full border border-border hover:border-primary text-text-secondary hover:text-text font-semibold transition-all hover:-translate-y-0.5"
+      >
+        <Mail class="w-4 h-4" />
+        Napisz do mnie
+      </a>
+    </div>
+
+    <!-- Stats strip -->
+    <div class="reveal reveal-delay-4 grid grid-cols-3 gap-6 sm:gap-12 max-w-lg mx-auto mt-16 pt-8 border-t border-border">
+      <div class="text-center">
+        <div class="text-2xl sm:text-3xl font-bold text-text" data-count="17">0</div>
+        <div class="text-xs sm:text-sm text-text-muted mt-1">Projektow</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl sm:text-3xl font-bold text-text" data-count="100">0</div>
+        <div class="text-xs sm:text-sm text-text-muted mt-1">% Funkcjonalnych</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl sm:text-3xl font-bold text-text" data-count="7">0</div>
+        <div class="text-xs sm:text-sm text-text-muted mt-1">Dni sredni czas</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll hint -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-text-muted animate-bounce">
+    <ChevronDown class="w-5 h-5" />
+  </div>
+</section>
+
+<script>
+  // Animated counters
+  const counters = document.querySelectorAll('[data-count]');
+  const counterObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target as HTMLElement;
+        const target = parseInt(el.dataset.count || '0');
+        const duration = 1500;
+        const step = target / (duration / 16);
+        let current = 0;
+        function tick() {
+          current += step;
+          if (current < target) {
+            el.textContent = Math.floor(current).toString();
+            requestAnimationFrame(tick);
+          } else {
+            el.textContent = target + '+';
+          }
+        }
+        tick();
+        counterObserver.unobserve(el);
+      });
+    },
+    { threshold: 0.5 }
+  );
+  counters.forEach((c) => counterObserver.observe(c));
+</script>
