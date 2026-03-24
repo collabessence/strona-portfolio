@@ -8,12 +8,12 @@ interface Props {
 }
 
 const {
-  title = 'madone.dev - Web Developer Portfolio',
+  title = 'collab.dev - Strony & Narzedzia Digital',
   description = 'Profesjonalne strony internetowe i narzedzia webowe. HTML, CSS, JavaScript, Python, React. Portfolio freelance web developera.',
   ogImage = '/og-image.png',
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://madone.dev');
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://collabessence.github.io');
 ---
 
 <!doctype html>
@@ -22,7 +22,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://madone.d
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <meta name="author" content="madone.dev" />
+    <meta name="author" content="collab.dev" />
 
     <link rel="canonical" href={canonicalURL.href} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -49,13 +49,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://madone.d
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "madone.dev",
+      "name": "collab.dev",
       "url": canonicalURL.origin,
       "jobTitle": "Web Developer",
       "knowsAbout": ["HTML", "CSS", "JavaScript", "Python", "React", "TypeScript"],
       "sameAs": [
-        "https://github.com/madone-dev",
-        "https://linkedin.com/in/madone-dev"
+        "https://github.com/collabessence",
+        "https://linkedin.com/in/collabessence"
       ]
     })} />
   </head>

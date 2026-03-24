@@ -1,4 +1,4 @@
-# madone.dev — Portfolio
+# collab.dev — Portfolio
 
 Portfolio freelance web developera. 17 gotowych projektow — strony wizytowki, narzedzia webowe, automatyzacja Python, AI tools.
 
