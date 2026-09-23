@@ -2,10 +2,6 @@
 
 **Auto-responder z FAQ i zbieraniem kontaktów**
 
-## 💰 Wartość komercyjna: 300-600 zł
-
----
-
 ## ✨ Funkcje
 
 - ✅ Automatyczne odpowiedzi na FAQ
@@ -16,8 +12,6 @@
 - ✅ Logowanie wszystkich wiadomości
 
 ---
-
-## 🚀 Instalacja
 
 ### Krok 1: Utwórz bota na Telegramie
 
@@ -52,8 +46,6 @@ python telegram_bot.py
 
 ---
 
-## 📖 Personalizacja
-
 ### 1. Zmień FAQ (linia 23-42)
 
 ```python
@@ -85,89 +77,6 @@ app.add_handler(CommandHandler("mojakomenda", self.moja_komenda))
 
 ---
 
-## 💼 Jak sprzedać ten produkt
-
-### Do kogo sprzedać:
-
-- 🏪 Małe sklepy (FAQ o produktach)
-- 💇 Salony (umówienie wizyty)
-- 🍕 Restauracje (przyjmowanie zamówień)
-- 🏋️ Siłownie/Studia (info o grafiku)
-- 📚 Szkoły online (wsparcie uczniów)
-- 🏨 Hotele/Pensjonaty (rezerwacje)
-
-### Cennik sugerowany:
-
-- **Podstawowy bot (jak ten)**: 300-400 zł
-- **+ Integracja z kalendarzem**: +200 zł
-- **+ Wysyłanie powiadomień**: +150 zł
-- **+ Płatności online**: +300 zł
-- **Miesięczne wsparcie**: 50 zł/m
-
-### Przykładowa oferta:
-
-```
-Temat: Bot Telegram dla Twojej firmy
-
-Cześć!
-
-Widzę że prowadzisz [BIZNES]. Mam dla Ciebie rozwiązanie które:
-
-✅ Odpowiada na pytania klientów 24/7
-✅ Umawia wizyty/rezerwacje automatycznie
-✅ Zbiera kontakty potencjalnych klientów
-✅ Oszczędza Twój czas
-
-Przykład działania: [LINK DO DEMO BOTA]
-
-Cena: 400 zł (jednorazowo) + 50 zł/m hosting
-
-Zainteresowany?
-```
-
----
-
-## 🎯 Gdzie szukać klientów
-
-1. **Grupy Telegram biznesowe**
-   - Napisz: "Tworzę boty Telegram dla firm"
-   - Pokaż działającego bota
-
-2. **Lokalne firmy**
-   - Fryzjerzy, restauracje, sklepy
-   - "Potrzebujesz bota do automatycznych odpowiedzi?"
-
-3. **LinkedIn**
-   - Właściciele firm, marketerzy
-   - "Automatyzacja obsługi klienta przez Telegram"
-
-4. **Facebook Groups**
-   - Grupy dla przedsiębiorców
-   - "Bot który odpowiada zamiast Ciebie"
-
----
-
-## 🔧 Możliwe rozszerzenia (dodatkowa płatność)
-
-### +200 zł: Integracja z Google Calendar
-Bot automatycznie dodaje rezerwacje do kalendarza
-
-### +150 zł: Powiadomienia push
-Wysyłanie ofert/aktualności do wszystkich użytkowników
-
-### +300 zł: Płatności
-Przyjmowanie płatności przez bota (Stripe/PayU)
-
-### +200 zł: Multi-język
-Bot w 2-3 językach
-
-### +250 zł: Integracja z CRM
-Automatyczne dodawanie leadów do systemu
-
----
-
-## 💡 Przykłady użycia
-
 ### Salon fryzjerski:
 "Bot odpowiada na pytania o cennik, umawia wizyty, przypomina o terminie"
 
@@ -182,15 +91,12 @@ Automatyczne dodawanie leadów do systemu
 
 ---
 
-## 🎓 Hosting bota (24/7)
-
 ### OPCJA 1: Lokalny komputer
 - Darmowe
 - Bot działa gdy komputer włączony
 - Dla testów
 
 ### OPCJA 2: VPS (np. OVH, nazwa.pl)
-- 20-40 zł/miesiąc
 - Bot działa 24/7
 - Profesjonalne
 
@@ -198,19 +104,6 @@ Automatyczne dodawanie leadów do systemu
 - Darmowe (z limitami)
 - Łatwe wdrożenie
 - Dla małych botów
-
-**Możesz doliczyć 50 zł/m za hosting!**
-
----
-
-## 📞 Wsparcie dla klientów
-
-Po sprzedaniu oferuj:
-
-- ✅ 7 dni wsparcia gratis
-- ✅ Instrukcja krok po kroku
-- ✅ Dalsze wsparcie: 50 zł/miesiąc
-- ✅ Aktualizacje: według potrzeb
 
 ---
 
@@ -223,33 +116,6 @@ A: Tak, gdy uruchomiony na serwerze
 A: Tak, kod jest łatwy do rozbudowy
 
 **Q: Ile kosztuje hosting?**
-A: 20-50 zł/miesiąc (możesz to doliczyć)
 
 **Q: Czy trzeba znać programowanie?**
 A: Nie, wystarczy zmienić teksty w FAQ
-
----
-
-## 🎁 BONUS: Demo dla klienta
-
-Przed sprzedażą:
-
-1. Uruchom bota ze swoim TOKEN
-2. Spersonalizuj dla branży klienta
-3. Wyślij link do bota
-4. Klient testuje → kupuje!
-
-**Działający demo = 80% szans na sprzedaż!**
-
----
-
-## 📊 Statystyki sprzedaży
-
-- **Konwersja**: 30-50% (wysoka)
-- **Czas wdrożenia**: 1-2h
-- **Zarobek na godzinę**: 150-300 zł
-- **Powtarzalne zlecenia**: Tak (hosting, updates)
-
----
-
-**Powodzenia ze sprzedażą! 💰🤖**

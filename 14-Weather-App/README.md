@@ -2,8 +2,6 @@
 
 Profesjonalna aplikacja pogodowa z integracją OpenWeatherMap API, prognozą 5-dniową, geolokalizacją i zapisywaniem ulubionych miast.
 
-## ✨ Funkcje
-
 ### 🌦️ Pogoda
 - **Aktualna pogoda** - Temperatura, opis, ikona
 - **Szczegółowe dane** - Wiatr, wilgotność, ciśnienie, widoczność
@@ -22,8 +20,6 @@ Profesjonalna aplikacja pogodowa z integracją OpenWeatherMap API, prognozą 5-d
 - **Tryb demo** - Testuj bez API key
 - **LocalStorage** - Zapisywanie preferencji
 - **Responsive design** - Działa na wszystkich urządzeniach
-
-## 🚀 Instalacja i Uruchomienie
 
 ### Krok 1: Pobierz pliki
 ```bash
@@ -64,8 +60,6 @@ cd 14-Weather-App
 - Aplikacja załaduje przykładowe dane
 - Idealne do testowania funkcjonalności
 
-## 📖 Jak używać
-
 ### Wyszukiwanie miasta
 
 1. **Wpisz nazwę miasta** w polu wyszukiwania
@@ -91,8 +85,6 @@ cd 14-Weather-App
 - Kliknij **°C | °F** w prawym górnym rogu
 - Temperatura automatycznie się przelicza
 - Preferowana jednostka jest zapisywana
-
-## 🛠️ Konfiguracja
 
 ### Zmiana domyślnego miasta
 
@@ -121,35 +113,6 @@ W `style.css`, zmienne CSS:
 }
 ```
 
-## 💼 Zastosowanie komercyjne
-
-### Idealne dla:
-- 📱 **Aplikacje mobilne** - jako widok pogody
-- 🌐 **Strony turystyczne** - pogoda w destynacjach
-- 🏢 **Dashboard firmowy** - widget pogody
-- 📰 **Portale informacyjne** - sekcja pogody
-- 🚗 **Aplikacje podróżnicze** - planowanie tras
-
-### Wartość komercyjna
-
-**Cena sprzedaży**: 400-800 zł
-
-**Customizacja**:
-- Własne kolory i branding (+100 zł)
-- Dodatkowe dane (UV index, pollution) (+200 zł)
-- Powiadomienia push o pogodzie (+300 zł)
-- Wersja mobilna (React Native) (+1500 zł)
-- Backend własnego API (+1000 zł)
-
-### Argumenty sprzedażowe
-
-1. **Darmowe dane** - API OpenWeatherMap jest darmowe (60 calls/min)
-2. **Profesjonalny wygląd** - nowoczesny design
-3. **Pełna funkcjonalność** - prognoza, geolokalizacja, ulubione
-4. **Responsywność** - działa na wszystkich urządzeniach
-5. **Łatwa integracja** - iframe lub standalone
-6. **Offline cache** - LocalStorage dla ostatnich danych
-
 ## 🔧 Tech Stack
 
 - **HTML5** - Semantyczny markup
@@ -160,8 +123,6 @@ W `style.css`, zmienne CSS:
 - **LocalStorage API** - Trwałe dane
 - **Font Awesome 6.4** - Ikony
 
-## 📊 API Limits
-
 ### OpenWeatherMap - Free Plan
 - **60 wywołań/minutę**
 - **1,000,000 wywołań/miesiąc**
@@ -170,8 +131,6 @@ W `style.css`, zmienne CSS:
 - **Geolokalizacja** ✅
 
 To **więcej niż wystarczy** dla małych i średnich aplikacji!
-
-## 🐛 Troubleshooting
 
 ### "Failed to fetch weather"
 **Przyczyna**: Nieprawidłowy API key lub brak internetu
@@ -201,8 +160,6 @@ To **więcej niż wystarczy** dla małych i średnich aplikacji!
 1. Otwórz konsolę (F12)
 2. Sprawdź błędy
 3. Wyczyść cache (Ctrl+Shift+R)
-
-## 🎨 Customizacja
 
 ### Dodanie dodatkowych danych
 
@@ -235,33 +192,12 @@ Użyj Chart.js dla prognoz:
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 ```
 
-## 📱 Mobile App
-
-Chcesz wersję mobilną? Można łatwo przenieść do:
-- **React Native** - iOS + Android
-- **Flutter** - Cross-platform
-- **Ionic** - Hybrid app
-
-**Wycena**: 2000-5000 zł za pełną aplikację mobilną
-
 ## 🔐 Security
 
 - ✅ API key przechowywany w LocalStorage (bezpieczne dla małych app)
 - ✅ Brak wysyłania wrażliwych danych
 - ✅ HTTPS zalecane dla geolokalizacji
 - ⚠️ Dla dużych aplikacji: używaj backend proxy dla API key
-
-## 📄 Licencja
-
-- **OpenWeatherMap API**: Bezpłatna dla non-commercial
-- **Font Awesome**: Bezpłatna licencja
-- **Kod źródłowy**: Możesz używać komercyjnie
-
-## 🤝 Wsparcie
-
-- 📧 Email: twoj-email@example.com
-- 💼 LinkedIn: [Link]
-- 🌐 Portfolio: [Link]
 
 ## 🌟 Features Roadmap
 
@@ -281,11 +217,3 @@ Chcesz wersję mobilną? Można łatwo przenieść do:
 **Autor**: [Twoje imię]  
 
 ⭐ **Gotowy do użycia! Zarejestruj się na OpenWeatherMap i zacznij!**
-
-## 🎯 Quick Start (3 kroki)
-
-1. Otwórz `index.html`
-2. Kliknij "Użyj Trybu Demo"
-3. Testuj aplikację!
-
-Potem zdobądź darmowy API key i ciesz się prawdziwymi danymi! ☀️

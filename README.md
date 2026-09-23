@@ -1,6 +1,6 @@
 # 🎯 Portfolio Hub - Profesjonalny Przegląd Projektów
 
-To jest moja główna wizytówka technologiczna, stanowiąca centralny punkt dostępu do **18 gotowych projektów** - stron, narzędzi webowych i automatyzacji Python.
+To jest moja główna wizytówka technologiczna, stanowiąca centralny punkt dostępu do **17 projektów demonstracyjnych** - stron, narzędzi webowych i automatyzacji Python. To koncepcje dla fikcyjnych firm, nie realizacje dla klientów.
 
 🌐 **Live demo:** https://collabessence.github.io/strona-portfolio/
 
@@ -10,9 +10,9 @@ To jest moja główna wizytówka technologiczna, stanowiąca centralny punkt dos
 |-----------|----------|
 | **🗂️ Strony (6)** | Salon fryzjerski, Warsztat samochodowy, Restauracja & Bar, Strona HR (multi-page), Klinika dentystyczna, Fitness & Siłownia |
 | **🛠️ Narzędzia webowe (7)** | Kalkulator ROI, Generator wizytówek, Generator landing pages, Generator faktur VAT, TODO App, System rezerwacji, Weather App |
-| **🐍 Python (5)** | AI Image Editor, AI Content Generator, Bot Telegram, Excel Automation, OLX Scraper |
+| **🐍 Python (4)** | AI Image Editor, AI Content Generator, Bot Telegram, Excel Automation |
 
-Dodatkowo `7-Portfolio-Strona/` to szablon strony portfolio do personalizacji.
+Dodatkowo `7-Portfolio-Strona/` to szablon strony portfolio do personalizacji, a `1-OLX-Scraper/` to ćwiczenie ze scrapowania (nie jest częścią oferty).
 
 ## 🛠️ Technologie
 - **Frontend:** HTML5, CSS3, JavaScript (Vanilla), Canvas (animacja cząsteczek)

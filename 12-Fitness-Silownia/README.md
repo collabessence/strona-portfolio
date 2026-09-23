@@ -2,8 +2,6 @@
 
 Profesjonalna strona internetowa dla klubu fitness/siłowni z dynamicznymi animacjami i responsywnym designem.
 
-## ✨ Funkcje
-
 ### 🎨 Design
 - **Energetyczna kolorystyka** - Pomarańczowe akcenty (#ff6b35) z ciemnym tłem
 - **Hero z efektem video** - Placeholder dla tła wideo
@@ -61,8 +59,6 @@ Profesjonalna strona internetowa dla klubu fitness/siłowni z dynamicznymi anima
 - **Font Awesome 6.4.0** - Ikony
 - **IntersectionObserver API** - Scroll animations
 
-## 📋 JavaScript Features
-
 ### Mobile Menu
 ```javascript
 - Toggle hamburger menu
@@ -105,8 +101,6 @@ Profesjonalna strona internetowa dla klubu fitness/siłowni z dynamicznymi anima
 - Page load fade-in
 ```
 
-## 🎯 Customizacja
-
 ### Kolory
 ```css
 --primary: #ff6b35 (pomarańczowy)
@@ -144,8 +138,6 @@ Zastąp placeholdery w HTML:
 4. Opcjonalnie: Dodaj prawdziwy formularz backend (PHP/Node.js)
 5. Wgraj na hosting
 
-## 🔧 Integracja Formularza
-
 ### Opcja 1: Formspree (darmowe)
 ```html
 <form action="https://formspree.io/f/YOUR_ID" method="POST">
@@ -180,18 +172,3 @@ Zaktualizuj liczby w HTML (data-target):
 - **Blog** - Sekcja artykułów o fitnessie
 - **Galeria** - Lightbox ze zdjęciami klubu
 - **Testimonials** - Opinie klientów z Trustpilot
-
-## 📄 Licencja
-
-Projekt stworzony do portfolio. Możesz używać i modyfikować według potrzeb.
-
-## 🤝 Wsparcie
-
-W razie pytań lub problemów, sprawdź:
-- Konsolę przeglądarki (F12)
-- Walidację HTML/CSS
-- Kompatybilność przeglądarki
-
----
-
-**Stworzono z 💪 dla branży fitness**

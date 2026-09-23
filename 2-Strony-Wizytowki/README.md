@@ -1,11 +1,5 @@
 # Strony Wizytówki - 3 Gotowe Szablony
 
-## 📋 Zawartość
-
-### 1. Fryzjer - Salon Piękności
-### 2. Mechanik - Warsztat Samochodowy  
-### 3. Restauracja - Bar
-
 ## ✨ Funkcje (wszystkie strony)
 
 - ✅ **Responsywny design** - działa na wszystkich urządzeniach
@@ -17,8 +11,6 @@
 - ✅ **Cennik** - przejrzyste ceny usług
 - ✅ **SEO ready** - gotowe pod optymalizację
 - ✅ **Fast loading** - zoptymalizowana wydajność
-
-## 🚀 Szybki Start
 
 ### Krok 1: Wybierz branżę
 ```bash
@@ -65,8 +57,6 @@ W pliku `style.css` zmień zmienne CSS:
 # Opcja C: FTP na własny hosting
 ```
 
-## 📄 Szczegóły każdej strony
-
 ### 1️⃣ Fryzjer - Salon Piękności
 
 **Sekcje:**
@@ -84,8 +74,6 @@ W pliku `style.css` zmień zmienne CSS:
 - Studia paznokci
 - Barbershopy
 - Salony SPA
-
-**Cena:** 800-1500 zł
 
 ---
 
@@ -106,8 +94,6 @@ W pliku `style.css` zmień zmienne CSS:
 - Serwisy blacharniczne
 - Myjnie samochodowe
 - Stacje diagnostyczne
-
-**Cena:** 800-1500 zł
 
 ---
 
@@ -130,107 +116,7 @@ W pliku `style.css` zmień zmienne CSS:
 - Food trucki
 - Catering
 
-**Cena:** 800-1500 zł
-
 ---
-
-## 💰 Sprzedaż
-
-### Pakiety
-
-**🥉 SOLO - 800 zł**
-- 1 strona wizytówka
-- Personalizacja (kolory, teksty)
-- Responsywny design
-- WhatsApp + Maps + Cookies
-- 1 miesiąc wsparcia
-
-**🥈 BUSINESS - 1200 zł**
-- 1 strona wizytówka
-- Personalizacja zaawansowana
-- Własne zdjęcia dodane
-- Optymalizacja SEO basic
-- Integracja z social media
-- 3 miesiące wsparcia
-- 1 aktualizacja gratis
-
-**🥇 PREMIUM - 1500 zł**
-- 1 strona wizytówka
-- Sesja fotograficzna (5 zdjęć)
-- Copywriting (teksty)
-- SEO optymalizacja pełna
-- Google My Business setup
-- Facebook Pixel
-- 6 miesięcy wsparcia
-- 3 aktualizacje gratis
-
-### Upselling (dodatkowa sprzedaż)
-
-- **Logo design** - +200-500 zł
-- **Sesja fotograficzna** - +300-800 zł
-- **Copywriting** - +200-400 zł
-- **Google Ads setup** - +300-600 zł
-- **Facebook Ads setup** - +300-600 zł
-- **Email marketing** - +200 zł/mc
-- **Hosting premium** - +50 zł/mc
-
-## 🎯 Targetowanie klientów
-
-### Gdzie szukać klientów:
-
-1. **Facebook Groups**
-   - Grupy branżowe (fryzjerzy, mechanicy, gastronomia)
-   - Grupy lokalne biznesowe
-   - "Szukam wykonawcy"
-
-2. **OLX/Marketplace**
-   - Kategoria "Usługi" → "Strony internetowe"
-   - Post z 3 przykładami
-
-3. **LinkedIn**
-   - Cold outreach do firm bez stron
-   - Grupy biznesowe
-
-4. **Bezpośredni kontakt**
-   - Walk-in do lokalnych biznesów
-   - "Zauważyłem że nie macie strony..."
-
-5. **Google Maps**
-   - Szukaj firm bez stron (sprawdź czy mają website)
-   - Kontakt przez Google My Business
-
-### Szablon email:
-
-```
-Temat: Profesjonalna strona dla [NAZWA FIRMY] - 800 zł
-
-Dzień dobry,
-
-Nazywam się [IMIĘ] i tworzę strony internetowe dla lokalnych firm.
-
-Zauważyłem, że [NAZWA FIRMY] nie ma jeszcze strony internetowej / 
-ma przestarzałą stronę, która nie działa na telefonach.
-
-Mogę przygotować nowoczesną stronę wizytówkę:
-✅ Responsywna (działa na telefonach)
-✅ Google Maps + WhatsApp button
-✅ Formularz kontaktowy
-✅ Galeria zdjęć
-✅ Hosting + domena GRATIS (rok)
-
-Cena: 800-1200 zł jednorazowo
-Realizacja: 3-5 dni
-
-Zobacz przykład: [LINK DO DEMO]
-
-Zainteresowany? Odpowiedz na tego maila lub zadzwoń: [TELEFON]
-
-Pozdrawiam,
-[IMIĘ NAZWISKO]
-[TWOJA STRONA]
-```
-
-## 🔧 Hosting i Domena
 
 ### Polecane hosty:
 
@@ -240,9 +126,6 @@ Pozdrawiam,
 - GitHub Pages - dla prostych stron
 
 **Płatne (polskie):**
-- home.pl - 5-15 zł/mc
-- nazwa.pl - 10-20 zł/mc
-- cyberfolks.pl - 15-30 zł/mc
 
 **Domena:**
 - .pl - 35-49 zł/rok
@@ -257,8 +140,6 @@ Pozdrawiam,
 3. Gotowe! Link: https://nazwa.netlify.app
 4. Opcjonalnie podepnij własną domenę
 ```
-
-## 📊 SEO - Podstawy
 
 ### On-page SEO checklist:
 
@@ -312,8 +193,6 @@ Pozdrawiam,
 </script>
 ```
 
-## 🎨 Customizacja
-
 ### Zmiana kolorów:
 
 Każda strona ma zmienne CSS w `:root`:
@@ -350,8 +229,6 @@ body {
 </div>
 ```
 
-## 🐛 Troubleshooting
-
 ### Problem: Strona nie wyświetla się poprawnie
 
 **Rozwiązanie:**
@@ -378,25 +255,3 @@ body {
 - Zmień numer w `href="https://wa.me/48123456789"`
 - Usuń spacje z numeru
 - Dodaj +48 przed numerem
-
-## 📞 Wsparcie
-
-Dla klientów oferujemy:
-- 📧 Email support (odpowiedź w 24h)
-- 💬 Quick fixes (drobne zmiany)
-- 📱 Konsultacje telefoniczne
-- 🎥 Video tutorials
-
-## 📄 Licencja
-
-Strony sprzedawane z licencją na użytek własny:
-- ✅ Modyfikacje dla klienta
-- ✅ Hosting na własnym serwerze
-- ✅ Nielimitowane aktualizacje
-- ❌ Odsprzedaż szablonów
-- ❌ Udostępnianie kodu źródłowego
-
----
-
-**Strony Wizytówki v2.0** | Upgrade 2024 (WhatsApp + Maps + Cookies)  
-**3 gotowe szablony** | **Wartość: 2400-4500 zł**

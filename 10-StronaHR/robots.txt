@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://stronahr.pl/sitemap.xml
+Sitemap: https://stronahr.example/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1

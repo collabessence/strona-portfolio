@@ -6,8 +6,6 @@ Profesjonalny edytor zdjęć z AI - usuwanie tła, upscaling, filtry, batch proc
 ![AI](https://img.shields.io/badge/AI-rembg%20%7C%20OpenCV-orange)
 ![License](https://img.shields.io/badge/License-Commercial-green)
 
-## ✨ Funkcje
-
 ### 🤖 AI Tools
 - **Usuwanie tła** - AI automatycznie wykrywa i usuwa tło (rembg)
 - **AI Upscaling** - powiększ 2x/4x bez utraty jakości
@@ -32,8 +30,6 @@ Profesjonalny edytor zdjęć z AI - usuwanie tła, upscaling, filtry, batch proc
 - **Jakość**: 50-100% (regulowana)
 - **Watermark**: własny tekst
 - **Undo/Redo**: 10 ostatnich operacji
-
-## 🚀 Instalacja
 
 ### Wymagania
 - Python 3.8+
@@ -62,8 +58,6 @@ python main.py
 ```
 
 Lub kliknij dwukrotnie `run.bat`
-
-## 📖 Instrukcja użycia
 
 ### Podstawowa edycja
 
@@ -135,8 +129,6 @@ Lub kliknij dwukrotnie `run.bat`
 4. 5-10 minut - gotowe!
 ```
 
-## ⚙️ Konfiguracja
-
 ### Zmiana jakości eksportu
 
 W interfejsie:
@@ -166,49 +158,6 @@ if result.mode == 'RGBA':
     result = white_bg
 ```
 
-## 💼 Zastosowanie komercyjne
-
-### Idealne dla:
-- 📸 **Fotografów** - usuwanie tła z sesji
-- 🛍️ **E-commerce** - produkty bez tła
-- 📱 **Social media** - Instagram, TikTok content
-- 🎨 **Grafików** - szybkie tła removal
-- 🏢 **Agencji** - batch processing dla klientów
-- 👔 **Corporate** - zdjęcia pracowników bez tła
-
-### Wycena projektu
-
-**Sprzedaż gotowej aplikacji:** 2000-4000 zł
-
-**Customizacja:**
-- Własne logo i branding (+200 zł)
-- Dodatkowe filtry (blur, vintage) (+400 zł)
-- Export do PDF/DOCX (+300 zł)
-- Integracja z Dropbox/Google Drive (+800 zł)
-- Automatyczne uploadowanie (+600 zł)
-- Wersja webowa (Flask/Django) (+3000 zł)
-
-**Miesięczne wsparcie:** 200-400 zł
-
-### Argumenty sprzedażowe
-
-1. **Oszczędność czasu** - 100 zdjęć w 10 minut vs 5 godzin ręcznie
-2. **Profesjonalna jakość** - AI lepsze niż Photoshop Magic Wand
-3. **Zero kosztów operacyjnych** - w przeciwieństwie do remove.bg (0.20$/zdjęcie)
-4. **Batch processing** - konkurencja tego nie ma
-5. **Offline** - działa bez internetu (po pierwszym uruchomieniu)
-6. **Łatwe w użyciu** - nie wymaga szkoleń
-
-### Porównanie z konkurencją
-
-| Funkcja | AI Image Editor | remove.bg | Photoshop |
-|---------|----------------|-----------|-----------|
-| Usuwanie tła | ✅ Unlimited | 💰 $0.20/img | ✅ Ręcznie |
-| Batch processing | ✅ | ❌ | ❌ |
-| Offline | ✅ | ❌ | ✅ |
-| Cena | 2000 zł (jednorazowo) | $9.99/mies | $240/rok |
-| AI Upscaling | ✅ | ❌ | Dodatkowy plugin |
-
 ## 🛠 Tech Stack
 
 - **Python 3.8+** - język
@@ -217,8 +166,6 @@ if result.mode == 'RGBA':
 - **rembg** - AI background removal (U2-Net model)
 - **OpenCV** - upscaling, filtry
 - **NumPy** - operacje na macierzach
-
-## 📊 Wydajność
 
 ### Czas przetwarzania (zależy od sprzętu):
 
@@ -235,8 +182,6 @@ if result.mode == 'RGBA':
 - **Dysk**: ~200MB (model rembg)
 - **CPU**: 80-100% podczas usuwania tła
 - **GPU**: Opcjonalne (CUDA) - 10x szybsze
-
-## 🐛 Troubleshooting
 
 ### Błąd: "ModuleNotFoundError: rembg"
 
@@ -275,30 +220,6 @@ pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
 - [ ] API REST dla integracji
 - [ ] Mobile app (Kivy)
 
-## 📄 Licencja
-
-Projekt komercyjny. Możesz:
-- ✅ Sprzedawać jako gotowe rozwiązanie
-- ✅ Customizować dla klientów
-- ✅ Używać w swojej firmie
-- ❌ Nie odsprzedawać kodu źródłowego
-
-## 🤝 Wsparcie
-
-- 📧 Email: twoj-email@example.com
-- 💼 LinkedIn: [Link]
-- 🌐 Portfolio: [Link]
-
----
-
-**Wersja:** 1.0.0  
-**Data:** 2025  
-**Autor:** [Twoje imię]  
-
-⭐ **5 gwiazdek od klientów!**
-
-## 💡 Tips & Tricks
-
 ### Najlepsze ustawienia dla różnych celów:
 
 **E-commerce produkty:**
@@ -318,11 +239,3 @@ Projekt komercyjny. Możesz:
 - Jakość: 100%
 - Wyostrz: TAK
 - Bez watermark
-
-**Batch dla agencji:**
-- 100+ zdjęć
-- Usuń tło
-- Export PNG
-- = 2500 zł za zlecenie!
-
-Zaczynaj zarabiać! 💰

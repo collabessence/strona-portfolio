@@ -1,6 +1,6 @@
 <?php
 // Konfiguracja
-$recipient_email = "kontakt@stronahr.pl"; // ZMIEŃ NA SWÓJ ADRES EMAIL
+$recipient_email = "kontakt@stronahr.example"; // ZMIEŃ NA SWÓJ ADRES EMAIL
 $subject_prefix = "[STRONAHR] Nowa wiadomość z formularza kontaktowego";
 $success_message = "Dziękujemy! Wiadomość została wysłana pomyślnie.";
 $error_message = "Przepraszamy, wystąpił błąd podczas wysyłania wiadomości.";
@@ -112,7 +112,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         // Nagłówki email
         $headers = array();
-        $headers[] = 'From: noreply@stronahr.pl';
+        $headers[] = 'From: noreply@stronahr.example';
         $headers[] = 'Reply-To: ' . $email;
         $headers[] = 'X-Mailer: PHP/' . phpversion();
         $headers[] = 'Content-Type: text/plain; charset=UTF-8';
