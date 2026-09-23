@@ -2,8 +2,6 @@
 
 Profesjonalny system rezerwacji online dla firm usługowych - salony fryzjerskie, gabinety kosmetyczne, centra medyczne, studia masażu i inne.
 
-## ✨ Funkcje
-
 ### Dla Klientów
 - **Wybór usługi** - przejrzysty katalog usług z cenami i czasem trwania
 - **Interaktywny kalendarz** - wybór daty z wykluczonymi weekendami i przeszłymi datami
@@ -38,8 +36,6 @@ Profesjonalny system rezerwacji online dla firm usługowych - salony fryzjerskie
 3. **Gotowe!**
    - Brak instalacji, brak serwera, brak bazy danych
    - Wszystkie dane zapisywane lokalnie w przeglądarce
-
-## 📖 Jak używać
 
 ### Rezerwacja wizyty (Klient)
 
@@ -87,8 +83,6 @@ Profesjonalny system rezerwacji online dla firm usługowych - salony fryzjerskie
    - Naciśnij "Eksport CSV"
    - Pobierze plik z wszystkimi rezerwacjami
    - Otwórz w Excel/Google Sheets
-
-## ⚙️ Konfiguracja
 
 ### Zmiana usług
 
@@ -170,43 +164,6 @@ if (clickedDate.getDay() === 0 || clickedDate.getDay() === 6) return;
 - **Font Awesome 6.4** - Ikony
 - **Date API** - Zarządzanie kalendarzem
 
-## 💼 Zastosowanie komercyjne
-
-### Idealne dla:
-- ✂️ Salony fryzjerskie
-- 💅 Gabinety kosmetyczne
-- 🏥 Przychodnie medyczne
-- 💆 Studia masażu
-- 🦷 Gabinety stomatologiczne
-- 🏋️ Siłownie i studia fitness
-- 🧘 Studia jogi
-- 🎓 Korepetycje i szkolenia
-
-### Wartość komercyjna
-
-**Cena sprzedaży:** 1500-3000 zł
-
-**Dodatkowe usługi:**
-- Personalizacja (logo, kolory) - +300 zł
-- Dodatkowe usługi/kategorie - +200 zł
-- Integracja z email - +500 zł
-- Backend z bazą danych - +2000 zł
-- Powiadomienia SMS - +800 zł
-- Płatności online - +1500 zł
-
-**Miesięczne utrzymanie:** 100-300 zł
-
-### Argumenty sprzedażowe
-
-1. **Oszczędność czasu** - brak telefonów, 24/7 rezerwacje
-2. **Wygoda dla klientów** - rezerwacja w 2 minuty
-3. **Automatyczna blokada** - brak podwójnych rezerwacji
-4. **Panel administracyjny** - zarządzanie w jednym miejscu
-5. **Mobilny dostęp** - działa na każdym urządzeniu
-6. **Bez dodatkowych kosztów** - brak abonamentów i baz danych
-
-## 📊 Rozbudowa (opcjonalnie)
-
 ### Proste usprawnienia
 - [ ] Dodaj więcej usług
 - [ ] Zmień godziny pracy
@@ -226,26 +183,3 @@ if (clickedDate.getDay() === 0 || clickedDate.getDay() === 6) return;
 - [ ] Płatności online (Stripe/PayU)
 - [ ] System lojalnościowy
 - [ ] Statystyki i analytics
-
-## 📝 Licencja
-
-Ten projekt jest własnością autora portfolio. Możesz:
-- ✅ Używać dla klientów komercyjnych
-- ✅ Modyfikować i dostosowywać
-- ✅ Sprzedawać jako część swoich usług
-- ❌ Nie możesz odsprzedawać kodu źródłowego jako szablon
-
-## 📞 Wsparcie
-
-Pytania? Problemy? Kontakt:
-- 📧 Email: twoj-email@example.com
-- 💼 LinkedIn: [Twój profil]
-- 🌐 Portfolio: [Link do portfolio]
-
----
-
-**Wersja:** 1.0.0  
-**Data wydania:** 2025  
-**Autor:** [Twoje imię]  
-
-⭐ Jeśli podoba Ci się ten projekt, zostaw gwiazdkę!

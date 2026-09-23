@@ -2,8 +2,6 @@
 
 Profesjonalny generator faktur VAT dostosowany do polskich przepisów podatkowych. Automatyczne obliczenia, generowanie PDF, zapis i wczytywanie danych.
 
-## 📋 Funkcje
-
 ### Podstawowe
 - ✅ Kompletne formularze sprzedawcy i nabywcy
 - ✅ Automatyczne obliczenia VAT (23%, 8%, 5%, 0%, ZW, NP)
@@ -22,8 +20,6 @@ Profesjonalny generator faktur VAT dostosowany do polskich przepisów podatkowyc
 - 🖨️ Stylowanie gotowe do druku
 - 📊 Różne jednostki miary (szt., godz., usł., kg, m, m², kpl.)
 - 💰 Różne metody płatności (przelew, gotówka, karta, pobranie)
-
-## 🚀 Instalacja
 
 ### Metoda 1: Uruchomienie lokalne
 1. Pobierz folder `9-Invoice-Generator`
@@ -45,21 +41,6 @@ git branch -M main
 git remote add origin https://github.com/username/invoice-gen.git
 git push -u origin main
 # Włącz GitHub Pages w ustawieniach repo
-```
-
-## 📖 Instrukcja użycia
-
-### 1. Dane sprzedawcy (zapamiętywane automatycznie)
-```
-Nazwa firmy: Twoja Firma Sp. z o.o.
-NIP: 123-456-78-90 (auto-formatowanie)
-Adres: ul. Przykładowa 1
-Kod: 00-001 (auto-formatowanie)
-Miasto: Warszawa
-Telefon: +48 123 456 789
-Email: kontakt@firma.pl
-Bank: PKO BP
-Konto: 12 3456 7890 1234 5678 9012 3456
 ```
 
 ### 2. Dane nabywcy
@@ -118,25 +99,6 @@ Dodaj dodatkowe informacje, np.:
 - Pobierze się plik JSON z wszystkimi danymi faktury
 - Możesz go później wczytać przyciskiem "📂 Wczytaj dane"
 
-## 💼 Zastosowania biznesowe
-
-### Dla freelancerów
-- Szybkie wystawianie faktur dla klientów
-- Zapamiętywanie swoich danych (nie trzeba wpisywać za każdym razem)
-- Profesjonalne PDF-y do wysyłki email
-
-### Dla małych firm
-- Proste fakturowanie bez kosztownych programów księgowych
-- Brak abonamentów i opłat miesięcznych
-- Działa offline po pierwszym załadowaniu
-
-### Dla agencji
-- Generowanie faktur dla wielu klientów
-- Zapis szablonów dla stałych klientów
-- Szybkie kopiowanie i modyfikacja
-
-## 🔧 Zaawansowane funkcje
-
 ### Automatyczne formatowanie
 System automatycznie formatuje:
 - **NIP**: `123456789` → `123-456-78-90`
@@ -160,14 +122,11 @@ DO ZAPŁATY = suma wszystkich brutto
 ```
 
 ### Kwota słownie
-Automatyczna konwersja kwoty na słowa:
 ```
 1234.56 PLN → "tysiąc dwieście trzydzieści cztery złotych 56/100"
 45.90 PLN → "czterdzieści pięć złotych 90/100"
 1000000.00 PLN → "jeden milion złotych 00/100"
 ```
-
-## 📊 Zgodność prawna
 
 ### Elementy obowiązkowe faktury VAT (spełnione ✅)
 - ✅ Słowa "FAKTURA VAT" lub "FAKTURA"
@@ -189,8 +148,6 @@ Automatyczna konwersja kwoty na słowa:
 - Nie integruje się z systemami ERP
 - Nie wysyła automatycznie do systemu e-Deklaracje
 - Zalecamy konsultację z księgowym dla firm rozliczających się z VAT
-
-## 🎨 Personalizacja
 
 ### Zmiana kolorów
 W pliku `style.css` zmień zmienne:
@@ -217,57 +174,12 @@ W `index.html` zmień `selected` w `<select id="paymentMethod">`:
 <option value="gotówka" selected>Gotówka</option>
 ```
 
-## 💰 Wartość produktu
-
-### Wycena rynkowa
-- Podobne generatory online: 300-500 zł/rok (abonament)
-- Programy księgowe z modułem faktur: 50-150 zł/miesiąc
-- **Twój produkt**: jednorazowa opłata 200-400 zł
-
-### Argumenty sprzedażowe
-1. **Brak abonamentów** - jednorazowy zakup, używasz bez limitów
-2. **Offline** - działa bez internetu po pierwszym załadowaniu
-3. **Prywatność** - dane przechowywane lokalnie, nie wysyłane na serwer
-4. **Polski VAT** - dostosowany do polskich przepisów
-5. **Łatwy** - nie wymaga instalacji, działa w przeglądarce
-
-### Przykładowe pakiety
-```
-SOLO - 250 zł
-- Generator faktur
-- Nieograniczona liczba faktur
-- Generowanie PDF
-- Zapis/wczytywanie danych
-
-FIRMA - 400 zł
-- Generator faktur
-- 3 szablony firmowe (możliwość dodania logo)
-- Konsultacja wdrożeniowa (30 min)
-- Instrukcja obsługi PDF
-
-AGENCJA - 800 zł
-- Generator faktur
-- Dostosowanie wizualne (kolory, logo)
-- 10 szablonów klientów
-- Wsparcie techniczne (3 miesiące)
-- Instrukcja + video tutorial
-```
-
-## 🐛 Rozwiązywanie problemów
-
 ### Faktura PDF nie generuje się
 **Problem**: Kliknięcie "Generuj PDF" nie działa
 **Rozwiązanie**: 
 - Sprawdź czy biblioteka jsPDF załadowała się (otwórz konsolę F12)
 - Sprawdź połączenie internetowe (CDN wymaga internetu)
 - Wypełnij wszystkie wymagane pola
-
-### Dane sprzedawcy nie zapisują się
-**Problem**: Po odświeżeniu strony dane znikają
-**Rozwiązanie**:
-- Sprawdź czy przeglądarka ma włączone LocalStorage
-- Nie używaj trybu incognito
-- Wyczyść cache i spróbuj ponownie
 
 ### Błędne obliczenia VAT
 **Problem**: Kwoty VAT się nie zgadzają
@@ -283,64 +195,6 @@ AGENCJA - 800 zł
 - Jeśli masz >15 pozycji, zostanie dodana druga strona
 - Sprawdź czy używasz najnowszej wersji przeglądarki
 
-## 📈 Rozbudowa produktu
-
-### Możliwe dodatki (zwiększenie wartości)
-1. **Moduł klientów** - baza stałych klientów z autouzupełnianiem
-2. **Historia faktur** - lista wystawionych faktur z wyszukiwarką
-3. **Faktura korygująca** - generowanie korekt
-4. **Faktura proforma** - faktury pro forma
-5. **Eksport do CSV** - dla księgowych
-6. **Integracja email** - wysyłka faktur bezpośrednio z aplikacji
-7. **Multi-waluta** - obsługa EUR, USD
-8. **Szablony** - zapisywanie szablonów dla powtarzających się faktur
-
-### Wersja PRO (dodatkowa sprzedaż)
-```
-Generator Faktur PRO - 800 zł
-+ Wszystkie funkcje podstawowe
-+ Baza klientów (nieograniczona)
-+ Historia faktur z wyszukiwarką
-+ Faktury korygujące
-+ 5 szablonów graficznych
-+ Eksport do Excel/CSV
-+ Wsparcie email (12 miesięcy)
-```
-
-## 🎓 Materiały marketingowe
-
-### Tytuły postów sprzedażowych
-1. "Generuj faktury VAT w 60 sekund - bez abonamentów!"
-2. "Przestań przepłacać za programy księgowe - Generator za 250 zł jednorazowo"
-3. "Freelancerzy! Ta aplikacja wyręczy Cię w fakturowaniu"
-4. "Polski generator faktur VAT z PDF - działa offline!"
-5. "Jak wystawić fakturę VAT? Prosty generator dla każdego"
-
-### Opis na OLX/Marketplace
-```
-🧾 Generator Faktur VAT - Profesjonalny, Polski, Bez Abonamentów!
-
-✅ Kompletne faktury VAT zgodne z polskimi przepisami
-✅ Automatyczne obliczenia (23%, 8%, 5%, 0%, ZW, NP)
-✅ Generowanie PDF - profesjonalny wygląd
-✅ Działa OFFLINE - nie potrzebujesz internetu
-✅ Zapamiętuje Twoje dane - wpisujesz raz
-✅ Bez limitów faktur - wystawiaj ile chcesz
-
-💰 CENA: 250 zł jednorazowo (nie ma żadnych abonamentów!)
-
-🎁 W PAKIECIE:
-- Pełna wersja generatora
-- Instrukcja PDF
-- Wsparcie techniczne (email)
-
-📦 Dostawa: natychmiast po płatności (link do pobrania)
-
-Idealne dla: freelancerów, małych firm, agencji, wszystkich którzy wystawiają faktury VAT
-
-Kontakt: [Twój kontakt]
-```
-
 ## 🔐 Bezpieczeństwo danych
 
 - ✅ Wszystkie dane przechowywane lokalnie w przeglądarce
@@ -350,24 +204,3 @@ Kontakt: [Twój kontakt]
 - ✅ Kod źródłowy dostępny do weryfikacji
 
 **Uwaga**: Dane w LocalStorage można utracić przy czyszczeniu przeglądarki. Zalecamy regularne eksportowanie faktur do JSON.
-
-## 📞 Wsparcie
-
-Dla klientów oferujemy:
-- 📧 Wsparcie email: [Twój email]
-- 📱 Szybkie FAQ w dokumentacji
-- 🎥 Video tutorial (opcjonalnie)
-- 💬 Konsultacja wdrożeniowa (w pakietach FIRMA i wyżej)
-
-## 📄 Licencja
-
-Produkt sprzedawany z licencją na użytek własny:
-- ✅ Nieograniczone wystawianie faktur
-- ✅ Instalacja na własnym serwerze
-- ✅ Modyfikacje dla własnych potrzeb
-- ❌ Odsprzedaż/redystrybucja bez zgody
-- ❌ Używanie kodu w innych komercyjnych projektach
-
----
-
-**Generator Faktur VAT PL v1.0** | Made with ❤️ for Polish freelancers and small businesses

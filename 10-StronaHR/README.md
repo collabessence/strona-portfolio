@@ -2,8 +2,6 @@
 
 Profesjonalna strona internetowa dla firmy STRONAHR - specjalizującej się w szkoleniach, mentoringu i usługach HR dla contact center.
 
-## 🚀 Co zostało dodane/ulepszone
-
 ### ✅ Grafika i wizualizacje
 - **Favicon SVG** z logo firmy
 - **Ikony SVG** dla sekcji oferty (HR, Szkolenia, Mentoring)
@@ -22,18 +20,9 @@ Profesjonalna strona internetowa dla firmy STRONAHR - specjalizującej się w sz
 - Walidacja po stronie klienta i serwera
 
 ### ✅ SEO i analityka
-- **Google Tag Manager** (GTM) - gotowy do konfiguracji
-- Zintegrowane miejsce na Google Analytics
+- Obsługa zgody na cookies (gotowa pod Google Analytics / GTM)
 - Strukturalne dane JSON-LD
 - Meta tagi Open Graph i Twitter Cards
-
-### ✅ Nowa zawartość
-- **Sekcja "O nas"** ze statystykami firmy
-- **Testimoniale** - opinie klientów (3 przykładowe)
-- **Rozbudowana stopka** z:
-  - Danymi kontaktowymi (email, telefon, adres)
-  - Linkami do social media (LinkedIn, Facebook, Instagram)
-  - Szybkimi linkami nawigacyjnymi
 
 ### ✅ Ulepszenia UX/UI
 - Płynne animacje i przejścia
@@ -41,19 +30,10 @@ Profesjonalna strona internetowa dla firmy STRONAHR - specjalizującej się w sz
 - Ikony graficzne zamiast tekstowych
 - Spójny design na wszystkich podstronach
 
-## 📋 Wymagane działania przed uruchomieniem
-
-### 1. Konfiguracja Google Tag Manager
-W plikach HTML znajdź:
-```html
-GTM-XXXXXXX
-```
-Zamień na swój ID z Google Tag Manager.
-
-### 2. Aktualizacja danych kontaktowych
+### Aktualizacja danych kontaktowych
 W `send.php` zmień:
 ```php
-$recipient_email = "kontakt@stronahr.pl";
+$recipient_email = "kontakt@stronahr.example";
 ```
 
 W stopce (`index.html` i wszystkie podstrony) zaktualizuj:
@@ -62,13 +42,13 @@ W stopce (`index.html` i wszystkie podstrony) zaktualizuj:
 - Adres fizyczny
 - Linki do social media (LinkedIn, Facebook, Instagram)
 
-### 3. Obraz Open Graph
+### Obraz Open Graph
 Przygotuj obraz **1200x630px** w formacie JPG i zamień placeholder:
 ```
 images/og-image.jpg
 ```
 
-### 4. Aktualizacja polityki prywatności
+### Aktualizacja polityki prywatności
 W `pages/polityka-prywatnosci.html` uzupełnij:
 - NIP firmy
 - Dokładne dane kontaktowe
@@ -139,13 +119,4 @@ Strona jest w pełni responsywna i testowana na:
 1. Skopiuj wszystkie pliki na serwer WWW
 2. Upewnij się, że PHP jest zainstalowane i skonfigurowane
 3. Zaktualizuj dane kontaktowe (patrz wyżej)
-4. Skonfiguruj GTM
-5. Przetestuj formularz kontaktowy
-
-## 📧 Wsparcie
-
-W razie pytań lub problemów, skontaktuj się z deweloperem.
-
----
-
-**© 2025 STRONAHR - Wszystkie prawa zastrzeżone**
+4. Przetestuj formularz kontaktowy

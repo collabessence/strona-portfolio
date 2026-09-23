@@ -6,8 +6,6 @@ Profesjonalna aplikacja desktopowa do generowania treści AI **bez API** i **bez
 ![AI](https://img.shields.io/badge/AI-Hugging%20Face-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-## ✨ Funkcje
-
 ### Generowanie treści
 - 📱 **Posty social media** (Facebook, LinkedIn, Instagram)
 - 🛍️ **Opisy produktów** dla e-commerce
@@ -29,8 +27,6 @@ Profesjonalna aplikacja desktopowa do generowania treści AI **bez API** i **bez
 - 🎨 **Nowoczesne GUI** (dark mode)
 - 🔒 **100% lokalnie** - bez wysyłania danych do internetu
 - ⚡ **Bez kosztów API** - darmowe użytkowanie
-
-## 🚀 Instalacja
 
 ### Wymagania
 - Python 3.8 lub nowszy
@@ -69,8 +65,6 @@ python main.py
 2. Poczekaj 1-2 minuty (pierwsze uruchomienie pobiera model ~500MB)
 3. Kolejne uruchomienia są natychmiastowe (model już pobrany)
 
-## 📖 Jak używać
-
 ### Podstawowe użycie
 
 1. **Wybierz typ treści**
@@ -99,8 +93,6 @@ python main.py
 **Ton:** Profesjonalny
 **Wynik:**
 > 🎓 Excited to announce our new Python programming course! Whether you're a beginner or looking to level up your skills, this comprehensive program covers everything from basics to advanced concepts. Join hundreds of successful graduates who transformed their careers. Limited spots available - enroll today! 💻 #Python #Programming #CareerDevelopment
-
-## ⚙️ Konfiguracja
 
 ### Zmiana modelu AI
 
@@ -135,39 +127,6 @@ tones = [
 ]
 ```
 
-## 🎯 Zastosowanie komercyjne
-
-### Idealne dla:
-- 📱 **Social media managerów** - szybkie tworzenie postów
-- ✍️ **Copywriterów** - inspiracja i wstępne drafty
-- 🛍️ **E-commerce** - opisy produktów na skalę
-- 📰 **Blogerów** - pomoc w pisaniu artykułów
-- 💼 **Agencji marketingowych** - content dla klientów
-- 🎓 **Edukacie** - materiały dydaktyczne
-
-### Wycena projektu
-
-**Sprzedaż gotowej aplikacji:** 2000-3500 zł
-
-**Customizacja:**
-- Zmiana modelu AI (+500 zł)
-- Dodanie własnych szablonów (+300 zł)
-- Export do DOCX/PDF (+400 zł)
-- Integracja z CMS (WordPress) (+1500 zł)
-- Tłumaczenia wielojęzyczne (+800 zł)
-- Własny branding (+200 zł)
-
-**Miesięczne wsparcie:** 200-400 zł
-
-### Argumenty sprzedażowe
-
-1. **Zero kosztów operacyjnych** - w przeciwieństwie do OpenAI API
-2. **Prywatność danych** - wszystko lokalne, nie opuszcza komputera
-3. **Nieograniczone użycie** - generuj ile chcesz
-4. **Offline capable** - działa bez internetu (po pierwszym uruchomieniu)
-5. **Szybkie** - 5-30 sekund na generację
-6. **Customizowalne** - możesz dodać swoje szablony
-
 ## 🛠 Tech Stack
 
 - **Python 3.8+** - język programowania
@@ -175,8 +134,6 @@ tones = [
 - **Hugging Face Transformers** - modele AI
 - **PyTorch** - backend dla modeli
 - **GPT-2 / DistilGPT2** - model językowy
-
-## 📊 Wydajność
 
 ### Czas generowania (zależy od sprzętu):
 
@@ -192,8 +149,6 @@ tones = [
 - **RAM**: 1-2GB podczas generowania
 - **Dysk**: 500MB-2GB (zależy od modelu)
 - **CPU**: 50-100% podczas generowania
-
-## 🐛 Rozwiązywanie problemów
 
 ### Błąd: "No module named 'transformers'"
 
@@ -231,22 +186,6 @@ device = "cpu"  # Zamiast "cuda"
 - [ ] Voice input (mówienie zamiast pisania)
 - [ ] Wersja webowa (Flask)
 - [ ] Własne fine-tuned modele
-
-## 📄 Licencja
-
-Ten projekt jest częścią portfolio i może być:
-- ✅ Używany komercyjnie dla klientów
-- ✅ Modyfikowany i dostosowywany
-- ✅ Sprzedawany jako gotowe rozwiązanie
-- ❌ Nie można odsprzedawać jako szablon/kod źródłowy
-
-## 🤝 Wsparcie
-
-Masz pytania? Problemy z instalacją?
-
-- 📧 Email: twoj-email@example.com
-- 💼 LinkedIn: [Twój profil]
-- 🌐 Portfolio: [Link]
 
 ## 🌟 Podziękowania
 

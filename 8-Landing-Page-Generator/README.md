@@ -1,14 +1,8 @@
 # 🎨 Landing Page Generator
 
-## 📋 Opis Produktu
+## Opis
 
 **Landing Page Generator** to narzędzie do szybkiego tworzenia profesjonalnych stron landing page z formularzami lead magnet. Idealne dla marketingowców, freelancerów i właścicieli małych firm.
-
-### **Wartość dla Klienta:** 200-400 zł
-
----
-
-## ✨ Funkcje
 
 ### **3 Profesjonalne Szablony**
 1. **Modern** - Gradient hero, nowoczesny design
@@ -33,8 +27,6 @@
 - 🚀 Gotowe do wgrania na hosting
 
 ---
-
-## 🚀 Jak Używać
 
 ### **Krok 1: Wybierz Szablon**
 Kliknij na jeden z 3 dostępnych szablonów
@@ -63,8 +55,6 @@ Kliknij na jeden z 3 dostępnych szablonów
 - Wgraj na hosting
 
 ---
-
-## 🔌 Integracje
 
 ### **Formspree (Darmowe)**
 ```html
@@ -99,74 +89,6 @@ https://api.getresponse.com/v3/campaigns/CAMPAIGN_ID/subscribers
 ```
 
 ---
-
-## 🌐 Hosting - Gdzie Wgrać?
-
-### **Netlify (POLECANE - Darmowe)**
-```bash
-# 1. Zainstaluj CLI
-npm install -g netlify-cli
-
-# 2. Deploy
-netlify deploy --prod
-
-# 3. Przeciągnij plik HTML w dashboard
-```
-**Zalety:** Darmowe, SSL, CDN, własna domena
-
-### **Vercel (Darmowe)**
-```bash
-vercel deploy landing-page.html
-```
-
-### **GitHub Pages (Darmowe)**
-```bash
-# 1. Utwórz repo: landing-page
-# 2. Push pliku HTML
-git add landing-page.html
-git commit -m "Landing page"
-git push
-
-# 3. Settings -> Pages -> Enable
-```
-**URL:** https://username.github.io/landing-page/
-
-### **Tradycyjny Hosting (FTP)**
-1. Kup hosting (home.pl, ovh.pl - 5-10 zł/m)
-2. Upload przez FileZilla
-3. Gotowe!
-
----
-
-## 💰 Jak Sprzedawać
-
-### **Pakiet: Landing Page + Setup**
-**Cena:** 400-800 zł
-
-**Co Zawiera:**
-- Stworzenie landing page według brief klienta
-- Personalizacja (kolory, logo, treść)
-- Integracja z email marketing (Mailchimp/GetResponse)
-- Hosting setup (Netlify/Vercel)
-- Własna domena klienta
-- Instrukcja obsługi
-
-### **Lead Magnet: Darmowa Landing dla Klienta**
-**Strategia:** Daj darmowy landing page, sprzedaj:
-- Email marketing automation (500 zł)
-- Google Ads setup (600 zł)
-- Facebook Ads campaign (800 zł)
-- Miesięczne wsparcie (200 zł/m)
-
-### **Upsell: Premium Features**
-- A/B testing (2 wersje landing) +200 zł
-- Analytics integration (GA4, Facebook Pixel) +150 zł
-- Exit-intent popup +100 zł
-- Live chat integration (Tidio, Crisp) +200 zł
-
----
-
-## 🎯 Przypadki Użycia
 
 ### **1. E-book Download**
 ```
@@ -210,8 +132,6 @@ Pola: Imię, Email
 
 ---
 
-## 📊 Optymalizacja Konwersji
-
 ### **Best Practices**
 
 **Nagłówek:**
@@ -230,7 +150,6 @@ Pola: Imię, Email
 - Call to action
 
 **Formularz:**
-- Minimum pól (im mniej, tym więcej konwersji)
 - Email zawsze wymagany
 - Telefon/firma opcjonalnie
 
@@ -247,8 +166,6 @@ Pola: Imię, Email
 - Dodaj social proof (liczby, opinie)
 
 ---
-
-## 🔧 Customizacja Kodu
 
 ### **Zmiana Czcionki**
 W sekcji `<style>`:
@@ -297,8 +214,6 @@ fbq('track', 'PageView');
 
 ---
 
-## 🐛 Troubleshooting
-
 ### **Formularz nie wysyła**
 1. Sprawdź URL webhook - musi zaczynać się od `https://`
 2. Użyj Formspree jeśli nie masz własnego API
@@ -338,50 +253,11 @@ fbq('track', 'PageView');
 
 ## 📈 Statystyki
 
-**Średnia konwersja landing page:**
 - Źle zoptymalizowana: 2-5%
 - Dobrze zoptymalizowana: 10-15%
 - Excellent: 20-30%
 
-**Czynniki wpływające na konwersję:**
-- Prostota formularza (mniej pól = więcej konwersji)
 - Jasny benefit w nagłówku
 - Social proof (liczby, opinie)
 - Trust badges (SSL, gwarancje)
 - Mobile responsive (60%+ ruchu z mobile)
-
----
-
-## 💼 Licencja Komercyjna
-
-✅ **Możesz:**
-- Tworzyć landing pages dla klientów
-- Sprzedawać jako usługę
-- Modyfikować kod
-- Używać w projektach komercyjnych
-
-❌ **Nie możesz:**
-- Odsprzedawać jako szablon/generator
-- Usuwać informacji o autorze (opcjonalnie)
-
----
-
-## 🎉 Bonusy
-
-### **10 Gotowych Copy Templates**
-Zobacz `TEMPLATES.md` - gotowe teksty dla różnych branż
-
-### **Checklist Optymalizacji**
-Zobacz `OPTIMIZATION.md` - jak zwiększyć konwersję
-
-### **Integration Guide**
-Zobacz `INTEGRATIONS.md` - step-by-step setup popularnych narzędzi
-
----
-
-**Stwórz swoją pierwszą landing page w 5 minut!** 🚀
-
----
-
-*Version: 1.0*  
-*Last updated: 2024*
