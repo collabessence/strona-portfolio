@@ -62,3 +62,6 @@ coverage/
 
 # Misc
 .sass-cache/
+
+# Dane firm z Google Places (telefony) - nie commitować
+tools/leads/out/

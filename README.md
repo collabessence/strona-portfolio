@@ -10,7 +10,8 @@ Strona oferty tworzenia stron internetowych dla małych firm (wizytówki, landin
 |---------|------------|
 | `index.html`, `style.css`, `script.js` | Strona główna (czysty HTML/CSS/JS, bez frameworka) |
 | `assets/` | Zrzuty ekranu projektów demo pokazywane na stronie głównej |
-| `tools/screenshots.js` | Skrypt (Node + Playwright) generujący te zrzuty |
+| `tools/` | Narzędzia do pozyskiwania klientów: generator dem, lista firm bez strony, szablony umowy/wycen/wiadomości, roadmap. Opis w `tools/README.md` |
+| `demo/` | Dema generowane dla konkretnych firm (`tools/mockup`), publiczne, `noindex` |
 | `2-Strony-Wizytowki/`, `10-StronaHR/`, `11-Dentysta-Klinika/`, `12-Fitness-Silownia/` | Strony demo dla fikcyjnych firm |
 | `5-…`, `6-…`, `8-…`, `9-…`, `13-…`, `14-…` | Narzędzia webowe (kalkulatory, generatory, TODO, rezerwacje, pogoda) |
 | `1-…`, `3-…`, `4-…`, `15-…`, `16-…` | Skrypty Python (scraper, Excel, bot Telegram, narzędzia AI) |
