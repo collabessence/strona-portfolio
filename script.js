@@ -4,7 +4,8 @@ class ParticlesAnimation {
         this.canvas = document.getElementById('particlesCanvas');
         this.ctx = this.canvas.getContext('2d');
         this.particles = [];
-        this.particleCount = 100;
+        // O(n²) line drawing - keep the count low on small screens
+        this.particleCount = window.innerWidth > 768 ? 100 : 40;
         this.mouse = { x: null, y: null, radius: 150 };
         
         this.init();
@@ -79,7 +80,7 @@ class ParticlesAnimation {
                 const dy = particle.y - this.mouse.y;
                 const distance = Math.sqrt(dx * dx + dy * dy);
 
-                if (distance < this.mouse.radius) {
+                if (distance > 0 && distance < this.mouse.radius) {
                     const forceX = dx / distance;
                     const forceY = dy / distance;
                     const force = (this.mouse.radius - distance) / this.mouse.radius;
@@ -98,7 +99,7 @@ window.addEventListener('load', () => {
     const loadingScreen = document.getElementById('loadingScreen');
     setTimeout(() => {
         loadingScreen.classList.add('hidden');
-    }, 2000);
+    }, 500);
 });
 
 // ===== NAVIGATION =====
@@ -232,6 +233,7 @@ const observeCounters = () => {
     
     const animateCounter = (counter) => {
         const target = parseInt(counter.dataset.target);
+        const suffix = counter.dataset.suffix ?? '+';
         const duration = 2000;
         const increment = target / (duration / 16);
         let current = 0;
@@ -239,10 +241,10 @@ const observeCounters = () => {
         const updateCounter = () => {
             current += increment;
             if (current < target) {
-                counter.textContent = Math.floor(current);
+                counter.textContent = Math.floor(current).toLocaleString('pl-PL');
                 requestAnimationFrame(updateCounter);
             } else {
-                counter.textContent = target + '+';
+                counter.textContent = target.toLocaleString('pl-PL') + suffix;
             }
         };
 
@@ -349,27 +351,22 @@ const initPortfolioFilter = () => {
 };
 
 // ===== CONTACT FORM =====
+// Static hosting (GitHub Pages) has no backend, so compose the message in the
+// visitor's mail client instead of pretending it was sent.
+const CONTACT_EMAIL = 'collabessence@gmail.com';
 const contactForm = document.getElementById('contactForm');
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        subject: document.getElementById('subject').value,
-        message: document.getElementById('message').value
-    };
 
-    console.log('Form submitted:', formData);
-    
-    // Show success message
-    alert('Dziękujemy za wiadomość! Odpowiemy najszybciej jak to możliwe.');
-    contactForm.reset();
-    
-    // Remove focus from inputs to reset labels
-    document.querySelectorAll('.form-group input, .form-group textarea').forEach(input => {
-        input.blur();
-    });
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    const body = `${message}\n\n--\n${name}\n${email}`;
+    window.location.href = `mailto:${CONTACT_EMAIL}` +
+        `?subject=${encodeURIComponent(subject)}` +
+        `&body=${encodeURIComponent(body)}`;
 });
 
 // ===== SCROLL TO TOP =====
@@ -395,8 +392,8 @@ const initCustomCursor = () => {
     const cursor = document.getElementById('cursor');
     const cursorFollower = document.getElementById('cursorFollower');
 
-    // Only enable on desktop
-    if (window.innerWidth > 768) {
+    // Only enable for mouse/trackpad users
+    if (window.matchMedia('(pointer: fine)').matches) {
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
@@ -482,8 +479,6 @@ const revealOnScroll = () => {
     });
 };
 
-window.addEventListener('scroll', revealOnScroll);
-
 // ===== PARALLAX MOUSE MOVE =====
 document.addEventListener('mousemove', (e) => {
     const moveX = (e.clientX - window.innerWidth / 2) / 50;
@@ -500,8 +495,8 @@ const animateSectionBackgrounds = () => {
     const sections = document.querySelectorAll('.about-section, .services-section, .portfolio-section');
     
     sections.forEach((section, index) => {
-        section.addEventListener('mouseenter', () => {
-            section.style.background = `radial-gradient(circle at ${event.clientX}px ${event.clientY}px, rgba(99, 102, 241, 0.05), transparent 40%)`;
+        section.addEventListener('mouseenter', (e) => {
+            section.style.background = `radial-gradient(circle at ${e.clientX}px ${e.clientY}px, rgba(99, 102, 241, 0.05), transparent 40%)`;
         });
     });
 };
@@ -568,8 +563,17 @@ const createScrollProgress = () => {
 
 // ===== INIT ALL ANIMATIONS =====
 document.addEventListener('DOMContentLoaded', () => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     // Initialize particles
-    new ParticlesAnimation();
+    if (!prefersReducedMotion) {
+        new ParticlesAnimation();
+    }
+
+    const currentYear = document.getElementById('currentYear');
+    if (currentYear) {
+        currentYear.textContent = new Date().getFullYear();
+    }
     
     // Initialize all features
     observeCounters();
@@ -600,22 +604,7 @@ const debounce = (func, wait) => {
     };
 };
 
-// Throttle function for mousemove events
-const throttle = (func, limit) => {
-    let inThrottle;
-    return function(...args) {
-        if (!inThrottle) {
-            func.apply(this, args);
-            inThrottle = true;
-            setTimeout(() => inThrottle = false, limit);
-        }
-    };
-};
-
 // Apply optimizations
-window.addEventListener('scroll', debounce(revealOnScroll, 50));
-document.addEventListener('mousemove', throttle((e) => {
-    // Optimized mousemove handler
-}, 16));
+window.addEventListener('scroll', debounce(revealOnScroll, 50), { passive: true });
 
 console.log('🚀 All animations and interactions initialized!');

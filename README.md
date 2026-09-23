@@ -1,22 +1,32 @@
 # 🎯 Portfolio Hub - Profesjonalny Przegląd Projektów
 
-To jest moja główna wizytówka technologiczna, stanowiąca centralny punkt dostępu do szerokiego wachlarza projektów programistycznych.
+To jest moja główna wizytówka technologiczna, stanowiąca centralny punkt dostępu do **18 gotowych projektów** - stron, narzędzi webowych i automatyzacji Python.
+
+🌐 **Live demo:** https://collabessence.github.io/strona-portfolio/
 
 ## 🌟 Co znajdziesz w środku?
-To repozytorium to "projekt w projekcie". Zawiera interaktywny interfejs z dostępem do ponad **15 różnych aplikacji i narzędzi**, w tym:
-- **🗂️ Strony Wizytówki:** (Fryzjer, Mechanik, Restauracja)
-- **📊 Narzędzia Analityczne:** Kalkulatory ROI, systemy porównawcze.
-- **🤖 Automatyzacja:** Scrapery danych (np. OLX), boty powiadomień.
-- **🛠️ Narzędzia Utility:** Generatory haseł, skracacze linków, timery.
+
+| Kategoria | Projekty |
+|-----------|----------|
+| **🗂️ Strony (6)** | Salon fryzjerski, Warsztat samochodowy, Restauracja & Bar, Strona HR (multi-page), Klinika dentystyczna, Fitness & Siłownia |
+| **🛠️ Narzędzia webowe (7)** | Kalkulator ROI, Generator wizytówek, Generator landing pages, Generator faktur VAT, TODO App, System rezerwacji, Weather App |
+| **🐍 Python (5)** | AI Image Editor, AI Content Generator, Bot Telegram, Excel Automation, OLX Scraper |
+
+Dodatkowo `7-Portfolio-Strona/` to szablon strony portfolio do personalizacji.
 
 ## 🛠️ Technologie
-- **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
-- **Animacje:** Particles.js, GSAP, CSS Animations
-- **Responsywność:** Mobile First Design
+- **Frontend:** HTML5, CSS3, JavaScript (Vanilla), Canvas (animacja cząsteczek)
+- **Python:** Pandas, Tkinter, BeautifulSoup, python-telegram-bot, Hugging Face
+- **Responsywność:** Mobile First Design, obsługa `prefers-reduced-motion`
 
 ## 🚀 Jak przeglądać?
-1. **Live Demo:** Jeśli włączone są GitHub Pages, kliknij w link w sekcji "About".
-2. **Lokalnie:** Pobierz repozytorium i uruchom `index.html`. 
+1. **Live demo:** link powyżej (GitHub Pages).
+2. **Lokalnie:** sklonuj repozytorium i uruchom prosty serwer, np. `python3 -m http.server`, a następnie otwórz http://localhost:8000.
+3. **Projekty Python:** instrukcje instalacji znajdziesz w `README.md` każdego folderu.
+
+## 📬 Kontakt
+- Email: collabessence@gmail.com
+- Telefon: +48 727 705 045
 
 ---
 *Każdy z sub-projektów znajduje się w dedykowanym folderze, co pozwala na łatwą analizę kodu źródłowego.*
