@@ -234,3 +234,29 @@ Wszystkie krytyczne problemy zostały naprawione. Projekty są:
 **Gratulacje! Twoje portfolio jest gotowe do pokazania światu! 🎉**
 
 Jeśli potrzebujesz dalszych napraw lub customizacji, sprawdź plik `PROBLEMY-I-NAPRAWY.md` dla pełnej listy sugestii.
+
+---
+
+# ✅ NAPRAWY - RUNDA 2
+
+**Data**: 2026-09-23
+
+### Błędy krytyczne
+- **Generator Landing Pages nie działał** - `getTemplate()` budował wszystkie 8 szablonów naraz, a szablony Tech/Business/SaaS wywoływały nieistniejące funkcje (`getAnimationCSS`, `getFormHTML`, `getFormJS`), więc podgląd nigdy się nie renderował. Dodano brakujące funkcje, szablony budowane są leniwie, selektor animacji faktycznie działa, a domyślne teksty trafiają do podglądu od razu. Usunięto martwy `script-fix.js`.
+- **Strona HR - JS nie działał na żadnej podstronie** - `navLinks` zadeklarowane dwukrotnie w `js/main.js` (`SyntaxError`) blokowało menu mobilne, formularz i animacje.
+- **Formularz kontaktowy portfolio gubił wiadomości** - pokazywał „Dziękujemy”, ale nic nie wysyłał. Teraz otwiera klienta poczty z gotową wiadomością do collabessence@gmail.com (GitHub Pages nie ma backendu).
+- **Linki „Dokumentacja” (projekty Python)** prowadziły do `README.md`, które GitHub Pages (Jekyll) nie serwuje pod tą ścieżką - teraz prowadzą do folderu na GitHubie.
+- **7-Portfolio-Strona** - wszystkie linki do projektów były względne do złego katalogu (404).
+
+### Treść i spójność
+- Ujednolicona liczba projektów (było 15/17 w różnych miejscach, filtry nie zgadzały się z kartami) - teraz 18, dodano kartę Weather App.
+- Liczniki: „100+ %” i „7+ dni” → „100 %” i „7 dni”, „30000+” → „30 000+”.
+- Sekcja kontakt: „Jesteśmy dostępni 24/7” (sprzeczne z godzinami Pn-Pt) → pierwsza osoba, klikalne telefon/email; rok w stopce aktualizuje się automatycznie.
+
+### SEO / UX / A11y
+- Favicon (`favicon.svg`), Open Graph + Twitter Card z obrazem `og-image.png` (1200×630), `canonical`, `theme-color`.
+- `sitemap.xml` zawiera wszystkie dema.
+- Wszystkie 25 inline styles przeniesione do klas CSS.
+- Ikony dekoracyjne `aria-hidden`, `rel="noopener"` przy `target="_blank"`.
+- `prefers-reduced-motion`: brak cząsteczek, kursora i animacji.
+- Własny kursor tylko dla myszy (`pointer: fine`), mniej cząsteczek na mobile, ekran ładowania 0,5 s zamiast 2 s, usunięte zdublowane listenery scrolla.

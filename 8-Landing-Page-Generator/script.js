@@ -38,10 +38,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Initialize input values from config
 function initializeInputs() {
-    document.getElementById('headline').value = config.headline || 'Pobierz Darmowy E-book!';
-    document.getElementById('subheadline').value = config.subheadline || '10 sprawdzonych strategii marketingowych';
-    document.getElementById('description').value = config.description || 'Zdobądź dostęp do ekskluzywnego przewodnika, który pomoże Ci zwiększyć konwersję o 300%. Wypełnij formularz i pobierz natychmiast!';
-    document.getElementById('buttonText').value = config.buttonText || 'Pobierz Bezpłatnie';
+    const defaults = {
+        headline: 'Pobierz Darmowy E-book!',
+        subheadline: '10 sprawdzonych strategii marketingowych',
+        description: 'Zdobądź dostęp do ekskluzywnego przewodnika, który pomoże Ci zwiększyć konwersję o 300%. Wypełnij formularz i pobierz natychmiast!',
+        buttonText: 'Pobierz Bezpłatnie'
+    };
+
+    // Keep config in sync with the prefilled inputs so the first preview isn't empty
+    Object.entries(defaults).forEach(([id, value]) => {
+        config[id] = config[id] || value;
+        document.getElementById(id).value = config[id];
+    });
 }
 
 // Attach event listeners
@@ -171,18 +179,19 @@ function generateHTML() {
 
 // Get template (Modern/Minimal/Gradient/Tech/Business/SaaS/E-commerce/Agency)
 function getTemplate(templateName) {
+    // Build only the selected template (lazy) instead of all eight on every keystroke
     const templates = {
-        modern: getModernTemplate(),
-        minimal: getMinimalTemplate(),
-        gradient: getGradientTemplate(),
-        tech: getTechTemplate(),
-        business: getBusinessTemplate(),
-        saas: getSaaSTemplate(),
-        ecommerce: getEcommerceTemplate(),
-        agency: getAgencyTemplate()
+        modern: getModernTemplate,
+        minimal: getMinimalTemplate,
+        gradient: getGradientTemplate,
+        tech: getTechTemplate,
+        business: getBusinessTemplate,
+        saas: getSaaSTemplate,
+        ecommerce: getEcommerceTemplate,
+        agency: getAgencyTemplate
     };
     
-    return templates[templateName] || templates.modern;
+    return (templates[templateName] || templates.modern)();
 }
 
 // Modern Template
@@ -282,6 +291,7 @@ function getModernTemplate() {
                 text-align: center;
                 margin-top: 20px;
             }
+            ${getAnimationCSS()}
             @media (max-width: 768px) {
                 .hero h1 { font-size: 2rem; }
                 .hero h2 { font-size: 1.2rem; }
@@ -402,6 +412,7 @@ function getMinimalTemplate() {
                 text-align: center;
                 margin-top: 20px;
             }
+            ${getAnimationCSS()}
             @media (max-width: 768px) {
                 .hero h1 { font-size: 2rem; }
                 .hero h2 { font-size: 1.1rem; }
@@ -529,6 +540,7 @@ function getGradientTemplate() {
                 margin-top: 20px;
                 font-weight: 600;
             }
+            ${getAnimationCSS()}
             @media (max-width: 768px) {
                 .hero h1 { font-size: 2rem; }
                 .hero h2 { font-size: 1.2rem; }
@@ -791,6 +803,7 @@ function getTechTemplate() {
                 background: ${config.colors.secondary};
                 box-shadow: 0 0 30px rgba(99, 102, 241, 0.4);
             }
+            ${getSuccessMessageCSS()}
             ${getAnimationCSS()}
             @media (max-width: 768px) {
                 .hero h1 { font-size: 2rem; }
@@ -910,6 +923,7 @@ function getBusinessTemplate() {
                 transform: translateY(-2px);
                 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             }
+            ${getSuccessMessageCSS()}
             ${getAnimationCSS()}
             @media (max-width: 768px) {
                 .hero { padding: 50px 30px; }
@@ -1008,6 +1022,7 @@ function getSaaSTemplate() {
             .submit-btn:hover {
                 background: ${config.colors.secondary};
             }
+            ${getSuccessMessageCSS()}
             ${getAnimationCSS()}
             @media (max-width: 768px) {
                 .hero h1 { font-size: 2rem; }
@@ -1017,6 +1032,80 @@ function getSaaSTemplate() {
         html: getFormHTML('saas'),
         js: getFormJS()
     };
+}
+
+// Shared form markup used by the Tech / Business / SaaS templates
+function getFormHTML(style) {
+    const formTitle = style === 'business' ? '<h3>Wypełnij formularz</h3>' : '';
+    return `
+            <div class="container">
+                <div class="hero">
+                    <h1>${config.headline}</h1>
+                    <h2>${config.subheadline}</h2>
+                    <p>${config.description}</p>
+                </div>
+                <div class="form-section">
+                    ${formTitle}
+                    <form id="leadForm">
+                        ${generateFormFields()}
+                        <button type="submit" class="submit-btn">${config.buttonText}</button>
+                    </form>
+                    <div class="success-message" id="successMessage">
+                        ✓ Dziękujemy! Sprawdź swoją skrzynkę email.
+                    </div>
+                </div>
+            </div>
+        `;
+}
+
+function getFormJS() {
+    return getFormScript();
+}
+
+function getSuccessMessageCSS() {
+    return `
+            .success-message {
+                display: none;
+                padding: 18px;
+                background: #10b981;
+                color: white;
+                border-radius: 10px;
+                text-align: center;
+                margin-top: 20px;
+                font-weight: 600;
+            }`;
+}
+
+// Entrance animation for the page container, driven by the "Typ Animacji" select
+function getAnimationCSS() {
+    const animations = {
+        'fade-in': {
+            keyframes: 'from { opacity: 0; } to { opacity: 1; }',
+            timing: '0.8s ease-out'
+        },
+        'slide-up': {
+            keyframes: 'from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); }',
+            timing: '0.8s ease-out'
+        },
+        'bounce': {
+            keyframes: '0% { opacity: 0; transform: scale(0.8); } 60% { opacity: 1; transform: scale(1.05); } 100% { transform: scale(1); }',
+            timing: '0.8s cubic-bezier(0.34, 1.56, 0.64, 1)'
+        },
+        'zoom': {
+            keyframes: 'from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); }',
+            timing: '0.6s ease-out'
+        }
+    };
+
+    const animation = animations[config.animation];
+    if (!animation) return '';
+
+    return `
+            @keyframes lpEntrance { ${animation.keyframes} }
+            .container { animation: lpEntrance ${animation.timing} both; }
+            @media (prefers-reduced-motion: reduce) {
+                .container { animation: none; }
+            }`;
 }
 
 // E-commerce Template

@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 2. Aktywny link w nawigacji na podstawie scrolla
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    const sectionNavLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 
     function updateActiveNavLink() {
         const scrollPos = window.scrollY + 100;
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const sectionId = section.getAttribute('id');
 
             if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-                navLinks.forEach(link => {
+                sectionNavLinks.forEach(link => {
                     link.classList.remove('active');
                     if (link.getAttribute('href') === `#${sectionId}`) {
                         link.classList.add('active');
