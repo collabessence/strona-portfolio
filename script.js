@@ -1,3 +1,23 @@
+// ===== THEME =====
+// Domyślny motyw (ciemny) ustawia inline skrypt w <head>; tutaj tylko przełącznik.
+const THEME_COLORS = { dark: '#0b1220', light: '#ffffff' };
+const themeToggle = document.getElementById('themeToggle');
+const themeMeta = document.querySelector('meta[name="theme-color"]');
+
+function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    themeMeta.setAttribute('content', THEME_COLORS[theme]);
+    themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Przełącz na jasny motyw' : 'Przełącz na ciemny motyw');
+    try { localStorage.setItem('theme', theme); } catch (e) { /* tryb prywatny */ }
+}
+
+applyTheme(document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+
+themeToggle.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    applyTheme(current === 'dark' ? 'light' : 'dark');
+});
+
 // ===== MOBILE NAV =====
 const nav = document.getElementById('nav');
 const navToggle = document.getElementById('navToggle');
