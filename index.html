@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adam – strony internetowe dla małych firm | Warszawa</title>
     <meta name="description" content="Nazywam się Adam. Robię strony internetowe dla małych firm z Warszawy i całej Polski: wizytówki, landing page i strony firmowe. Stała cena ustalona z góry, kod jest Twój.">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#0b1220">
+    <script>
+        // Motyw ustawiany przed renderem, żeby uniknąć mignięcia. Domyślnie ciemny.
+        (function () {
+            var t;
+            try { t = localStorage.getItem('theme'); } catch (e) {}
+            document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
+        })();
+    </script>
     <link rel="canonical" href="https://collabessence.github.io/strona-portfolio/">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
@@ -56,6 +64,8 @@
         <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6M10 14 21 3M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></symbol>
         <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
         <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+        <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+        <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
     </svg>
 
     <a class="skip-link" href="#oferta">Przejdź do treści</a>
@@ -74,10 +84,16 @@
                 <a href="#faq">FAQ</a>
                 <a href="#kontakt" class="btn btn--primary btn--sm">Bezpłatna wycena</a>
             </nav>
-            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav" aria-label="Otwórz menu">
-                <svg class="icon icon--open"><use href="#i-menu"/></svg>
-                <svg class="icon icon--close"><use href="#i-close"/></svg>
-            </button>
+            <div class="header__actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Przełącz na jasny motyw">
+                    <svg class="icon icon--moon"><use href="#i-moon"/></svg>
+                    <svg class="icon icon--sun"><use href="#i-sun"/></svg>
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav" aria-label="Otwórz menu">
+                    <svg class="icon icon--open"><use href="#i-menu"/></svg>
+                    <svg class="icon icon--close"><use href="#i-close"/></svg>
+                </button>
+            </div>
         </div>
     </header>
 
