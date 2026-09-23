@@ -200,23 +200,41 @@ body {
     font-size: 1.2rem;
 }
 
-.image-placeholder {
-    background: var(--light);
+.hero-visual {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
     border-radius: 20px;
-    padding: 60px;
-    text-align: center;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 400px;
+    gap: 2rem;
+    color: var(--white);
+    box-shadow: var(--shadow-lg);
 }
 
-.image-placeholder i {
-    font-size: 8rem;
-    color: var(--primary);
-    margin-bottom: 1rem;
-    opacity: 0.3;
+.hero-visual svg {
+    width: 160px;
+    height: 160px;
+    opacity: 0.9;
+}
+
+.hero-chips {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0 1.5rem;
+}
+
+.hero-chips li {
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    font-size: 0.95rem;
 }
 
 /* Section Header */

@@ -1,32 +1,38 @@
-# 🎯 Portfolio Hub - Profesjonalny Przegląd Projektów
+# Strona portfolio – Adam, web developer
 
-To jest moja główna wizytówka technologiczna, stanowiąca centralny punkt dostępu do **17 projektów demonstracyjnych** - stron, narzędzi webowych i automatyzacji Python. To koncepcje dla fikcyjnych firm, nie realizacje dla klientów.
+Strona oferty tworzenia stron internetowych dla małych firm (wizytówki, landing page, strony firmowe) plus projekty demonstracyjne.
 
-🌐 **Live demo:** https://collabessence.github.io/strona-portfolio/
+🌐 **Live:** https://collabessence.github.io/strona-portfolio/
 
-## 🌟 Co znajdziesz w środku?
+## Struktura
 
-| Kategoria | Projekty |
-|-----------|----------|
-| **🗂️ Strony (6)** | Salon fryzjerski, Warsztat samochodowy, Restauracja & Bar, Strona HR (multi-page), Klinika dentystyczna, Fitness & Siłownia |
-| **🛠️ Narzędzia webowe (7)** | Kalkulator ROI, Generator wizytówek, Generator landing pages, Generator faktur VAT, TODO App, System rezerwacji, Weather App |
-| **🐍 Python (4)** | AI Image Editor, AI Content Generator, Bot Telegram, Excel Automation |
+| Ścieżka | Co to jest |
+|---------|------------|
+| `index.html`, `style.css`, `script.js` | Strona główna (czysty HTML/CSS/JS, bez frameworka) |
+| `assets/` | Zrzuty ekranu projektów demo pokazywane na stronie głównej |
+| `tools/screenshots.js` | Skrypt (Node + Playwright) generujący te zrzuty |
+| `2-Strony-Wizytowki/`, `10-StronaHR/`, `11-Dentysta-Klinika/`, `12-Fitness-Silownia/` | Strony demo dla fikcyjnych firm |
+| `5-…`, `6-…`, `8-…`, `9-…`, `13-…`, `14-…` | Narzędzia webowe (kalkulatory, generatory, TODO, rezerwacje, pogoda) |
+| `1-…`, `3-…`, `4-…`, `15-…`, `16-…` | Skrypty Python (scraper, Excel, bot Telegram, narzędzia AI) |
+| `7-Portfolio-Strona/` | Starszy szablon strony portfolio do personalizacji |
 
-Dodatkowo `7-Portfolio-Strona/` to szablon strony portfolio do personalizacji, a `1-OLX-Scraper/` to ćwiczenie ze scrapowania (nie jest częścią oferty).
+Wszystkie projekty w podfolderach to koncepcje dla fikcyjnych firm, nie realizacje dla klientów.
 
-## 🛠️ Technologie
-- **Frontend:** HTML5, CSS3, JavaScript (Vanilla), Canvas (animacja cząsteczek)
-- **Python:** Pandas, Tkinter, BeautifulSoup, python-telegram-bot, Hugging Face
-- **Responsywność:** Mobile First Design, obsługa `prefers-reduced-motion`
+## Uruchomienie lokalne
 
-## 🚀 Jak przeglądać?
-1. **Live demo:** link powyżej (GitHub Pages).
-2. **Lokalnie:** sklonuj repozytorium i uruchom prosty serwer, np. `python3 -m http.server`, a następnie otwórz http://localhost:8000.
-3. **Projekty Python:** instrukcje instalacji znajdziesz w `README.md` każdego folderu.
+```bash
+python3 -m http.server 8000
+# http://localhost:8000
+```
 
-## 📬 Kontakt
+Odświeżenie zrzutów ekranu w sekcji „Projekty”:
+
+```bash
+npm i -D playwright && npx playwright install chromium
+node tools/screenshots.js
+```
+
+## Kontakt
+
 - Email: collabessence@gmail.com
 - Telefon: +48 727 705 045
-
----
-*Każdy z sub-projektów znajduje się w dedykowanym folderze, co pozwala na łatwą analizę kodu źródłowego.*
