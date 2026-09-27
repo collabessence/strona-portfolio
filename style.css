@@ -577,6 +577,36 @@ img {
     font-weight: 600;
 }
 
+.work--featured {
+    grid-column: 1 / -1;
+    border-color: var(--accent);
+}
+
+@media (min-width: 861px) {
+    .work--featured {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .work--featured .work__shot {
+        aspect-ratio: auto;
+        border-bottom: 0;
+        border-right: 1px solid var(--line);
+    }
+
+    .work--featured .work__body {
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.tag--real {
+    background: var(--accent);
+    color: #fff;
+}
+
 .works__more {
     margin: 28px 0 0;
     color: var(--muted);

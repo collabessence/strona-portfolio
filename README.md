@@ -9,7 +9,7 @@ Strona oferty tworzenia stron internetowych dla małych firm (wizytówki, landin
 | Ścieżka | Co to jest |
 |---------|------------|
 | `index.html`, `style.css`, `script.js` | Strona główna (czysty HTML/CSS/JS, bez frameworka) |
-| `assets/` | Zrzuty ekranu projektów demo pokazywane na stronie głównej |
+| `assets/` | Zrzuty ekranu projektów pokazywane na stronie głównej (`realizacja-parkiet.jpg` pochodzi z builda repo `parkiet-chelm`) |
 | `tools/` | Narzędzia do pozyskiwania klientów: generator dem, lista firm bez strony, szablony umowy/wycen/wiadomości, roadmap. Opis w `tools/README.md` |
 | `demo/` | Dema generowane dla konkretnych firm (`tools/mockup`), publiczne, `noindex` |
 | `2-Strony-Wizytowki/`, `10-StronaHR/`, `11-Dentysta-Klinika/`, `12-Fitness-Silownia/` | Strony demo dla fikcyjnych firm |
@@ -17,7 +17,7 @@ Strona oferty tworzenia stron internetowych dla małych firm (wizytówki, landin
 | `1-…`, `3-…`, `4-…`, `15-…`, `16-…` | Skrypty Python (scraper, Excel, bot Telegram, narzędzia AI) |
 | `7-Portfolio-Strona/` | Starszy szablon strony portfolio do personalizacji |
 
-Wszystkie projekty w podfolderach to koncepcje dla fikcyjnych firm, nie realizacje dla klientów.
+Projekty w podfolderach to koncepcje dla fikcyjnych firm. Pierwsza realizacja dla klienta: [parkiet-chelm.vercel.app](https://parkiet-chelm.vercel.app/) (osobne repo).
 
 ## Uruchomienie lokalne
 
