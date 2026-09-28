@@ -12,7 +12,6 @@ Lejek, na który realnie możesz liczyć: **100 kontaktów → 10–15 rozmów �
 - [ ] Brief: pytania z `szablony/brief.md` wklejone do Tally / Google Forms, link zapisany.
 - [ ] CRM: `szablony/crm.csv` zaimportowany do Google Sheets + `crm-apps-script.js` z codziennym przypomnieniem.
 - [ ] Profile z tym samym opisem i linkiem do strony: LinkedIn, Facebook, Useme, Oferteo, Fixly.
-- [ ] Klucz Google Places API (`leads/README.md`).
 
 ### Dzień 1–2: oferta "pierwszy klient"
 - [ ] Dwie strony wizytówki po 400 zł (zamiast 800) w zamian za: opinię z imieniem i nazwą firmy, zgodę na portfolio, dwa polecenia. Limit dwie, potem cennik normalny.
@@ -23,14 +22,14 @@ Lejek, na który realnie możesz liczyć: **100 kontaktów → 10–15 rozmów �
 - [ ] Każda odpowiedź "znam X" → demo dla X tego samego dnia.
 
 ### Dzień 3–7: firmy lokalne z gotowym demem
-- [ ] `leads.py` dla 2–3 kategorii w Twojej okolicy (fryzjer, mechanik, dentysta, restauracja).
-- [ ] Codziennie 10 firm: demo (`mockup.py`) + kontakt telefon / wizyta / Messenger (wiadomości 2–4). Nie masowy e-mail (patrz "Ostrzeżenia").
+- [ ] `pipeline.py szukaj` dla 2–3 kategorii w Twojej okolicy (fryzjer, mechanik, dentysta, restauracja). Źródło: OpenStreetMap, za darmo.
+- [ ] Codziennie `pipeline.py dzisiaj`: 10 firm → `demo` → `publikuj` → `wiadomosc` → kontakt telefon / wizyta / Messenger → `status kontakt`. Nie masowy e-mail (patrz "Ostrzeżenia").
 - [ ] Codziennie 15 min: Useme, Oferteo, OLX "zlecę stronę", grupy FB. Wiadomość nr 6 + link do dema z branży. Przewaga: "jutro wyślę podgląd".
-- [ ] Każdy kontakt do CRM z datą follow-upu (+3 dni).
+- [ ] Follow-upy ustawiają się same; rano `pipeline.py dzisiaj`.
 
 ## Tydzień 2: domknąć pierwszego, zbudować taśmę
 
-- [ ] Follow-upy z CRM (wiadomość nr 5). Większość sprzedaży dzieje się tu.
+- [ ] Follow-upy z `dzisiaj` (`wiadomosc --rodzaj followup`). Większość sprzedaży dzieje się tu.
 - [ ] Pierwszy projekt w pełni po procesie: brief → wycena (`szablony/wycena.md`) → umowa + zaliczka → podgląd → 2 rundy poprawek → publikacja → opinia. Każdy krok z szablonu.
 - [ ] Starter dla klienta: kopia szablonu wizytówki + formularz przez Web3Forms lub Formspree (darmowe, bez backendu) + deploy na Cloudflare Pages / Netlify + checklist: domena, SSL, `sitemap.xml`, Google Business Profile klienta.
 - [ ] Dzień publikacji: prośba o opinię (wiadomość nr 7), case study na Twojej stronie (sekcja "Projekty": pierwsza prawdziwa realizacja zamiast jednego dema), post na LinkedIn / FB.
@@ -48,17 +47,17 @@ Lejek, na który realnie możesz liczyć: **100 kontaktów → 10–15 rozmów �
 
 | Czynność | Automat | Ty |
 |---|---|---|
-| Znajdowanie firm bez strony | `leads.py` → CSV | wybór kategorii i dzielnicy |
-| Demo dla konkretnej firmy | `mockup.py` → link | rzut oka przed wysłaniem |
-| Pierwsza wiadomość | szablon | wysyłka i rozmowa |
-| Follow-upy | mail z arkusza co rano | treść odpowiedzi |
+| Znajdowanie firm bez strony | `pipeline.py szukaj` (OSM) | wybór kategorii i dzielnicy, 10 s weryfikacji w wyszukiwarce |
+| Demo dla konkretnej firmy | `pipeline.py demo` + `publikuj` | rzut oka przed wysłaniem |
+| Pierwsza wiadomość | `pipeline.py wiadomosc` | wysyłka i rozmowa |
+| Follow-upy | `pipeline.py dzisiaj` | treść odpowiedzi |
 | Brief od klienta | formularz → arkusz | rozmowa 20 min |
-| Wycena, umowa, zaliczka | szablony | decyzja o cenie, podpis |
+| Wycena, umowa, zaliczka | `pipeline.py wycena` / `umowa` | decyzja o cenie, podpis |
 | Budowa strony | szablon + deploy | treść, dopasowanie, poprawki |
 | Opinia, case study, post | szablony | wysłanie prośby |
 
 ## Ostrzeżenia (ogólne, nie porada prawna)
 
 1. **Masowe cold maile do firm są w Polsce ryzykowne.** Przepisy o komunikacji elektronicznej wymagają zgody na informację handlową, także wobec firm. Dlatego w planie jest telefon, wizyta, DM i formularze kontaktowe. Jeśli chcesz mailować, pierwsza wiadomość może być tylko pytaniem o zgodę na przesłanie oferty.
-2. **Places API zamiast scrapowania Map.** Scraping łamie regulamin Google i grozi blokadą konta. API ma darmowy pakiet wystarczający na setki firm miesięcznie.
-3. **Dane firm (telefony) trzymaj poza publicznym repo.** `tools/leads/out/` jest w `.gitignore`. Dema w `demo/` są publiczne, ale z `noindex`; usuwaj je po zakończeniu rozmowy.
+2. **OpenStreetMap zamiast scrapowania Google Maps.** Scraping łamie regulamin Google i grozi blokadą konta. OSM jest darmowe i legalne, ale niekompletne: sprawdź firmę w wyszukiwarce przed kontaktem.
+3. **Dane firm (telefony) trzymaj poza publicznym repo.** `tools/leads/out/` i `tools/pipeline/out/` są w `.gitignore`. Dema w `demo/` są publiczne, ale z `noindex`; usuwaj je po zakończeniu rozmowy.
