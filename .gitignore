@@ -65,3 +65,4 @@ coverage/
 
 # Dane firm z Google Places (telefony) - nie commitować
 tools/leads/out/
+tools/pipeline/out/

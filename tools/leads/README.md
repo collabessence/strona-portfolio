@@ -1,34 +1,32 @@
-# leads.py – firmy bez strony WWW
+# leads.py – firmy bez strony WWW (OpenStreetMap, za darmo)
 
-## Klucz API (raz, 10 minut)
-
-1. https://console.cloud.google.com → nowy projekt (np. "leady").
-2. APIs & Services → Library → **Places API (New)** → Enable.
-3. Credentials → Create credentials → API key. W "API restrictions" zaznacz tylko Places API (New).
-4. Billing trzeba podpiąć (karta), ale Google daje co miesiąc darmowy pakiet, który wystarcza na kilkaset zapytań Text Search. Ustaw w Billing → Budgets alert na 10 zł, żeby spać spokojnie.
-
-```bash
-export GOOGLE_PLACES_API_KEY="AIza..."
-```
+Źródło: OpenStreetMap przez Overpass API. Bez klucza, bez karty, bez limitu płatnego. Dane na licencji ODbL, do takiego użytku w porządku.
 
 ## Użycie
 
 ```bash
-python3 tools/leads/leads.py --typ fryzjer --gdzie "Mokotów, Warszawa"
-python3 tools/leads/leads.py --typ mechanik --gdzie "Piaseczno" --strony 3
-python3 tools/leads/leads.py --typ dentysta --gdzie "Ursynów, Warszawa" --wszystkie
+python3 tools/leads/leads.py --typ fryzjer --gdzie "Mokotów"
+python3 tools/leads/leads.py --typ mechanik --gdzie "Piaseczno"
+python3 tools/leads/leads.py --typ dentysta --gdzie "Chełm" --wszystkie
 ```
 
-Typy: `fryzjer`, `mechanik`, `restauracja`, `dentysta`, `fitness`, `kosmetyczka`, `fizjoterapeuta`. Każda strona wyników to 20 firm i jedno zapytanie do API.
+Typy: `fryzjer`, `kosmetyczka`, `mechanik`, `restauracja`, `dentysta`, `fitness`, `fizjoterapeuta`, `weterynarz`, `kwiaciarnia`.
 
-Domyślnie w CSV zostają tylko firmy **bez strony** albo z linkiem tylko do Facebooka/Instagrama/Booksy (`tylko_social = TAK`). `--wszystkie` zapisuje wszystkie.
+`--gdzie` to nazwa obszaru administracyjnego dokładnie tak, jak w OSM: dzielnica Warszawy („Mokotów”, „Wola”, „Ursynów”), miasto („Chełm”, „Piaseczno”) albo gmina. Jeśli wynik to 0, najpierw sprawdź pisownię na openstreetmap.org.
 
-## Kolumny
+## Co dostajesz
 
-`typ, nazwa, telefon, adres, ocena, opinie, strona, ma_strone, tylko_social, maps`
+CSV w `tools/leads/out/` (folder w `.gitignore`), kolumny:
+`typ, nazwa, telefon, adres, strona, ma_strone, tylko_social, godziny, osm, sprawdz`
 
-Najlepsi kandydaci: dużo opinii (firma działa i ma klientów), brak strony. Firma z 200 opiniami i bez strony traci klientów codziennie i zwykle o tym wie.
+Domyślnie tylko firmy bez tagu `website` (albo z samym Facebookiem/Instagramem), firmy z telefonem na górze.
 
-## Co dalej
+## Ograniczenie, o którym musisz wiedzieć
 
-Otwórz CSV w arkuszu, dodaj kolumny z `szablony/crm.csv` (status, data kontaktu, follow-up) i pracuj po 10 firm dziennie. Demo dla wiersza N: `python3 tools/mockup/mockup.py --csv <plik> --wiersz N`.
+OSM nie jest kompletne. Brak tagu `website` oznacza „nikt nie wpisał”, nie „firma nie ma strony”. Przed kontaktem kliknij link z kolumny `sprawdz` (wyszukiwarka z nazwą firmy): 10 sekund i wiesz. W praktyce ok. połowa kandydatów z OSM faktycznie nie ma strony; to i tak lista, której nie musisz układać ręcznie.
+
+Brak telefonu w OSM? Jest na Google Maps albo na drzwiach lokalu; wpisz go w CRM (`pipeline.py`) przed kontaktem.
+
+## Dalej
+
+Cały przepływ (lista → demo → wiadomość → follow-up → wycena → umowa) obsługuje `tools/pipeline/pipeline.py`, który wywołuje ten skrypt sam: `python3 tools/pipeline/pipeline.py szukaj --typ fryzjer --gdzie "Mokotów"`.
