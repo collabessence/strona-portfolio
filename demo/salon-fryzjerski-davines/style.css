@@ -1,0 +1,136 @@
+/* Salon Fryzjerski Davines, Chełm.
+   Kreda, świerk, szałwia, grafit. Jeden akcent (malwa) tylko na akcji "Zadzwoń".
+   Mocny element: numer telefonu jako bilet wizyty z perforacją. Reszta jest cicha.
+   Wizyty są telefoniczne, więc nie ma godzin otwarcia ani formularza. */
+
+:root {
+  --kreda: #edf0ec;
+  --swierk: #23403a;
+  --szalwia: #b5c4b0;
+  --grafit: #1f2523;
+  --malwa: #a92f5d;
+  --malwa-ciemna: #8c2349;
+  --biel: #ffffff;
+  --display: "Jost", "Futura", "Century Gothic", "Trebuchet MS", sans-serif;
+  --tekst: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --margines: clamp(20px, 5vw, 72px);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--kreda); color: var(--grafit);
+  font: 400 1.1875rem/1.65 var(--tekst);
+}
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--swierk); outline-offset: 3px; }
+h1, h2 { font-family: var(--display); font-weight: 500; line-height: 1.05; letter-spacing: -.01em; margin: 0; }
+
+/* góra */
+.gora { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 20px var(--margines); }
+.znak { font: 500 1.125rem/1.2 var(--display); text-decoration: none; letter-spacing: .01em; }
+.gora-tel { font: 500 1.125rem/1 var(--display); text-decoration: none; white-space: nowrap; }
+.znak:hover, .gora-tel:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+/* hero */
+.hero { display: grid; gap: clamp(28px, 5vw, 56px); padding: clamp(24px, 5vw, 56px) var(--margines) clamp(48px, 8vw, 96px); max-width: 1180px; }
+.hero-opis { margin: 0 0 16px; font-family: var(--display); font-weight: 500; color: var(--swierk); }
+.hero h1 { font-size: clamp(2.6rem, 8vw, 5.5rem); max-width: 12ch; }
+.hero-lead { max-width: 36ch; margin: 22px 0 0; font-size: 1.25rem; color: #39433f; }
+.hero-akcje { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* bilet wizyty */
+.bilet {
+  position: relative; display: grid; gap: 14px; max-width: 460px;
+  background: var(--biel); color: var(--grafit); text-decoration: none;
+  border: 2px solid var(--swierk); border-radius: 6px;
+  padding: 22px 24px 20px;
+  box-shadow: 6px 6px 0 var(--szalwia);
+}
+.bilet::before, .bilet::after {
+  content: ""; position: absolute; top: 56px; width: 18px; height: 18px; border-radius: 50%;
+  background: var(--kreda); border: 2px solid var(--swierk);
+}
+.bilet::before { left: -11px; clip-path: inset(0 0 0 50%); }
+.bilet::after { right: -11px; clip-path: inset(0 50% 0 0); }
+.bilet:hover { background: #fbfcfb; }
+.bilet:active { transform: translate(2px, 2px); box-shadow: 4px 4px 0 var(--szalwia); }
+.bilet-glowa {
+  font: 500 1.05rem/1 var(--display); color: var(--swierk);
+  padding-bottom: 12px; border-bottom: 2px dashed var(--swierk);
+}
+.bilet-numer { font: 500 clamp(2.4rem, 11vw, 3.6rem)/1 var(--display); letter-spacing: .02em; white-space: nowrap; }
+.bilet-dol { display: grid; gap: 14px; margin-top: 6px; }
+.bilet-pole { display: block; border-bottom: 1.5px solid #8a968f; padding-bottom: 2px; min-height: 1.6rem; }
+.bilet-pole i { font: 400 .9rem/1 var(--display); color: #5b6761; font-style: normal; }
+.bilet-opis { font-size: .95rem; color: #4b5651; }
+
+/* przyciski */
+.przycisk {
+  display: inline-flex; align-items: center; justify-content: center; text-align: center;
+  min-height: 52px; padding: 12px 26px; border: 2px solid var(--swierk); border-radius: 999px;
+  background: transparent; color: var(--swierk);
+  font: 500 1.0625rem/1.1 var(--display); text-decoration: none; cursor: pointer;
+}
+.przycisk:hover { background: rgba(35, 64, 58, .08); }
+.przycisk:active { transform: translateY(1px); }
+.przycisk-glowny { background: var(--malwa); border-color: var(--malwa); color: var(--biel); }
+.przycisk-glowny:hover { background: var(--malwa-ciemna); border-color: var(--malwa-ciemna); }
+
+/* kroki */
+.kroki { background: var(--swierk); color: var(--biel); padding: clamp(40px, 7vw, 88px) var(--margines); }
+.kroki h2 { font-size: clamp(2rem, 5vw, 3.25rem); margin-bottom: clamp(24px, 4vw, 40px); }
+.kroki-lista { list-style: none; counter-reset: krok; margin: 0; padding: 0; max-width: 980px; display: grid; gap: 28px; }
+.kroki-lista li { counter-increment: krok; display: grid; grid-template-columns: 3.2rem 1fr; gap: 4px 16px; align-items: baseline; }
+.kroki-lista li::before { content: counter(krok); grid-row: 1 / span 2; font: 500 3rem/1 var(--display); color: var(--szalwia); }
+.kroki-lista strong { font: 500 1.5rem/1.2 var(--display); }
+.kroki-lista span { color: #d8e2d9; max-width: 52ch; }
+
+/* usługi */
+.uslugi { padding: clamp(40px, 7vw, 88px) var(--margines); }
+.uslugi-wewn { max-width: 980px; }
+.uslugi h2 { font-size: clamp(2rem, 5vw, 3.25rem); margin-bottom: clamp(18px, 3vw, 28px); }
+.uslugi-lista { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--swierk); }
+.uslugi-lista li { padding: 16px 0; border-bottom: 1px solid #b6bfb8; font: 500 1.375rem/1.25 var(--display); }
+.przypis { margin: 18px 0 0; max-width: 56ch; color: #4b5651; font-size: 1rem; }
+
+/* dojazd */
+.dojazd { background: var(--szalwia); padding: clamp(40px, 7vw, 88px) var(--margines) clamp(48px, 8vw, 96px); }
+.dojazd-wewn { max-width: 1180px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.dojazd h2 { font-size: clamp(2rem, 5vw, 3.25rem); }
+.dojazd-adres { font: 500 clamp(1.75rem, 4.5vw, 2.5rem)/1.15 var(--display); margin: 8px 0 12px; }
+.dane { margin: 0 0 14px; display: grid; gap: 10px; width: 100%; max-width: 460px; }
+.dane div { display: grid; grid-template-columns: 6rem 1fr; gap: 12px; padding-bottom: 10px; border-bottom: 1px solid rgba(31, 37, 35, .35); }
+.dane dt { font-family: var(--display); font-weight: 500; }
+.dane dd { margin: 0; }
+.dojazd .przycisk { border-color: var(--grafit); color: var(--grafit); }
+.dojazd .przycisk:hover { background: rgba(31, 37, 35, .08); }
+.dojazd .przycisk-glowny { background: var(--malwa); border-color: var(--malwa); color: var(--biel); }
+.dojazd .przycisk-glowny:hover { background: var(--malwa-ciemna); border-color: var(--malwa-ciemna); }
+
+/* stopka */
+.stopka { background: var(--grafit); color: #c6cdc8; padding: 28px var(--margines) 96px; font-size: .95rem; }
+.stopka p { margin: 0 0 6px; }
+
+/* pasek propozycji (nie jest częścią strony klienta) */
+#demo-bar {
+  position: fixed; left: 12px; bottom: 12px; z-index: 2147483000;
+  max-width: min(360px, calc(100vw - 24px));
+  background: #0f1715; color: #e8efe9; border: 1px solid #2a3a35; border-radius: 12px;
+  padding: 12px 34px 12px 14px; font: 14px/1.45 var(--display);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, .35);
+}
+#demo-bar strong { display: block; margin-bottom: 4px; }
+#demo-bar a { color: #9fd0bd; font-weight: 600; }
+#demo-bar button { position: absolute; top: 4px; right: 8px; background: none; border: 0; color: #9fb0a8; font-size: 20px; cursor: pointer; }
+
+@media (min-width: 880px) {
+  .hero { grid-template-columns: 1.15fr .85fr; align-items: center; }
+  .hero-akcje { grid-column: 1 / -1; }
+  .bilet { justify-self: end; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
