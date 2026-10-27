@@ -1,26 +1,12 @@
-// ===== THEME =====
-// Domyślny motyw (ciemny) ustawia inline skrypt w <head>; tutaj tylko przełącznik.
-const THEME_COLORS = { dark: '#0b1220', light: '#ffffff' };
-const themeToggle = document.getElementById('themeToggle');
-const themeMeta = document.querySelector('meta[name="theme-color"]');
-
-function applyTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    themeMeta.setAttribute('content', THEME_COLORS[theme]);
-    themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Przełącz na jasny motyw' : 'Przełącz na ciemny motyw');
-    try { localStorage.setItem('theme', theme); } catch (e) { /* tryb prywatny */ }
-}
-
-applyTheme(document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
-
-themeToggle.addEventListener('click', () => {
-    const current = document.documentElement.getAttribute('data-theme');
-    applyTheme(current === 'dark' ? 'light' : 'dark');
-});
-
 // ===== MOBILE NAV =====
 const nav = document.getElementById('nav');
 const navToggle = document.getElementById('navToggle');
+
+function closeNav() {
+    nav.classList.remove('is-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', 'Otwórz menu');
+}
 
 navToggle.addEventListener('click', () => {
     const open = nav.classList.toggle('is-open');
@@ -29,16 +15,12 @@ navToggle.addEventListener('click', () => {
 });
 
 nav.addEventListener('click', (e) => {
-    if (e.target.closest('a')) {
-        nav.classList.remove('is-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-    }
+    if (e.target.closest('a')) closeNav();
 });
 
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && nav.classList.contains('is-open')) {
-        nav.classList.remove('is-open');
-        navToggle.setAttribute('aria-expanded', 'false');
+        closeNav();
         navToggle.focus();
     }
 });
@@ -79,22 +61,3 @@ form.addEventListener('submit', (e) => {
 
 // ===== FOOTER YEAR =====
 document.getElementById('year').textContent = new Date().getFullYear();
-
-// ===== REVEAL ON SCROLL =====
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const revealTargets = document.querySelectorAll('.card, .work, .step, .price, .faq, .included');
-
-if (!reduceMotion && 'IntersectionObserver' in window) {
-    revealTargets.forEach((el) => el.classList.add('reveal'));
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-    revealTargets.forEach((el) => observer.observe(el));
-}

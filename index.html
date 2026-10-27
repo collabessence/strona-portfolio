@@ -1,414 +1,346 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adam – strony internetowe dla małych firm | Warszawa</title>
-    <meta name="description" content="Nazywam się Adam. Robię strony internetowe dla małych firm z Warszawy i całej Polski: wizytówki, landing page i strony firmowe. Stała cena ustalona z góry, kod jest Twój.">
-    <meta name="theme-color" content="#0b1220">
-    <script>
-        // Motyw ustawiany przed renderem, żeby uniknąć mignięcia. Domyślnie ciemny.
-        (function () {
-            var t;
-            try { t = localStorage.getItem('theme'); } catch (e) {}
-            document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
-        })();
-    </script>
-    <link rel="canonical" href="https://collabessence.github.io/strona-portfolio/">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adam – strony internetowe dla małych firm | Warszawa</title>
+<meta name="description" content="Nazywam się Adam. Robię strony internetowe dla małych firm z Warszawy i całej Polski: wizytówki, landing page i strony firmowe. Stała cena ustalona z góry, kod jest Twój.">
+<meta name="theme-color" content="#0e1512">
+<link rel="canonical" href="https://collabessence.github.io/strona-portfolio/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="pl_PL">
-    <meta property="og:title" content="Adam – strony internetowe dla małych firm">
-    <meta property="og:description" content="Wizytówki, landing page i strony firmowe. Stała cena ustalona z góry, kod jest Twój. Warszawa i cała Polska.">
-    <meta property="og:url" content="https://collabessence.github.io/strona-portfolio/">
-    <meta property="og:image" content="https://collabessence.github.io/strona-portfolio/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Adam – strony internetowe dla małych firm">
+<meta property="og:description" content="Wizytówki, landing page i strony firmowe. Stała cena ustalona z góry, kod jest Twój. Warszawa i cała Polska.">
+<meta property="og:url" content="https://collabessence.github.io/strona-portfolio/">
+<meta property="og:image" content="https://collabessence.github.io/strona-portfolio/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-    <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&family=Sacramento&display=swap">
+<link rel="stylesheet" href="style.css">
 
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Adam – strony internetowe dla małych firm",
-        "description": "Tworzenie stron internetowych dla małych firm: wizytówki, landing page, strony firmowe.",
-        "url": "https://collabessence.github.io/strona-portfolio/",
-        "email": "collabessence@gmail.com",
-        "telephone": "+48727705045",
-        "priceRange": "od 600 zł",
-        "address": { "@type": "PostalAddress", "addressLocality": "Warszawa", "addressCountry": "PL" },
-        "areaServed": "PL"
-    }
-    </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Adam – strony internetowe dla małych firm",
+  "description": "Tworzenie stron internetowych dla małych firm: wizytówki, landing page, strony firmowe.",
+  "url": "https://collabessence.github.io/strona-portfolio/",
+  "email": "collabessence@gmail.com",
+  "telephone": "+48727705045",
+  "priceRange": "od 600 zł",
+  "address": { "@type": "PostalAddress", "addressLocality": "Warszawa", "addressCountry": "PL" },
+  "areaServed": "PL"
+}
+</script>
 </head>
 <body>
-    <svg class="sprite" aria-hidden="true" focusable="false">
-        <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
-        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
-        <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></symbol>
-        <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
-        <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
-        <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></symbol>
-        <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
-        <symbol id="i-building" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></symbol>
-        <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
-        <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></symbol>
-        <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
-        <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09zM12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2zM9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></symbol>
-        <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6M10 14 21 3M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></symbol>
-        <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
-        <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
-        <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
-        <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
-    </svg>
 
-    <a class="skip-link" href="#oferta">Przejdź do treści</a>
+<a class="skip-link" href="#realizacje">Przejdź do treści</a>
 
-    <header class="header" id="top">
-        <div class="container header__inner">
-            <a href="#top" class="brand" aria-label="Adam – strona główna">
-                <span class="brand__mark" aria-hidden="true">A</span>
-                <span class="brand__text">Adam<span class="brand__sub">web developer</span></span>
-            </a>
-            <nav class="nav" id="nav" aria-label="Główna">
-                <a href="#oferta">Oferta</a>
-                <a href="#projekty">Projekty</a>
-                <a href="#proces">Jak pracuję</a>
-                <a href="#cennik">Cennik</a>
-                <a href="#faq">FAQ</a>
-                <a href="#kontakt" class="btn btn--primary btn--sm">Bezpłatna wycena</a>
-            </nav>
-            <div class="header__actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Przełącz na jasny motyw">
-                    <svg class="icon icon--moon"><use href="#i-moon"/></svg>
-                    <svg class="icon icon--sun"><use href="#i-sun"/></svg>
-                </button>
-                <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav" aria-label="Otwórz menu">
-                    <svg class="icon icon--open"><use href="#i-menu"/></svg>
-                    <svg class="icon icon--close"><use href="#i-close"/></svg>
-                </button>
-            </div>
+<header class="header" id="top">
+  <div class="container header__inner">
+    <a href="#top" class="brand" aria-label="Adam Szymański – strona główna">Adam Szymański</a>
+    <nav class="nav" id="nav" aria-label="Główna">
+      <a href="#realizacje">Realizacje</a>
+      <a href="#cennik">Cennik</a>
+      <a href="#proces">Jak pracuję</a>
+      <a href="#faq">Pytania</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="header__tel" href="tel:+48727705045">727 705 045</a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Otwórz menu">
+      <span class="nav-toggle__bars" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <h1>Strona internetowa dla Twojej firmy. Prosta, szybka, z ceną ustaloną z góry.</h1>
+        <p class="lead">
+          Robię strony dla małych firm: wizytówki, landing page i strony firmowe.
+          Bez kreatorów i abonamentów. Dostajesz kod, który jest Twój.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="tel:+48727705045">Zadzwoń: 727 705 045</a>
+          <a class="btn btn--ghost" href="#kontakt">Napisz do mnie</a>
         </div>
-    </header>
+        <p class="hero__note">Odpowiadam w ciągu 24 godzin. Wycena jest bezpłatna.</p>
+      </div>
 
-    <main>
-        <section class="hero">
-            <div class="container hero__inner">
-                <p class="eyebrow">Web developer · Warszawa · pracuję zdalnie z całą Polską</p>
-                <h1>Strona internetowa dla Twojej firmy. Prosta, szybka i zrobiona porządnie.</h1>
-                <p class="lead">
-                    Nazywam się Adam. Robię strony dla małych firm: wizytówki, landing page i strony firmowe.
-                    Bez kreatorów i abonamentów. Dostajesz kod, który jest Twój, i cenę ustaloną z góry.
-                </p>
-                <div class="hero__actions">
-                    <a href="#kontakt" class="btn btn--primary">Bezpłatna wycena <svg class="icon"><use href="#i-arrow"/></svg></a>
-                    <a href="#projekty" class="btn btn--ghost">Zobacz projekty</a>
-                </div>
-                <ul class="hero__facts" aria-label="Najważniejsze informacje">
-                    <li><svg class="icon"><use href="#i-check"/></svg>Odpowiadam w ciągu 24 godzin</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Stała cena, bez niespodzianek</li>
-                    <li><svg class="icon"><use href="#i-check"/></svg>Strona wizytówka gotowa w 1–2 tygodnie</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="section" id="oferta">
-            <div class="container">
-                <div class="section__head">
-                    <p class="eyebrow">Oferta</p>
-                    <h2>Trzy rodzaje stron. Wybierz tę, której potrzebuje Twoja firma.</h2>
-                    <p class="section__desc">Nie wiesz, która? Napisz, opowiedz o firmie, a podpowiem, co ma sens.</p>
-                </div>
-                <div class="grid grid--3">
-                    <article class="card">
-                        <div class="card__icon"><svg class="icon"><use href="#i-layout"/></svg></div>
-                        <h3>Strona wizytówka</h3>
-                        <p>Jedna strona z najważniejszymi informacjami: usługi, cennik, galeria, mapa i kontakt. Dla salonów, warsztatów, gabinetów, restauracji.</p>
-                        <ul class="checklist">
-                            <li>Do 6 sekcji na jednej stronie</li>
-                            <li>Formularz kontaktowy i przycisk „Zadzwoń”</li>
-                            <li>Mapa Google i godziny otwarcia</li>
-                        </ul>
-                        <p class="card__price">od 800 zł</p>
-                    </article>
-                    <article class="card">
-                        <div class="card__icon"><svg class="icon"><use href="#i-zap"/></svg></div>
-                        <h3>Landing page</h3>
-                        <p>Strona z jednym celem: zapis, zapytanie albo zakup. Do kampanii reklamowej, promocji lub nowej usługi.</p>
-                        <ul class="checklist">
-                            <li>Jeden jasny przekaz i jedno wezwanie do działania</li>
-                            <li>Formularz z wysyłką na Twój e-mail</li>
-                            <li>Szybkie ładowanie, gotowa pod reklamy</li>
-                        </ul>
-                        <p class="card__price">od 600 zł</p>
-                    </article>
-                    <article class="card">
-                        <div class="card__icon"><svg class="icon"><use href="#i-building"/></svg></div>
-                        <h3>Strona firmowa</h3>
-                        <p>Kilka podstron: oferta, o firmie, realizacje, kontakt. Dla firm, które mają więcej do pokazania niż jedna strona pomieści.</p>
-                        <ul class="checklist">
-                            <li>3–6 podstron ze wspólną nawigacją</li>
-                            <li>Polityka prywatności i zgoda na cookies</li>
-                            <li>Podstawowe SEO: tytuły, opisy, mapa strony</li>
-                        </ul>
-                        <p class="card__price">od 1800 zł</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section--alt" id="projekty">
-            <div class="container">
-                <div class="section__head">
-                    <p class="eyebrow">Projekty</p>
-                    <h2>Zobacz, jak wyglądają moje strony</h2>
-                    <p class="section__desc">
-                        Strona dla prawdziwej firmy i cztery projekty demonstracyjne dla fikcyjnych firm.
-                        Każdą możesz otworzyć i przeklikać.
-                    </p>
-                </div>
-                <div class="grid grid--2 works">
-                    <a class="work work--featured" href="https://parkiet-chelm.vercel.app/" target="_blank" rel="noopener">
-                        <div class="work__shot"><img src="assets/realizacja-parkiet.jpg" width="1280" height="720" loading="lazy" alt="Zrzut ekranu strony Cyklinowanie i układanie parkietu Chełm: ciemne tło, nagłówek Podłoga jak nowa. Bez wymiany., zdjęcia realizacji przed i po"></div>
-                        <div class="work__body">
-                            <span class="tag tag--real">Realizacja dla klienta</span>
-                            <h3>Cyklinowanie i układanie parkietu, Chełm <svg class="icon"><use href="#i-external"/></svg></h3>
-                            <p>Strona firmy parkieciarskiej z jednym celem: telefon. Realizacje ze zdjęciami przed/po i suwakiem, opinie z Google, przebieg zlecenia, dojazd. Szybka i lekka, sprawdzona testami i Lighthouse.</p>
-                        </div>
-                    </a>
-                    <a class="work" href="2-Strony-Wizytowki/3-Restauracja-Bar/index.html" target="_blank" rel="noopener">
-                        <div class="work__shot"><img src="assets/demo-restauracja.jpg" width="1280" height="720" loading="lazy" alt="Zrzut ekranu strony demo restauracji: ciemne tło, nagłówek Smaki Tradycji, przyciski rezerwacji i menu"></div>
-                        <div class="work__body">
-                            <span class="tag">Wizytówka</span>
-                            <h3>Restauracja <svg class="icon"><use href="#i-external"/></svg></h3>
-                            <p>Menu z cenami, galeria, rezerwacja stolika i mapa dojazdu. Ciemna, elegancka kolorystyka.</p>
-                        </div>
-                    </a>
-                    <a class="work" href="11-Dentysta-Klinika/index.html" target="_blank" rel="noopener">
-                        <div class="work__shot"><img src="assets/demo-dentysta.jpg" width="1280" height="720" loading="lazy" alt="Zrzut ekranu strony demo kliniki stomatologicznej: jasne tło, niebieskie akcenty, przycisk Umów wizytę"></div>
-                        <div class="work__body">
-                            <span class="tag">Wizytówka</span>
-                            <h3>Klinika stomatologiczna <svg class="icon"><use href="#i-external"/></svg></h3>
-                            <p>Usługi, zespół, cennik i umawianie wizyt. Jasny, spokojny układ, który buduje zaufanie.</p>
-                        </div>
-                    </a>
-                    <a class="work" href="12-Fitness-Silownia/index.html" target="_blank" rel="noopener">
-                        <div class="work__shot"><img src="assets/demo-fitness.jpg" width="1280" height="720" loading="lazy" alt="Zrzut ekranu strony demo siłowni: ciemne tło, pomarańczowe akcenty, nagłówek Przekrocz swoje granice"></div>
-                        <div class="work__body">
-                            <span class="tag">Wizytówka</span>
-                            <h3>Siłownia <svg class="icon"><use href="#i-external"/></svg></h3>
-                            <p>Plany treningowe, trenerzy, karnety i zapis na pierwszy trening. Mocna, energiczna typografia.</p>
-                        </div>
-                    </a>
-                    <a class="work" href="10-StronaHR/index.html" target="_blank" rel="noopener">
-                        <div class="work__shot"><img src="assets/demo-hr.jpg" width="1280" height="720" loading="lazy" alt="Zrzut ekranu strony demo firmy szkoleniowej: ciemne tło, nagłówek Zwiększ efektywność swojego zespołu"></div>
-                        <div class="work__body">
-                            <span class="tag">Strona firmowa</span>
-                            <h3>Firma szkoleniowa <svg class="icon"><use href="#i-external"/></svg></h3>
-                            <p>Strona główna i trzy podstrony usług, polityka prywatności, zgoda na cookies i formularz z walidacją.</p>
-                        </div>
-                    </a>
-                </div>
-                <p class="works__more">
-                    Więcej projektów, w tym narzędzia webowe i skrypty, znajdziesz
-                    <a href="https://github.com/collabessence/strona-portfolio" target="_blank" rel="noopener">w repozytorium na GitHubie</a>.
-                </p>
-            </div>
-        </section>
-
-        <section class="section" id="proces">
-            <div class="container">
-                <div class="section__head">
-                    <p class="eyebrow">Jak pracuję</p>
-                    <h2>Cztery kroki od pomysłu do działającej strony</h2>
-                </div>
-                <ol class="steps">
-                    <li class="step">
-                        <div class="step__icon"><svg class="icon"><use href="#i-chat"/></svg></div>
-                        <h3>Rozmowa i wycena</h3>
-                        <p>Piszesz, czym się zajmujesz i czego potrzebujesz. W ciągu 24 godzin odpowiadam z konkretną ceną i terminem.</p>
-                    </li>
-                    <li class="step">
-                        <div class="step__icon"><svg class="icon"><use href="#i-pencil"/></svg></div>
-                        <h3>Projekt i treść</h3>
-                        <p>Ustalamy układ, kolory i treści. Jeśli nie masz tekstów ani zdjęć, pomogę je przygotować.</p>
-                    </li>
-                    <li class="step">
-                        <div class="step__icon"><svg class="icon"><use href="#i-code"/></svg></div>
-                        <h3>Budowa i poprawki</h3>
-                        <p>Buduję stronę i wysyłam link do podglądu. Dwie rundy poprawek są w cenie.</p>
-                    </li>
-                    <li class="step">
-                        <div class="step__icon"><svg class="icon"><use href="#i-rocket"/></svg></div>
-                        <h3>Publikacja i przekazanie</h3>
-                        <p>Pomagam z domeną i hostingiem, publikuję stronę i przekazuję Ci kod oraz krótką instrukcję.</p>
-                    </li>
-                </ol>
-            </div>
-        </section>
-
-        <section class="section section--alt" id="cennik">
-            <div class="container">
-                <div class="section__head">
-                    <p class="eyebrow">Cennik</p>
-                    <h2>Ceny startowe. Dokładną kwotę podaję po rozmowie.</h2>
-                    <p class="section__desc">Cena zależy od liczby sekcji i podstron oraz od tego, czy masz gotowe teksty i zdjęcia. Ustalamy ją raz i nie zmienia się w trakcie.</p>
-                </div>
-                <div class="grid grid--3">
-                    <article class="price">
-                        <h3>Landing page</h3>
-                        <p class="price__amount">od 600 zł</p>
-                        <p class="price__meta">Realizacja: około tygodnia</p>
-                        <ul class="checklist">
-                            <li>Jedna strona, jeden cel</li>
-                            <li>Formularz na Twój e-mail</li>
-                            <li>Gotowa pod kampanię reklamową</li>
-                        </ul>
-                        <a href="#kontakt" class="btn btn--ghost btn--block">Zapytaj o wycenę</a>
-                    </article>
-                    <article class="price price--featured">
-                        <span class="price__badge">Najczęściej wybierana</span>
-                        <h3>Strona wizytówka</h3>
-                        <p class="price__amount">od 800 zł</p>
-                        <p class="price__meta">Realizacja: 1–2 tygodnie</p>
-                        <ul class="checklist">
-                            <li>Do 6 sekcji: usługi, cennik, galeria, kontakt</li>
-                            <li>Formularz, mapa, przycisk „Zadzwoń”</li>
-                            <li>Podstawowe SEO i szybkie ładowanie</li>
-                        </ul>
-                        <a href="#kontakt" class="btn btn--primary btn--block">Zapytaj o wycenę</a>
-                    </article>
-                    <article class="price">
-                        <h3>Strona firmowa</h3>
-                        <p class="price__amount">od 1800 zł</p>
-                        <p class="price__meta">Realizacja: 2–4 tygodnie</p>
-                        <ul class="checklist">
-                            <li>3–6 podstron</li>
-                            <li>Polityka prywatności, cookies</li>
-                            <li>Mapa strony i dane dla Google</li>
-                        </ul>
-                        <a href="#kontakt" class="btn btn--ghost btn--block">Zapytaj o wycenę</a>
-                    </article>
-                </div>
-                <div class="included">
-                    <h3>W każdej cenie</h3>
-                    <ul class="checklist checklist--grid">
-                        <li>Wygląd dopasowany do telefonu i komputera</li>
-                        <li>Dwie rundy poprawek w trakcie projektu</li>
-                        <li>Pełny kod źródłowy, bez abonamentu</li>
-                        <li>Pomoc z domeną i hostingiem</li>
-                        <li>Instrukcja, jak samodzielnie zmieniać treści</li>
-                        <li>30 dni na zgłoszenie błędów po publikacji</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="o-mnie">
-            <div class="container about">
-                <div class="about__avatar" aria-hidden="true">A</div>
-                <div class="about__text">
-                    <p class="eyebrow">O mnie</p>
-                    <h2>Adam, web developer z Warszawy</h2>
-                    <p>
-                        Buduję strony w HTML, CSS i JavaScript, bez ciężkich kreatorów, dzięki czemu są szybkie i proste
-                        w utrzymaniu. Zaczynam jako freelancer, więc każdy projekt traktuję jak ten, od którego zależy
-                        moja opinia. W zamian dostajesz niższą cenę niż w agencji i kontakt bezpośrednio ze mną,
-                        bez pośredników.
-                    </p>
-                    <p>
-                        Pracuję zdalnie. Jeśli jesteś z Warszawy, chętnie spotkam się na kawę i omówimy projekt na miejscu.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section--alt" id="faq">
-            <div class="container container--narrow">
-                <div class="section__head">
-                    <p class="eyebrow">FAQ</p>
-                    <h2>Najczęstsze pytania</h2>
-                </div>
-                <details class="faq">
-                    <summary>Ile trwa zrobienie strony?</summary>
-                    <p>Landing page około tygodnia, wizytówka 1–2 tygodnie, strona firmowa 2–4 tygodnie. Najwięcej czasu zajmują zwykle teksty i zdjęcia, dlatego im szybciej je dostanę, tym szybciej strona będzie gotowa.</p>
-                </details>
-                <details class="faq">
-                    <summary>Czy potrzebuję domeny i hostingu? Ile to kosztuje?</summary>
-                    <p>Tak. Domena .pl to około 50–100 zł rocznie, hosting od kilkudziesięciu złotych rocznie. Pomogę wybrać i skonfigurować, a rachunki opłacasz bezpośrednio u dostawcy, więc strona jest w pełni Twoja.</p>
-                </details>
-                <details class="faq">
-                    <summary>Czy będę mógł sam zmieniać treści?</summary>
-                    <p>Drobne zmiany, jak godziny otwarcia czy ceny, pokażę Ci, jak zrobić samodzielnie. Większe zmiany możesz zlecić mnie albo dowolnemu innemu programiście, bo dostajesz cały kod.</p>
-                </details>
-                <details class="faq">
-                    <summary>Co jeśli projekt mi się nie spodoba?</summary>
-                    <p>Zanim zacznę budować, uzgadniamy układ i kolory. W trakcie masz dwie rundy poprawek w cenie. Jeśli po pierwszym podglądzie uznasz, że to nie to, kończymy współpracę i rozliczamy tylko wykonaną część.</p>
-                </details>
-                <details class="faq">
-                    <summary>Co dokładnie dostaję po zakończeniu?</summary>
-                    <p>Opublikowaną stronę, pełny kod źródłowy, krótką instrukcję i 30 dni na zgłaszanie błędów, które poprawiam bez dodatkowych kosztów.</p>
-                </details>
-            </div>
-        </section>
-
-        <section class="section" id="kontakt">
-            <div class="container contact">
-                <div class="contact__info">
-                    <p class="eyebrow">Kontakt</p>
-                    <h2>Opowiedz mi o swojej firmie</h2>
-                    <p class="section__desc">Napisz kilka zdań: czym się zajmujesz, jaką stronę potrzebujesz i na kiedy. Odpowiem w ciągu 24 godzin z wyceną.</p>
-                    <ul class="contact__list">
-                        <li><svg class="icon"><use href="#i-mail"/></svg><a href="mailto:collabessence@gmail.com">collabessence@gmail.com</a></li>
-                        <li><svg class="icon"><use href="#i-phone"/></svg><a href="tel:+48727705045">+48 727 705 045</a><span class="muted">pn–pt, 9:00–18:00</span></li>
-                        <li><svg class="icon"><use href="#i-pin"/></svg><span>Warszawa, praca zdalna z całą Polską</span></li>
-                    </ul>
-                </div>
-                <form class="form" id="contactForm" novalidate>
-                    <div class="form__row">
-                        <div class="field">
-                            <label for="name">Imię</label>
-                            <input type="text" id="name" name="name" autocomplete="given-name" required>
-                        </div>
-                        <div class="field">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" autocomplete="email" required>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label for="type">Jakiej strony potrzebujesz?</label>
-                        <select id="type" name="type">
-                            <option value="Strona wizytówka">Strona wizytówka</option>
-                            <option value="Landing page">Landing page</option>
-                            <option value="Strona firmowa">Strona firmowa</option>
-                            <option value="Jeszcze nie wiem">Jeszcze nie wiem</option>
-                        </select>
-                    </div>
-                    <div class="field">
-                        <label for="message">Wiadomość</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Czym się zajmujesz? Czego potrzebujesz? Masz już domenę, teksty, zdjęcia?" required></textarea>
-                    </div>
-                    <p class="form__error" id="formError" role="alert" hidden>Uzupełnij imię, poprawny e-mail i wiadomość.</p>
-                    <button type="submit" class="btn btn--primary">Wyślij wiadomość <svg class="icon"><use href="#i-arrow"/></svg></button>
-                    <p class="form__hint">Formularz otworzy Twój program pocztowy z gotową wiadomością. Możesz też napisać bezpośrednio na <a href="mailto:collabessence@gmail.com">collabessence@gmail.com</a>.</p>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container footer__inner">
-            <p>© <span id="year">2026</span> Adam · Strony internetowe · Warszawa</p>
-            <p><a href="https://github.com/collabessence/strona-portfolio" target="_blank" rel="noopener">Kod tej strony na GitHubie</a></p>
+      <div class="szyld">
+        <div class="szyld__tablica" role="img" aria-label="Neon: Otwarte całą dobę">
+          <p class="szyld__neon" aria-hidden="true">Otwarte</p>
+          <p class="szyld__rurka" aria-hidden="true">całą dobę</p>
         </div>
-    </footer>
+        <p class="szyld__podpis">Tak działa dobra strona firmowa: klient znajdzie Cię i zadzwoni o każdej porze, także gdy zamykasz sklep.</p>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <section class="section" id="realizacje">
+    <div class="container">
+      <div class="section__head">
+        <h2>Realizacje</h2>
+        <p class="section__desc">Jedna strona zrobiona dla prawdziwego klienta i cztery projekty pokazowe dla fikcyjnych firm. Każdą możesz otworzyć i przeklikać.</p>
+      </div>
+
+      <a class="featured" href="https://parkiet-chelm.vercel.app/" target="_blank" rel="noopener">
+        <div class="featured__shot">
+          <img src="assets/realizacja-parkiet.jpg" width="1280" height="720" loading="lazy" alt="Zrzut ekranu strony Cyklinowanie i układanie parkietu Chełm: ciemne tło, nagłówek Podłoga jak nowa. Bez wymiany., zdjęcia realizacji przed i po">
+        </div>
+        <div class="featured__body">
+          <p class="featured__tag">Strona dla klienta</p>
+          <h3>Cyklinowanie i układanie parkietu, Chełm</h3>
+          <p>Strona firmy parkieciarskiej z jednym celem: telefon. Realizacje ze zdjęciami przed i po oraz suwakiem, opinie z Google, przebieg zlecenia i dojazd. Szybka i lekka, sprawdzona testami i Lighthouse.</p>
+          <p class="featured__go">Otwórz stronę</p>
+        </div>
+      </a>
+
+      <h3 class="subhead">Projekty pokazowe</h3>
+      <ul class="demos">
+        <li>
+          <a class="demo" href="2-Strony-Wizytowki/3-Restauracja-Bar/index.html" target="_blank" rel="noopener">
+            <img src="assets/demo-restauracja.jpg" width="1280" height="720" loading="lazy" alt="Zrzut ekranu strony demo restauracji: ciemne tło, nagłówek Smaki Tradycji, przyciski rezerwacji i menu">
+            <span class="demo__text">
+              <span class="demo__name">Restauracja</span>
+              <span class="demo__type">Strona wizytówka</span>
+              <span class="demo__desc">Menu z cenami, galeria, rezerwacja stolika i mapa dojazdu. Ciemna, elegancka kolorystyka.</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="demo" href="11-Dentysta-Klinika/index.html" target="_blank" rel="noopener">
+            <img src="assets/demo-dentysta.jpg" width="1280" height="720" loading="lazy" alt="Zrzut ekranu strony demo kliniki stomatologicznej: jasne tło, niebieskie akcenty, przycisk Umów wizytę">
+            <span class="demo__text">
+              <span class="demo__name">Klinika stomatologiczna</span>
+              <span class="demo__type">Strona wizytówka</span>
+              <span class="demo__desc">Usługi, zespół, cennik i umawianie wizyt. Jasny, spokojny układ, który buduje zaufanie.</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="demo" href="12-Fitness-Silownia/index.html" target="_blank" rel="noopener">
+            <img src="assets/demo-fitness.jpg" width="1280" height="720" loading="lazy" alt="Zrzut ekranu strony demo siłowni: ciemne tło, pomarańczowe akcenty, nagłówek Przekrocz swoje granice">
+            <span class="demo__text">
+              <span class="demo__name">Siłownia</span>
+              <span class="demo__type">Strona wizytówka</span>
+              <span class="demo__desc">Plany treningowe, trenerzy, karnety i zapis na pierwszy trening. Mocna, energiczna typografia.</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="demo" href="10-StronaHR/index.html" target="_blank" rel="noopener">
+            <img src="assets/demo-hr.jpg" width="1280" height="720" loading="lazy" alt="Zrzut ekranu strony demo firmy szkoleniowej: ciemne tło, nagłówek Zwiększ efektywność swojego zespołu">
+            <span class="demo__text">
+              <span class="demo__name">Firma szkoleniowa</span>
+              <span class="demo__type">Strona firmowa</span>
+              <span class="demo__desc">Strona główna i trzy podstrony usług, polityka prywatności, zgoda na cookies i formularz z walidacją.</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+      <p class="works__more">
+        Więcej projektów, w tym narzędzia webowe i skrypty, znajdziesz
+        <a href="https://github.com/collabessence/strona-portfolio" target="_blank" rel="noopener">w repozytorium na GitHubie</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--tint" id="cennik">
+    <div class="container">
+      <div class="section__head">
+        <h2>Cennik</h2>
+        <p class="section__desc">To ceny startowe. Dokładną kwotę podaję po rozmowie, zależy od liczby sekcji i podstron oraz od tego, czy masz gotowe teksty i zdjęcia. Ustalamy ją raz i nie zmienia się w trakcie.</p>
+      </div>
+
+      <ul class="cennik">
+        <li class="oferta">
+          <div class="oferta__opis">
+            <h3>Landing page</h3>
+            <p>Strona z jednym celem: zapis, zapytanie albo zakup. Do kampanii reklamowej, promocji lub nowej usługi.</p>
+            <ul class="lista">
+              <li>Jeden jasny przekaz i jedno wezwanie do działania</li>
+              <li>Formularz z wysyłką na Twój e-mail</li>
+              <li>Szybkie ładowanie, gotowa pod reklamy</li>
+            </ul>
+          </div>
+          <p class="oferta__czas">Realizacja: około tygodnia</p>
+          <p class="oferta__cena"><span>od</span> 600 zł</p>
+        </li>
+        <li class="oferta">
+          <div class="oferta__opis">
+            <h3>Strona wizytówka</h3>
+            <p>Jedna strona z najważniejszymi informacjami: usługi, cennik, galeria, mapa i kontakt. Dla salonów, warsztatów, gabinetów, restauracji.</p>
+            <ul class="lista">
+              <li>Do 6 sekcji na jednej stronie</li>
+              <li>Formularz kontaktowy i przycisk „Zadzwoń”</li>
+              <li>Mapa Google i godziny otwarcia</li>
+            </ul>
+          </div>
+          <p class="oferta__czas">Realizacja: 1–2 tygodnie</p>
+          <p class="oferta__cena"><span>od</span> 800 zł</p>
+        </li>
+        <li class="oferta">
+          <div class="oferta__opis">
+            <h3>Strona firmowa</h3>
+            <p>Kilka podstron: oferta, o firmie, realizacje, kontakt. Dla firm, które mają więcej do pokazania niż jedna strona pomieści.</p>
+            <ul class="lista">
+              <li>3–6 podstron ze wspólną nawigacją</li>
+              <li>Polityka prywatności i zgoda na cookies</li>
+              <li>Podstawowe SEO: tytuły, opisy, mapa strony</li>
+            </ul>
+          </div>
+          <p class="oferta__czas">Realizacja: 2–4 tygodnie</p>
+          <p class="oferta__cena"><span>od</span> 1800 zł</p>
+        </li>
+      </ul>
+
+      <div class="included">
+        <h3>W każdej cenie</h3>
+        <ul class="lista lista--dwie">
+          <li>Wygląd dopasowany do telefonu i komputera</li>
+          <li>Dwie rundy poprawek w trakcie projektu</li>
+          <li>Pełny kod źródłowy, bez abonamentu</li>
+          <li>Pomoc z domeną i hostingiem</li>
+          <li>Instrukcja, jak samodzielnie zmieniać treści</li>
+          <li>30 dni na zgłoszenie błędów po publikacji</li>
+        </ul>
+        <p class="included__hint">Nie wiesz, którą stronę wybrać? Napisz, opowiedz o firmie, a podpowiem, co ma sens.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="proces">
+    <div class="container">
+      <div class="section__head">
+        <h2>Cztery kroki od pomysłu do działającej strony</h2>
+      </div>
+      <ol class="steps">
+        <li class="step">
+          <h3>Rozmowa i wycena</h3>
+          <p>Piszesz, czym się zajmujesz i czego potrzebujesz. W ciągu 24 godzin odpowiadam z konkretną ceną i terminem.</p>
+        </li>
+        <li class="step">
+          <h3>Projekt i treść</h3>
+          <p>Ustalamy układ, kolory i treści. Jeśli nie masz tekstów ani zdjęć, pomogę je przygotować.</p>
+        </li>
+        <li class="step">
+          <h3>Budowa i poprawki</h3>
+          <p>Buduję stronę i wysyłam link do podglądu. Dwie rundy poprawek są w cenie.</p>
+        </li>
+        <li class="step">
+          <h3>Publikacja i przekazanie</h3>
+          <p>Pomagam z domeną i hostingiem, publikuję stronę i przekazuję Ci kod oraz krótką instrukcję.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section--tint" id="o-mnie">
+    <div class="container about">
+      <h2>Adam, web developer z Warszawy</h2>
+      <div class="about__text">
+        <p>
+          Buduję strony w HTML, CSS i JavaScript, bez ciężkich kreatorów, dzięki czemu są szybkie i proste
+          w utrzymaniu. Zaczynam jako freelancer, więc każdy projekt traktuję jak ten, od którego zależy
+          moja opinia. W zamian dostajesz niższą cenę niż w agencji i kontakt bezpośrednio ze mną,
+          bez pośredników.
+        </p>
+        <p>
+          Pracuję zdalnie. Jeśli jesteś z Warszawy, chętnie spotkam się na kawę i omówimy projekt na miejscu.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="container container--narrow">
+      <div class="section__head">
+        <h2>Najczęstsze pytania</h2>
+      </div>
+      <details class="faq">
+        <summary>Ile trwa zrobienie strony?</summary>
+        <p>Landing page około tygodnia, wizytówka 1–2 tygodnie, strona firmowa 2–4 tygodnie. Najwięcej czasu zajmują zwykle teksty i zdjęcia, dlatego im szybciej je dostanę, tym szybciej strona będzie gotowa.</p>
+      </details>
+      <details class="faq">
+        <summary>Czy potrzebuję domeny i hostingu? Ile to kosztuje?</summary>
+        <p>Tak. Domena .pl to około 50–100 zł rocznie, hosting od kilkudziesięciu złotych rocznie. Pomogę wybrać i skonfigurować, a rachunki opłacasz bezpośrednio u dostawcy, więc strona jest w pełni Twoja.</p>
+      </details>
+      <details class="faq">
+        <summary>Czy będę mógł sam zmieniać treści?</summary>
+        <p>Drobne zmiany, jak godziny otwarcia czy ceny, pokażę Ci, jak zrobić samodzielnie. Większe zmiany możesz zlecić mnie albo dowolnemu innemu programiście, bo dostajesz cały kod.</p>
+      </details>
+      <details class="faq">
+        <summary>Co jeśli projekt mi się nie spodoba?</summary>
+        <p>Zanim zacznę budować, uzgadniamy układ i kolory. W trakcie masz dwie rundy poprawek w cenie. Jeśli po pierwszym podglądzie uznasz, że to nie to, kończymy współpracę i rozliczamy tylko wykonaną część.</p>
+      </details>
+      <details class="faq">
+        <summary>Co dokładnie dostaję po zakończeniu?</summary>
+        <p>Opublikowaną stronę, pełny kod źródłowy, krótką instrukcję i 30 dni na zgłaszanie błędów, które poprawiam bez dodatkowych kosztów.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="section section--tint contact-section" id="kontakt">
+    <div class="container contact">
+      <div class="contact__info">
+        <h2>Opowiedz mi o swojej firmie</h2>
+        <p class="section__desc">Napisz kilka zdań: czym się zajmujesz, jaką stronę potrzebujesz i na kiedy. Odpowiem w ciągu 24 godzin z wyceną. Wolisz rozmowę? Zadzwoń.</p>
+        <a class="contact__tel" href="tel:+48727705045">727 705 045</a>
+        <p class="contact__hours">pn–pt, 9:00–18:00</p>
+        <p class="contact__line"><a href="mailto:collabessence@gmail.com">collabessence@gmail.com</a></p>
+        <p class="contact__line">Warszawa, praca zdalna z całą Polską</p>
+      </div>
+      <form class="form" id="contactForm" novalidate>
+        <div class="form__row">
+          <div class="field">
+            <label for="name">Imię</label>
+            <input type="text" id="name" name="name" autocomplete="given-name" required>
+          </div>
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="type">Jakiej strony potrzebujesz?</label>
+          <select id="type" name="type">
+            <option value="Strona wizytówka">Strona wizytówka</option>
+            <option value="Landing page">Landing page</option>
+            <option value="Strona firmowa">Strona firmowa</option>
+            <option value="Jeszcze nie wiem">Jeszcze nie wiem</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Wiadomość</label>
+          <textarea id="message" name="message" rows="5" placeholder="Czym się zajmujesz? Czego potrzebujesz? Masz już domenę, teksty, zdjęcia?" required></textarea>
+        </div>
+        <p class="form__error" id="formError" role="alert" hidden>Uzupełnij imię, poprawny e-mail i wiadomość.</p>
+        <button type="submit" class="btn btn--primary">Wyślij wiadomość</button>
+        <p class="form__hint">Formularz otworzy Twój program pocztowy z gotową wiadomością. Możesz też napisać bezpośrednio na <a href="mailto:collabessence@gmail.com">collabessence@gmail.com</a>.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p>© <span id="year">2026</span> Adam Szymański · Strony internetowe · Warszawa</p>
+    <p><a href="https://github.com/collabessence/strona-portfolio" target="_blank" rel="noopener">Kod tej strony na GitHubie</a></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
