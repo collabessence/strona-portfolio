@@ -1,8 +1,10 @@
 name: Deploy to GitHub Pages
 
 # Strona główna to statyczne pliki w katalogu głównym repo (index.html,
-# style.css, script.js, assets/) plus dema w podfolderach. Nie ma etapu budowania:
-# repo jest pakowane w całości i publikowane jako artefakt Pages.
+# style.css, script.js, assets/) plus cztery dema linkowane z index.html.
+# Do artefaktu Pages trafia tylko katalog _site, złożony z tej listy: reszta repo
+# (tools/, ROADMAP, ćwiczenia numerowane, szablony) nie jest serwowana publicznie.
+# Nowe demo linkowane ze strony głównej dopisz do kroku "Assemble public site".
 #
 # Pages w ustawieniach repo działa w trybie "GitHub Actions", więc bez tego
 # workflowu push do master nie wdraża niczego.
@@ -31,10 +33,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Assemble public site
+        run: |
+          set -euo pipefail
+          mkdir -p _site/2-Strony-Wizytowki
+          cp index.html style.css script.js favicon.svg og-image.png robots.txt sitemap.xml _site/
+          cp -r assets _site/assets
+          cp -r 10-StronaHR 11-Dentysta-Klinika 12-Fitness-Silownia _site/
+          cp -r 2-Strony-Wizytowki/3-Restauracja-Bar _site/2-Strony-Wizytowki/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
 
       - name: Deploy to GitHub Pages
         id: deployment
